@@ -243,7 +243,50 @@ const ULTIMASBUILDS_1 = "Airi, Alice, Aleister, Amily, Annette, Baldum, D´Arcy,
 const ULTIMASBUILDS_2 = "";
 const ULTIMASBUILDS_3 = "";
 
+
 ////////////////////////////////////////////////////////////////////
+//                      Lista de ARCANAS                          //
+////////////////////////////////////////////////////////////////////
+
+const ARCANA_RED_ILUMINACAO        = {"nome" : "Iluminação", "Atributos" : "Poder de Habilidade +5.3"};
+const ARCANA_RED_OBLITERACAO       = {"nome" : "Obliteração", "Atributos" : "Dano de Ataque +3.2"};
+const ARCANA_RED_MASSACRE          = {"nome" : "Massacre", "Atributos" : "Dano de Ataque +2, Perfuração de Armadura +3.6"};
+const ARCANA_RED_SEDEDESANGUE      = {"nome" : "Sede de Sangue", "Atributos" : "Dano de Ataque +2.5, Roubo de Vida +0.5%"};
+const ARCANA_RED_DESCONTROLE       = {"nome" : "Descontrole", "Atributos" : "Taxa Crítica +0.7%, Dano Crítico +3.6%"};
+const ARCANA_RED_INDOMAVEL         = {"nome" : "Indomável", "Atributos" : "Velocidade de Ataque +1%, Vida Máxima +33.7, Armadura +2.3"};
+const ARCANA_RED_VIOLACAO          = {"nome" : "Violação", "Atributos" : "Poder de Habilidade +4.2, Perfuração Mágica +2.4"};
+const ARCANA_RED_CONJURACAO        = {"nome" : "Conjuração", "Atributos" : "Poder de Habilidade +4.2, Velocidade de Ataque +0.6%"};
+const ARCANA_RED_ATROCIDADE        = {"nome" : "Atrocidade", "Atributos" : "Taxa Crítica +1.6%"};
+const ARCANA_RED_BLITZ             = {"nome" : "Blitz", "Atributos" : "Velocidade de Ataque +1.6%, Taxa Crítica +0.5%"};
+const ARCANA_RED_LIST              = [ARCANA_RED_ILUMINACAO, ARCANA_RED_OBLITERACAO, ARCANA_RED_MASSACRE, ARCANA_RED_SEDEDESANGUE, ARCANA_RED_DESCONTROLE, ARCANA_RED_INDOMAVEL, ARCANA_RED_VIOLACAO, ARCANA_RED_CONJURACAO, ARCANA_RED_ATROCIDADE, ARCANA_RED_BLITZ];
+
+const ARCANA_PURPLE_COLOSSO        = {"nome" : "Colosso", "Atributos" : "Vida Máxima +75"};
+const ARCANA_PURPLE_ORACAO         = {"nome" : "Oração", "Atributos" : "Roubo Mágico de Vida +1.6%"};
+const ARCANA_PURPLE_LADRÃO         = {"nome" : "Ladrão", "Atributos" : "Roubo de Vida +1.6%"};
+const ARCANA_PURPLE_TIRANIA        = {"nome" : "Tirania", "Atributos" : "Taxa Crítica +0.5%, Vida Máxima +60"};
+const ARCANA_PURPLE_IMORTAL        = {"nome" : "Imortal", "Atributos" : "Vida Máxima +60, Vida/5s +4.5"};
+const ARCANA_PURPLE_BANQUETE       = {"nome" : "Banquete", "Atributos" : "Roubo de Vida +1%, Defesa Mágica +4.1"};
+const ARCANA_PURPLE_MAGIANEGRA     = {"nome" : "Magia Negra", "Atributos" : "Poder de Habilidade +2.4, Roubo Mágico de Vida +1%, Poder de Habilidade +5.3"};
+const ARCANA_PURPLE_BENEVOLENCIA   = {"nome" : "Benevolência", "Atributos" : "Vida Máxima +45, Vida/5s +5.2, Velocidade de Movimento +0.4"};
+const ARCANA_PURPLE_ASSASSINO      = {"nome" : "Assassino", "Atributos" : "Dano de Ataque +1.6, Velocidade de Movimento +1%"};
+const ARCANA_PURPLE_GUERRILHA      = {"nome" : "Guerrilha", "Atributos" : "Velocidade de Ataque +1%, Velocidade de Movimento +1%"};
+const ARCANA_PURPLE_LIST           = [ARCANA_PURPLE_COLOSSO, ARCANA_PURPLE_ORACAO, ARCANA_PURPLE_LADRÃO, ARCANA_PURPLE_TIRANIA, ARCANA_PURPLE_IMORTAL, ARCANA_PURPLE_BANQUETE, ARCANA_PURPLE_MAGIANEGRA, ARCANA_PURPLE_BENEVOLENCIA, ARCANA_PURPLE_ASSASSINO, ARCANA_PURPLE_GUERRILHA];
+
+const ARCANA_GREEN_FORTIFICACAO    = {"nome" : "Fortificação", "Atributos" : "Armadura +9"};
+const ARCANA_GREEN_ACODURO         = {"nome" : "Aço Duro", "Atributos" : "Armadura +5, Defesa Mágica +5"};
+const ARCANA_GREEN_CORAGEM         = {"nome" : "Coragem", "Atributos" : "Vida Máxima +37.5, Redução de Recarga +0.6%"};
+const ARCANA_GREEN_PROEZA          = {"nome" : "Proeza", "Atributos" : "Defesa Mágica +9"};
+const ARCANA_GREEN_MALDICAO        = {"nome" : "Maldição", "Atributos" : "Poder de Habilidade +2.4, Redução de Recarga +0.7%"};
+const ARCANA_GREEN_FERRAO          = {"nome" : "Ferrão", "Atributos" : "Dano de Ataque +0.9, Perfuração de Armadura +6.4"};
+const ARCANA_GREEN_AGITACAO        = {"nome" : "Agitação", "Atributos" : "Velocidade de Ataque +0.6%, Perfuração Mágica +6.4"};
+const ARCANA_GREEN_FOCO            = {"nome" : "Foco", "Atributos" : "Redução de Recarga +1%"};
+const ARCANA_GREEN_CONSUMACAO      = {"nome" : "Consumação", "Atributos" : "Roubo Mágico de Vida +0.7%, Armadura +5.9"};
+const ARCANA_GREEN_CRUZADAS        = {"nome" : "Cruzadas", "Atributos" : "Armadura +2.7, Defesa Mágica +2.7, Redução de Recarga +0.6%"};
+const ARCANA_GREEN_LIST            = [ARCANA_GREEN_FORTIFICACAO, ARCANA_GREEN_ACODURO, ARCANA_GREEN_CORAGEM, ARCANA_GREEN_PROEZA, ARCANA_GREEN_MALDICAO, ARCANA_GREEN_FERRAO, ARCANA_GREEN_AGITACAO, ARCANA_GREEN_FOCO, ARCANA_GREEN_CONSUMACAO, ARCANA_GREEN_CRUZADAS];
+
+
+
+/////////////////////////////////////////////////////////////////////
 //                          Inicio do BOT                         //
 ////////////////////////////////////////////////////////////////////
 
@@ -345,6 +388,74 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           }
         }
       }
+
+  }
+
+ function calculoAtr(string, numero){
+  	let text = string.split('+');
+  	let aux1 = '';
+  	let aux2 = '';
+  	let aux3 = '';
+  	let val = null;
+
+  	aux3 = text[0];
+
+  	if(text[1].includes('%')){
+  		aux1 = text[1].replace('%', '');
+		  val = parseFloat(aux1) * numero;
+		  aux2 = val.toString()+ '%';
+  	}else{
+  		val = parseFloat(text[1]) * numero;
+  		aux2 = val.toString();
+  	}
+
+  	let result = aux3 + '+' + aux2;
+  	return result;
+  }
+
+  function calcularArcana(arcanaNome, numero, cor){
+  	var lista = [];
+    var atributoList = new Array();
+    var result;
+  	switch(cor){
+  	  case 'Red':
+  		lista = ARCANA_RED_LIST;
+        break;
+      case 'Purple':
+        lista = ARCANA_PURPLE_LIST;
+        break;
+      case 'Green':
+        lista = ARCANA_GREEN_LIST;
+        break;
+    }    
+        
+    for (i = 0; i < lista.length; i++){
+      if(lista[i].nome == arcanaNome){
+        var atr = lista[i].Atributos;
+        console.log(atr);
+        if(atr.includes(',')){
+          atr = atr.replace(/\s*,\s*/g, ",");
+          atr = atr.split(',');
+          for (j = 0; j < atr.length; j++){
+            var atrb = calculoAtr(atr[j], numero);
+            console.log(atrb);
+
+            atributoList.push(atrb);
+          } 
+          result = atributoList.join(', ');
+        }else{
+          result = calculoAtr(atr, numero);
+        }
+
+      }
+    } 
+
+    return result;
+ 	}
+
+  
+  function calcularArcanas(listaArcanas){
+
 
   }
 
@@ -2207,8 +2318,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(TULEN_URL));
-          agent.add('Não esquece de completar a máscara viu?');
-          agent.add('e após fechar a build, o ideal é vender a Lágrima da Fênix e comprar outro item de sua preferência!');
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
