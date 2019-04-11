@@ -226,6 +226,18 @@ const FUNCAO_ERRADA_2 = "Mas infelizmente você é :(";
 const BUILD_EM_BREVE = "Me pergunta depois, nesse momento to pesquisando novas builds para esse herói!";
 
 ////////////////////////////////////////////////////////////////////
+//                     Lista de itens ImgURL                      //
+////////////////////////////////////////////////////////////////////
+
+const BOOTS           = 'https://imgur.com/rxJmTBB.jpg';
+const SONIC_BOOTS     = 'https://imgur.com/bCOC3AG.jpg';
+const GILDED_BOOTS    = 'https://imgur.com/EB648Wi.jpg';
+const FLASHY_BOOTS    = 'https://imgur.com/4gLngtp.jpg';
+const ENCHANTED_BOOTS = 'https://imgur.com/gj4Pkpx.jpg';
+const WAR_BOOTS       = 'https://imgur.com/Ur0x0Fv.jpg';
+const HERMES_BOOTS    = 'https://imgur.com/Iq9RbZZ.jpg';
+
+////////////////////////////////////////////////////////////////////
 //                     Lista de memes ImgURL                      //
 ////////////////////////////////////////////////////////////////////
 
@@ -286,9 +298,20 @@ const ARCANA_GREEN_LIST            = [ARCANA_GREEN_FORTIFICACAO, ARCANA_GREEN_AC
 
 
 
-/////////////////////////////////////////////////////////////////////
-//                          Inicio do BOT                         //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                           GLOSSARIO                                                                  //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 ////////////////////////////////////////////////////////////////////
+//                               JOGO                             //
+////////////////////////////////////////////////////////////////////
+
+const info_AOV = {"termo":"AoV", "definicao":"Uma abreviação do nome Arena of Valor"};
+const GLOSSARIO = [];
+
+/////////////////////////////////////////////////////////////////////
+//                          Inicio do BOT                          //
+/////////////////////////////////////////////////////////////////////
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
 
@@ -364,29 +387,55 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const list     = agent.parameters.listar;  
     const cor      = agent.parameters.arcanas_cores;
     const theBest  = agent.parameters.Superioridade;
+    const boots    = agent.parameters.boots;
 
-    let filtro = { lista:list, best:theBest }; 
+    let filtro = { lista:list, best:theBest, arcana:arcanas, botas:boots }; 
 
      if(filtro.lista) {
-
-        if(cor){
-          switch(cor){
-            case 'red':
-              agent.add('As arcanas vermelhas são:');
-              agent.add('Iluminação, Obliteração, Massacre, Sede de Sangue, Descontrole, Indomável, Violação, Conjuração, Atrocidade e Blitz.');
-              break;
-
-            case 'purple':
-              agent.add('As arcanas roxas são:');
-              agent.add('Colosso, Oração, Ladrão, Tirania, Imortal, Banquete, Magia Negra, Benevolência, Assassino e Guerrilha.');
-              break;
-
-            case 'green':
-              agent.add('As arcanas verdes são:');
-              agent.add('Fortificação, Aço Duro, Coragem, Proeza, Maldição, Ferrão, Agitação, Foco, Consumação e Cruzadas.');
-              break;
+        if(filtro.arcana){ 
+          if(cor){
+            switch(cor){
+              case 'red':
+                agent.add('As arcanas vermelhas são:');
+                agent.add('Iluminação, Obliteração, Massacre, Sede de Sangue, Descontrole, Indomável, Violação, Conjuração, Atrocidade e Blitz.');
+                break;
+  
+              case 'purple':
+                agent.add('As arcanas roxas são:');
+                agent.add('Colosso, Oração, Ladrão, Tirania, Imortal, Banquete, Magia Negra, Benevolência, Assassino e Guerrilha.');
+                break;
+  
+              case 'green':
+                agent.add('As arcanas verdes são:');
+                agent.add('Fortificação, Aço Duro, Coragem, Proeza, Maldição, Ferrão, Agitação, Foco, Consumação e Cruzadas.');
+                break;
+            }
+          }
+          else{
+            agent.add('As arcanas são separadas por cores');
+            agent.add('Vermelha, Roxa ou Verde? Me diz qual cor você quer saber');
           }
         }
+
+        if(filtro.botas){
+          agent.add('As lista de itens de movimento são:');
+          agent.add('Botas de Velocidade');
+          agent.add(new Image(BOOTS));
+          agent.add('Botas Sônicas');
+          agent.add(new Image(SONIC_BOOTS));
+          agent.add('Bota Dourada');
+          agent.add(new Image(GILDED_BOOTS));
+          agent.add('Botas Ofuscantes');
+          agent.add(new Image(FLASHY_BOOTS));
+          agent.add('Chutes Encatados');
+          agent.add(new Image(ENCHANTED_BOOTS));
+          agent.add('Botas de Guerra');
+          agent.add(new Image(WAR_BOOTS));
+          agent.add('Escolha de Hermes');
+          agent.add(new Image(HERMES_BOOTS));
+          agent.add('Para saber mais detalhes de cada uma digite ´detalhar + nome da bota´');
+        }
+        
       }
 
   }
@@ -415,7 +464,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
   function calcularArcana(arcanaNome, numero, cor){
   	var lista = [];
-    var atributoList = new Array();
+    var atributoList = [];
     var result;
   	switch(cor){
   	  case 'Red':
@@ -428,7 +477,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         lista = ARCANA_GREEN_LIST;
         break;
     }    
-        
+    var i;
+    var j;
     for (i = 0; i < lista.length; i++){
       if(lista[i].nome == arcanaNome){
         var atr = lista[i].Atributos;
@@ -455,6 +505,74 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
   
   function calcularArcanas(listaArcanas){
+    
+
+  }
+
+  function detalharItens(agent){
+    var boots    = agent.parameters.boots;
+    var detalhar = agent.parameters.detalhes;
+
+    let filtro = { bota:boots, detalhe:detalhar }; 
+
+    if(filtro.detalhe && filtro.bota){
+      switch(filtro.bota){
+        case 'boots':
+          agent.add('Botas da Velocidade é o item básico de movimento');
+          agent.add(new Image(BOOTS));
+          agent.add('Ela te dá +30 de velocidade de movimento');
+          agent.add('E a partir dela podemos comprar outras botas, cada uma com sua particularidade');
+          break;
+        case 'sonic_boots':
+          agent.add('Botas Sônicas:');
+          agent.add(new Image(SONIC_BOOTS));
+          agent.add('Te da +60 de velocidade de movimento');
+          agent.add('Te dá 110 de armadura e reduz o dano físico em 15%');
+          agent.add('Ideal quando o time inimigo tem pouco dano mágico');
+          break;
+        case 'gilded_boots':
+          agent.add('Bota Dourada:');
+          agent.add(new Image(GILDED_BOOTS));
+          agent.add('Te da +60 de velocidade de movimento');
+          agent.add('Te dá 110 de defesa mágica e aumenta sua resistencia a controle de grupo em 30%');
+          agent.add('Ideal quando o time inimigo tem bastante controle de grupo e dano mágico');
+          break;
+        case 'flashy_boots':
+          agent.add('Botas Ofuscantes:');
+          agent.add(new Image(FLASHY_BOOTS));
+          agent.add('Te da +60 de velocidade de movimento');
+          agent.add('E reduz o tempo de recarga de habilidades em 15%');
+          agent.add('Ideal para heróis que precisam atingir o máximo de redução de recarga possível(40%).');
+          agent.add('Heróis como Ilumia, Ignis e outros que ativam a passiva após usar habilidades são os mais indicados a usar essa bota');
+          break;
+        case 'enchanted_boots':
+          agent.add('Chutes Encatados:');
+          agent.add(new Image(ENCHANTED_BOOTS));
+          agent.add('Te da +60 de velocidade de movimento');
+          agent.add('Te dá +75 de perfuração mágica');
+          agent.add('Ideal para heróis que causam dano mágico');
+          agent.add('E querem máximizar o dano de suas habilidades logo no inicio da partida');
+          agent.add('Principalmente contra heróis que estão usando bota dourada');
+          break;
+        case 'war_boots':
+          agent.add('Botas de Guerra:');
+          agent.add(new Image(WAR_BOOTS));
+          agent.add('Te da +60 de velocidade de movimento');
+          agent.add('Te dá +25% de velocidade de ataque');
+          agent.add('Ideal para atiradores ou heróis que causem dano físico');
+          agent.add('Assim como Omen ou Murad que ativam determinada habilidade após uma quantidade ataques básicos');
+          break;
+        case 'hermes_boots':
+          agent.add('Escolha de Hermes:');
+          agent.add(new Image(HERMES_BOOTS));
+          agent.add('Te da +60 de velocidade de movimento');
+          agent.add('Ligeiro: Aumenta em +60 a velocidade de movimento ao sair de uma batalha');
+          agent.add('Ideal para ROAMING, agilizar nas rotações e outros heróis com baixa mobilidade');
+          agent.add('Ao levar dano ou atacar algum inimigo perde o efeito Ligeiro');
+          break;
+          
+      }
+    }
 
 
   }
@@ -2756,6 +2874,48 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                 BOOTS                                                                               //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  function checarBoots(agent) {
+    const heroi    = agent.parameters.Heroi;
+    const build    = agent.parameters.Builds;
+    const boots    = agent.parameters.boots;
+    const theBest  = agent.parameters.Superioridade;
+    const duvida   = agent.parameters.duvidas;
+
+    let filtro = { hero:heroi, builds:build, bota:boots, melhor:theBest, pergunta:duvida}; 
+    if (filtro.bota && filtro.bota == 'boots'){
+      if(filtro.pergunta){
+        switch(filtro.pergunta) {
+          case 'porque':
+            agent.add('Boa pergunta');
+            agent.add('Nas minhas builds eu indico somente a bota básica de movimento');
+            agent.add('Pois cada bota assim como cada item é situacional');
+            agent.add('Para entender melhor basta digitar ´listar botas´');
+            break;
+          case 'qual':
+            agent.add('Não existe uma bota certa para o herói');
+            agent.add('Pois assim como os itens, cada um tem sua situação adequada');
+            agent.add('Para entender melhor cada bota, basta digitar ´listar botas´ ');
+            break;
+        }
+      }
+      if(filtro.melhor){
+        agent.add('Olha, o melhor é fazer pelo menos a básica');
+        agent.add('Mas caso queira entender cada uma e saber escolher a mais adequada para o seu herói');
+        agent.add('Digite ´listar botas´ que eu te explico com maior prazer!');
+      }
+      if(!filtro.melhor && !filtro.pergunta){
+        agent.add('Nas minhas builds vou indicar agora apenas a bota básica de movimento');
+        agent.add('Dessa forma você fica livre para completar com a que mais gostar ');
+        agent.add('Ou com a que for mais adequada para sua partida');
+        agent.add('Para entender melhor cada bota, digite ´listar botas´');
+      }
+    }
+  }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                 ARCANAS                                                                              //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -3729,7 +3889,15 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   intentMap.set('checarBuild', testando); 
 
   intentMap.set('checarBuild', checarBuild);
+  
+  intentMap.set('checarBoots', checarBoots);
+
+  intentMap.set('listarAlgo', listarAlgo);
+
+  intentMap.set('detalharItens', detalharItens);
+
   intentMap.set('checarArcanas', checarArcanas);
+
   intentMap.set('ultimasBuilds', ultimasBuilds);
 
   intentMap.set('listar_menu', listar_menu);
