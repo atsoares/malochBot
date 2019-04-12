@@ -229,13 +229,13 @@ const BUILD_EM_BREVE = "Me pergunta depois, nesse momento to pesquisando novas b
 //                     Lista de itens ImgURL                      //
 ////////////////////////////////////////////////////////////////////
 
-const BOOTS           = 'https://imgur.com/rxJmTBB.jpg';
-const SONIC_BOOTS     = 'https://imgur.com/bCOC3AG.jpg';
-const GILDED_BOOTS    = 'https://imgur.com/EB648Wi.jpg';
-const FLASHY_BOOTS    = 'https://imgur.com/4gLngtp.jpg';
-const ENCHANTED_BOOTS = 'https://imgur.com/gj4Pkpx.jpg';
-const WAR_BOOTS       = 'https://imgur.com/Ur0x0Fv.jpg';
-const HERMES_BOOTS    = 'https://imgur.com/Iq9RbZZ.jpg';
+const BOOTS           = 'https://imgur.com/LRETxQ5.jpg';
+const SONIC_BOOTS     = 'https://imgur.com/RREgc7r.jpg';
+const GILDED_BOOTS    = 'https://imgur.com/CxIV6RT.jpg';
+const FLASHY_BOOTS    = 'https://imgur.com/Mch6l2p.jpg';
+const ENCHANTED_BOOTS = 'https://imgur.com/hsP2pCL.jpg';
+const WAR_BOOTS       = 'https://imgur.com/5IdduzO.jpg';
+const HERMES_BOOTS    = 'https://imgur.com/4ya8Bov.jpg';
 
 ////////////////////////////////////////////////////////////////////
 //                     Lista de memes ImgURL                      //
@@ -2890,8 +2890,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         switch(filtro.pergunta) {
           case 'porque':
             agent.add('Boa pergunta');
-            agent.add('Nas minhas builds eu indico somente a bota básica de movimento');
-            agent.add('Pois cada bota assim como cada item é situacional');
+            agent.add('Essa bota é apenas uma sugestão');
+            agent.add('Pois cada bota, assim como cada item é situacional');
             agent.add('Para entender melhor basta digitar ´listar botas´');
             break;
           case 'qual':
@@ -2907,8 +2907,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         agent.add('Digite ´listar botas´ que eu te explico com maior prazer!');
       }
       if(!filtro.melhor && !filtro.pergunta){
-        agent.add('Nas minhas builds vou indicar agora apenas a bota básica de movimento');
-        agent.add('Dessa forma você fica livre para completar com a que mais gostar ');
+        agent.add('Não existe bota certa, o certo é ter pelo menos uma');
+        agent.add('Você é livre para completar com a que mais gostar ');
         agent.add('Ou com a que for mais adequada para sua partida');
         agent.add('Para entender melhor cada bota, digite ´listar botas´');
       }
