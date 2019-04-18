@@ -419,21 +419,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         if(filtro.botas){
           agent.add('As lista de itens de movimento são:');
-          agent.add('Botas de Velocidade');
-          agent.add(new Image(BOOTS));
-          agent.add('Botas Sônicas');
-          agent.add(new Image(SONIC_BOOTS));
-          agent.add('Bota Dourada');
-          agent.add(new Image(GILDED_BOOTS));
-          agent.add('Botas Ofuscantes');
-          agent.add(new Image(FLASHY_BOOTS));
-          agent.add('Chutes Encatados');
-          agent.add(new Image(ENCHANTED_BOOTS));
-          agent.add('Botas de Guerra');
-          agent.add(new Image(WAR_BOOTS));
-          agent.add('Escolha de Hermes');
-          agent.add(new Image(HERMES_BOOTS));
-          agent.add('Para saber mais detalhes de cada uma digite ´detalhar + nome da bota´');
+          agent.add('Botas de Velocidade, Botas Sônicas, Bota Dourada, Botas Ofuscantes, Chutes Encatados, Botas de Guerra, Escolha de Hermes');
+          agent.add('Para saber mais detalhes de cada uma digite ´detalhar nome da bota´');
         }
         
       }
@@ -2935,10 +2922,16 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     if(arcanas && !filtro.explicar && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.tipo){
       agent.add('Para informações sobre arcanas digite:');
       agent.add('´arcana informações´');
-      agent.add('Para arcanas mais indicadas para iniciantes digite:');
+      agent.add('Tempo de leitura de 1min30seg');
+      agent.add('Para arcanas mais indicadas para iniciantes:');
       agent.add('´arcana para iniciantes´');
-      agent.add('Para saber a arcanas recomendadas para um herói digite:');
-      agent.add('´arcana + nome do herói´');
+      agent.add('Tempo de leitura de 35seg');
+      agent.add('Se quiser arcanas “genéricas” para classes de heróis');
+      agent.add('Como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:');
+      agent.add('´arcana + classe´');
+      agent.add('Tempo de leitura de 35seg');
+      agent.add('Se quiser saber as arcanas recomendadas para um herói:');
+      agent.add('´arcana + nome do herói´, não contém texto explicativo');
     }
 
     if(arcanas && filtro.explicar){
@@ -3879,6 +3872,609 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     }
  }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                 DICAS                                                                                //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function checarDicas(agent) {
+
+  const dicas    = agent.parameters.Dicas;
+  const heroi    = agent.parameters.heroi;
+  const classes  = agent.parameters.classes;
+  const begginer = agent.parameters.levelPlayer;
+  const role     = agent.parameters.role;
+
+  let filtro = { hero:heroi, classe:classes, iniciante:begginer, papel:role }; 
+
+  if(dicas && !filtro.hero && !filtro.classe && !filtro.iniciante){
+    agent.add('Se quiser dicas para iniciantes digite:');
+    agent.add('´dicas para iniciantes´');
+    agent.add('tempo de leitura de 35seg');
+    agent.add('Para dicas sobre algum herói:');
+    agent.add('´dicas + nome do herói´');
+    agent.add('tempo de leitura 1min');
+    agent.add('Se quiser dicas de jogo por classes de heróis');
+    agent.add('Como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:');
+    agent.add('´dicas + classe´');
+    agent.add('tempo de leitura de 35seg');
+    agent.add('Para dicas em determinado papel do jogo');
+    agent.add('Como mid, suporte, lane, jungle ou solo');
+    agent.add('´dicas + papel´');
+    agent.add('tempo de leitura 1min');
+  }
+
+  if (filtro.iniciante) {
+    agent.add('As melhores arcanas para iniciante');
+    agent.add('São arcanas para Tanks/Suportes');
+    agent.add('Pois basicamente');
+    agent.add('Funciona com todos os heróis');
+    agent.add('E é uma boa alternativa');
+    agent.add('Caso você não saiba direito');
+    agent.add('Com que tipo de herói');
+    agent.add('Você gosta de jogar');
+    agent.add('As arcanas são:');
+    agent.add('Vermelhas: Indomável');
+    agent.add('Roxas: Benevolência');
+    agent.add('Verdes: Coragem');
+    agent.add('Se você tiver uma página'); 
+    agent.add('Com 10 de cada'); 
+    agent.add('No total');
+    agent.add('A soma disso vai ser:');
+    agent.add('+10% de Velocidade de Ataque');
+    agent.add('+1162 de HP máximo');
+    agent.add('+23 de Armadura');
+    agent.add('Regeneração de 52 HP');
+    agent.add('a cada 5 segundos');
+    agent.add('+4% de Velocidade de movimento');
+    agent.add('+6% de redução de recarga de habilidade');
+  }
+
+  if (filtro.classe) {
+    switch(filtro.classe){
+      case 'Mago':
+        agent.add('Apesar de serem');
+        agent.add('Bem frágeis');
+        agent.add('Os Magos são');
+        agent.add('Mt mt fortes');
+        agent.add('A principal função deles');
+        agent.add('É causar dano');
+        agent.add('Como a maioria dos heróis do jogo');
+        agent.add('Causam somente dano físico');
+        agent.add('Basta comprar mais armadura');
+        agent.add('Que o dano');
+        agent.add('É menor');
+        agent.add('Por isso magos são importantes');
+        agent.add('São suas habilidades');
+        agent.add('Que causam dano mágico');
+        agent.add('Ignorando a armadura');
+        filtro.tipo = 'AP';
+        break;
+      case 'Atirador':
+        agent.add('Os Atiradores são');
+        agent.add('Os heróis com maior dano');
+        agent.add('Podendo dizer que');
+        agent.add('A defesa deles é o ataque');
+        agent.add('Pois são frágeis');
+        agent.add('E é por isso');
+        agent.add('Que precisam farmar');
+        agent.add('E juntar bastante Gold');
+        agent.add('Para terminar seus itens');
+        agent.add('O mais rápido possível');
+        agent.add('E ficar forte');
+        agent.add('Para derrubar torres');
+        break;
+      case 'Assassino':
+        agent.add('Os Assassino são especializados');
+        agent.add('Em causar muito dano');
+        agent.add('De uma só vez');
+        agent.add('Por isso são');
+        agent.add('Os mais adequados');
+        agent.add('A derrotar montros da Jungle');
+        agent.add('E principalmente');
+        agent.add('Matar Magos e Atiradores');
+        agent.add('Ou quem tiver de bobeira');
+        agent.add('Pelo mapa sozinho');
+        agent.add('Por isso');
+        agent.add('Aproveite bem a moite');
+        agent.add('Garantindo o elemento surpresa');
+        agent.add('E sempre atacando no momento certo');
+        break;
+      case 'Guerreiro':
+        agent.add('Guerreiros são parecidos com tanques');
+        agent.add('Porém');
+        agent.add('Possuem mais dano');
+        agent.add('Que um tanque');
+        agent.add('O que diminui um pouco sua defesa');
+        agent.add('Seu foco é');
+        agent.add('Ter um alto dano físico');
+        agent.add('Para ataques basicos');
+        agent.add('Mas também');
+        agent.add('Ter itens de defesa');
+        agent.add('Para aguentar dano');
+        break;
+      case 'Tanque':
+        agent.add('A principal função do Tanque');
+        agent.add('É proteger o time');
+        agent.add('Principalmente');
+        agent.add('Seu aliado');
+        agent.add('Que mais causa dano');
+        agent.add('Como atiradores e magos');
+        agent.add('São responsáveis por iniciar as batalhas');
+        agent.add('Ter controle de grupo');
+        agent.add('Sendo fundametais');
+        agent.add('Na decisão de avançar ou recuar');
+        agent.add('E o mais importante');
+        agent.add('É não morrer');
+        agent.add('São eles que protegem o time');
+        break;
+      case 'Suporte':
+        agent.add('Os suportes foram feitos');
+        agent.add('Para estar perto de um aliado');
+        agent.add('Seu foco');
+        agent.add('É ter controle de grupo');
+        agent.add('Porém');
+        agent.add('Eles podem causar um pouco de dano');
+        agent.add('E apesar de serem');
+        agent.add('Os menos populares');
+        agent.add('Com eles o time fica');
+        agent.add('Muito mais forte');
+        break;
+    }
+  }
+
+  if(filtro.papel && !filtro.hero){
+    switch(filtro.papel) {
+      case 'Lane':
+        agent.add('');
+        break;
+      case 'Solo':
+        agent.add('');
+        break;
+      case 'Suporte':
+        agent.add('');
+        break;
+      case 'Mid':
+        agent.add('');
+        break;
+      case 'Jungle':
+        agent.add('');
+        break;  
+    }
+  }
+
+  if(filtro.hero) {
+
+    switch(filtro.hero){
+
+      case 'Airi':
+        agent.add('As arcanas recomendadas para ir de Airi são:');
+        break; 
+
+      case 'Aleister':
+
+        agent.add('As arcanas recomendadas para jogar de Aleister são:');
+        break;
+
+      case 'Alice':
+
+        agent.add('As arcanas recomendadas para jogar de Alice são:');
+        break;
+
+      case 'Amily':
+
+        agent.add('As arcanas recomendadas para jogar de Amily são:');
+        break;
+
+      case 'Annette':
+
+        agent.add('As arcanas recomendadas para jogar de Annette são:');
+        break;
+
+      case 'Arduin':
+
+        agent.add('As arcanas recomendadas para jogar de Arduin são:');
+        break;
+
+      case 'Arthur':
+
+        agent.add('As arcanas recomendadas para jogar de Arthur são:');
+        break;
+
+      case 'Arum':
+
+        agent.add('As arcanas recomendadas para jogar de Arum são:'); 
+        break;
+
+      case 'Astrid':
+
+        agent.add('As arcanas recomendadas para jogar de Astrid são:');
+        break;
+
+      case 'Azzenka':
+
+        agent.add('As arcanas recomendadas para jogar de Azzen´ka são:');
+        break;
+
+      case 'Baldum':
+
+        agent.add('As arcanas recomendadas para jogar de Baldum são:');
+        break;
+
+      case 'Batman':
+
+        agent.add('As arcanas recomendadas para jogar de Batman são:');
+        break;
+
+      case 'Butterfly':
+
+        agent.add('As arcanas recomendadas para jogar de Butterfly são:'); 
+        break;       
+
+      case 'Capheny':
+
+        agent.add('Infelizmente ainda não está em nosso servidor');
+        agent.add('Assim que tiver noticias dela, te informo melhor, ta bom?');
+        break;
+
+      case 'Chaugnar':
+
+        agent.add('As arcanas recomendadas para jogar de Chaugnar são:');
+        break;
+
+      case 'Cresht':
+
+        agent.add('As arcanas recomendadas para jogar de Cresht são:'); 
+        break;
+
+      case 'Darcy':
+
+        agent.add('As arcanas recomendadas para jogar de D´Arcy são: ');
+        break;  
+
+      case 'Diaochan':
+
+        agent.add('As arcanas recomendadas para jogar de Diaochan são:'); 
+        break; 
+
+      case 'Elsu':
+
+        agent.add('As arcanas recomendadas para jogar de Elsu são:');
+        break;  
+
+      case 'Errol':
+
+        agent.add('Infelizmente ainda não está em nosso servidor');
+        agent.add('Assim que tiver noticias dele, te informo melhor, ta bom?'); 
+        break;
+
+      case 'Fennik':
+
+        agent.add('As arcanas recomendadas para jogar de Fennik são:');
+        break;
+
+      case 'Florentino':
+
+        agent.add('Eita, quer apelar mesmo de Florentino ein?');
+        break;
+
+
+      case 'Gildur':
+
+        agent.add('As arcanas recomendadas para jogar de Gildur são:');
+        break; 
+
+      case 'Grakk':
+
+        agent.add('As arcanas recomendadas para jogar de Grakk são:');
+        break;
+
+      case 'Hayate':
+
+        agent.add('As arcanas recomendadas para jogar de Hayate são:');
+        break;
+
+      case 'Ignis':
+
+        agent.add('As arcanas recomendadas para jogar de Ignis são:');
+        break;
+
+      case 'Ilumia':
+
+        agent.add('As arcanas recomendadas para jogar de Ilumia são:');
+        break; 
+
+      case 'Jinnar':
+
+        agent.add('As arcanas recomendadas para jogar de Jinnar são:');
+        break; 
+
+      case 'Kahlii':
+
+        agent.add('As arcanas recomendadas para jogar de Kahlii são:');
+        break;  
+
+      case 'KilGroth':
+
+        agent.add('As arcanas recomendadas para jogar de Kil´Groth são:');
+        break;
+
+      case 'Kriknak':
+
+        agent.add('As arcanas recomendadas para jogar de Kriknak são:');
+        break;
+
+      case 'Krixi':
+
+        agent.add('As arcanas recomendadas para jogar de Krixi são:');
+        break;
+
+      case 'Lauriel':
+
+        agent.add('As arcanas recomendadas para jogar de Lauriel são:');
+        break;
+
+      case 'Liliana':
+
+        agent.add('As arcanas recomendadas para jogar de Liliana são:');
+        break;
+
+      case 'Lindis':
+
+        agent.add('As arcanas recomendadas para jogar de Lindis são:');
+        break;
+
+      case 'LuBu':
+
+        agent.add('As arcanas recomendadas para jogar de Lu Bu são:');
+        break;
+
+      case 'Lumburr':
+
+        agent.add('As arcanas recomendadas para jogar de Lumburr são:');
+        break;
+
+      case 'Maloch':
+
+        agent.add('As arcanas que eu te recomendo são:');
+        break;
+
+      case 'Marja':
+
+        agent.add('As arcanas recomendadas para jogar de Marja são:');
+        break;
+
+      case 'Max':
+
+        agent.add('As arcanas recomendadas para jogar de Max são:');
+        break;
+
+      case 'Mganga':
+
+        agent.add('As arcanas recomendadas para jogar de Mganga são:');
+        break;
+
+      case 'Mina':
+
+        agent.add('As arcanas recomendadas para jogar de Mina são:');
+        break;
+
+      case 'Moren':
+
+        agent.add('As arcanas recomendadas para jogar de Moren são:');
+        break;
+
+      case 'Murad':
+
+        agent.add('As arcanas recomendadas para jogar de Murad são:');
+        break; 
+
+      case 'Nakroth':
+
+        agent.add('As arcanas recomendadas para jogar de Nakroth são:');
+        break;
+
+      case 'Natalya':
+
+        agent.add('As arcanas recomendadas para jogar de Natalya são:');
+        break;
+
+      case 'Omega':
+
+        agent.add('As arcanas recomendadas para jogar de Omega são:');
+        break;
+
+      case 'Ormarr':
+
+        agent.add('As arcanas recomendadas para jogar de Ormarr são:');
+        break;
+
+      case 'Omen':
+
+        agent.add('As arcanas recomendadas para jogar de Omen são:');
+        break;
+
+      case 'Peura':
+
+        agent.add('As arcanas recomendadas para jogar de Peura são:');
+        break;
+
+      case 'Preyta':
+
+        agent.add('As arcanas recomendadas para jogar de Preyta são:');
+        break;
+
+      case 'Quillen':
+
+        agent.add('As arcanas recomendadas para jogar de Quillen são:');
+        break;
+
+      case 'Raz':
+
+        agent.add('As arcanas recomendadas para jogar de Raz são:');
+        break;
+
+      case 'Riktor':
+
+        agent.add('As arcanas recomendadas para jogar de Riktor são:');
+        break;
+
+      case 'Rourke':
+
+        agent.add('As arcanas recomendadas para jogar de Rourke são:');
+        break;
+
+      case 'Roxie':
+
+        agent.add('As arcanas recomendadas para jogar de Roxie são:');
+        break;
+
+      case 'Ryoma':
+
+        agent.add('As arcanas recomendadas para jogar de Ryoma são:');
+        break;
+
+      case 'Sephera':
+
+        agent.add('As arcanas recomendadas para jogar de Sephera são:');
+        break;
+
+      case 'Skud':
+
+        agent.add('As arcanas recomendadas para jogar de Skud são:');
+        break;  
+
+      case 'Slimz':
+
+        agent.add('As arcanas recomendadas para jogar de Slimz são:'); 
+        break;
+
+      case 'Superman':
+
+        agent.add('As arcanas recomendadas para jogar de Superman são:'); 
+        break;
+
+      case 'Taara':
+
+        agent.add('As arcanas recomendadas para jogar de Taara são:');
+        break;
+
+      case 'TeeMee':
+
+        agent.add('As arcanas recomendadas para jogar de TeeMee são:');
+        break;
+
+      case 'TelAnnas':
+
+        agent.add('As arcanas recomendadas para jogar de Tel´Annas são:');
+        break;
+
+
+      case 'Thane':
+
+        agent.add('As arcanas recomendadas para jogar de Thane são:');
+        break;
+
+      case 'TheFlash':
+
+        agent.add('As arcanas recomendadas para jogar de Flash são:');
+        break;
+
+
+      case 'TheJoker':
+
+        agent.add('As arcanas recomendadas para jogar de Coringa são:');
+        break;
+
+      case 'Toro':
+
+        agent.add('Infelizmente ele não está em nosso servidor');
+        break;
+
+      case 'Tulen':
+
+        agent.add('As arcanas recomendadas para jogar de Tulen são:');
+        break;
+
+      case 'Valhein':
+
+        agent.add('As arcanas recomendadas para jogar de Valhein são:');
+        break;
+
+      case 'Veera':
+
+        agent.add('Você quis dizer, Valhein AP?');
+        break;
+
+      case 'Veres':
+
+        agent.add('As arcanas recomendadas para jogar de Veres são:');
+        break;
+
+      case 'Violet':
+
+        agent.add('As arcanas recomendadas para jogar de Violet são:');
+        break;
+
+      case 'Wiro':
+
+        agent.add('As arcanas recomendadas para jogar de Wiro são:');
+        break;
+
+      case 'Wisp':
+
+        agent.add('As arcanas recomendadas para jogar de Wisp são:');
+        break;
+
+      case 'Wonder Woman':
+
+        agent.add('As arcanas recomendadas para jogar de Mulher Maravilha são:');
+        break;
+
+      case 'Wukong':
+
+        agent.add('As arcanas recomendadas para jogar de Wukong são:');
+        break;
+
+      case 'Xeniel':
+
+        agent.add('As arcanas recomendadas para jogar de Xeniel são:');
+        break;
+
+      case 'YBneth':
+
+        agent.add('As arcanas recomendadas para jogar de Y´bneth são:');
+        break;
+
+      case 'Yorn':
+
+        agent.add('As arcanas recomendadas para jogar de Yorn são:');
+        break;
+
+      case 'Zanis':
+
+        agent.add('As arcanas recomendadas para jogar de Zanis são:');
+        break;
+
+      case 'Zephys':
+
+        agent.add('As arcanas recomendadas para jogar de Zephys são:');
+        break;
+
+      case 'Zill':
+
+        agent.add('As arcanas recomendadas para jogar de Zill são:');
+        break;
+
+      case 'Zuka':
+
+        agent.add('As arcanas recomendadas para jogar de Zuka são:');
+        break;
+    } 
+  }
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                               intentMap                                                                              //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -3887,6 +4483,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   let intentMap = new Map();
 
   intentMap.set('checarBuild', testando); 
+
+  intentMap.set('checarDicas', checarDicas);
 
   intentMap.set('checarBuild', checarBuild);
   
