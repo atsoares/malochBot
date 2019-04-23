@@ -225,6 +225,14 @@ const FUNCAO_ERRADA_1 = "Poxa, achei que você não era troll...";
 const FUNCAO_ERRADA_2 = "Mas infelizmente você é :(";
 const BUILD_EM_BREVE = "Me pergunta depois, nesse momento to pesquisando novas builds para esse herói!";
 
+
+////////////////////////////////////////////////////////////////////
+//                     Lista de Imagens Dicas                     //
+////////////////////////////////////////////////////////////////////
+
+const minimap_lane   = 'https://imgur.com/OsV1TTX.jpg';
+const rotacao_jungle = 'https://imgur.com/CqkiSZ5.jpg';
+
 ////////////////////////////////////////////////////////////////////
 //                     Lista de itens ImgURL                      //
 ////////////////////////////////////////////////////////////////////
@@ -3022,96 +3030,21 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     if (filtro.classe && !filtro.tipo) {
       switch(filtro.classe){
         case 'Mago':
-          agent.add('Apesar de serem');
-          agent.add('Bem frágeis');
-          agent.add('Os Magos são');
-          agent.add('Mt mt fortes');
-          agent.add('A principal função deles');
-          agent.add('É causar dano');
-          agent.add('Como a maioria dos heróis do jogo');
-          agent.add('Causam somente dano físico');
-          agent.add('Basta comprar mais armadura');
-          agent.add('Que o dano');
-          agent.add('É menor');
-          agent.add('Por isso magos são importantes');
-          agent.add('São suas habilidades');
-          agent.add('Que causam dano mágico');
-          agent.add('Ignorando a armadura');
           filtro.tipo = 'AP';
           break;
         case 'Atirador':
-          agent.add('Os Atiradores são');
-          agent.add('Os heróis com maior dano');
-          agent.add('Podendo dizer que');
-          agent.add('A defesa deles é o ataque');
-          agent.add('Pois são frágeis');
-          agent.add('E é por isso');
-          agent.add('Que precisam farmar');
-          agent.add('E juntar bastante Gold');
-          agent.add('Para terminar seus itens');
-          agent.add('O mais rápido possível');
-          agent.add('E ficar forte');
-          agent.add('Para derrubar torres');
           filtro.tipo = 'ADC';
           break;
         case 'Assassino':
-          agent.add('Os Assassino são especializados');
-          agent.add('Em causar muito dano');
-          agent.add('De uma só vez');
-          agent.add('Por isso são');
-          agent.add('Os mais adequados');
-          agent.add('A derrotar montros da Jungle');
-          agent.add('E principalmente');
-          agent.add('Matar Magos e Atiradores');
-          agent.add('Ou quem tiver de bobeira');
-          agent.add('Pelo mapa sozinho');
-          agent.add('Por isso');
-          agent.add('Aproveite bem a moite');
-          agent.add('Garantindo o elemento surpresa');
-          agent.add('E sempre atacando no momento certo');
           filtro.tipo = 'ADA';
           break;
         case 'Guerreiro':
-          agent.add('Guerreiros são parecidos com tanques');
-          agent.add('Porém');
-          agent.add('Possuem mais dano');
-          agent.add('Que um tanque');
-          agent.add('O que diminui um pouco sua defesa');
-          agent.add('Seu foco é');
-          agent.add('Ter um alto dano físico');
-          agent.add('Para ataques basicos');
-          agent.add('Mas também');
-          agent.add('Ter itens de defesa');
-          agent.add('Para aguentar dano');
           filtro.tipo = 'AD';
           break;
         case 'Tanque':
-          agent.add('A principal função do Tanque');
-          agent.add('É proteger o time');
-          agent.add('Principalmente');
-          agent.add('Seu aliado');
-          agent.add('Que mais causa dano');
-          agent.add('Como atiradores e magos');
-          agent.add('São responsáveis por iniciar as batalhas');
-          agent.add('Ter controle de grupo');
-          agent.add('Sendo fundametais');
-          agent.add('Na decisão de avançar ou recuar');
-          agent.add('E o mais importante');
-          agent.add('É não morrer');
-          agent.add('São eles que protegem o time');
           filtro.tipo = 'Tank';
           break;
         case 'Suporte':
-          agent.add('Os suportes foram feitos');
-          agent.add('Para estar perto de um aliado');
-          agent.add('Seu foco');
-          agent.add('É ter controle de grupo');
-          agent.add('Porém');
-          agent.add('Eles podem causar um pouco de dano');
-          agent.add('E apesar de serem');
-          agent.add('Os menos populares');
-          agent.add('Com eles o time fica');
-          agent.add('Muito mais forte');
           filtro.tipo = 'Tank';
           break;
       }
@@ -3906,120 +3839,82 @@ function checarDicas(agent) {
   }
 
   if (filtro.iniciante) {
-    agent.add('As melhores arcanas para iniciante');
-    agent.add('São arcanas para Tanks/Suportes');
-    agent.add('Pois basicamente');
-    agent.add('Funciona com todos os heróis');
-    agent.add('E é uma boa alternativa');
-    agent.add('Caso você não saiba direito');
-    agent.add('Com que tipo de herói');
-    agent.add('Você gosta de jogar');
-    agent.add('As arcanas são:');
-    agent.add('Vermelhas: Indomável');
-    agent.add('Roxas: Benevolência');
-    agent.add('Verdes: Coragem');
-    agent.add('Se você tiver uma página'); 
-    agent.add('Com 10 de cada'); 
-    agent.add('No total');
-    agent.add('A soma disso vai ser:');
-    agent.add('+10% de Velocidade de Ataque');
-    agent.add('+1162 de HP máximo');
-    agent.add('+23 de Armadura');
-    agent.add('Regeneração de 52 HP');
-    agent.add('a cada 5 segundos');
-    agent.add('+4% de Velocidade de movimento');
-    agent.add('+6% de redução de recarga de habilidade');
+    agent.add('E ae, então você começou a jogar agora');
+    agent.add('E ta precisando de ajuda né? Sem problemas');
+    agent.add('As dicas que eu tenho para você são essas:');
+    agent.add('1. Guarde todo seu gold inicial para comprar arcanas');
+    agent.add('2. Consiga novos heróis de missões e eventos');
+    agent.add('3. Aprenda com seus erros e de outros players');
+    agent.add('4. Olhe sempre o mapa, ele é seu melhor amigo durante uma partida');
+    agent.add('5. Limpe as waves de minions, elas te ajudam a levar objetivos e te dão maior visão do mapa');
+    agent.add('Não existe "sua" lane, existe "nossas" lanes.');
+    agent.add('Quando uma torre do seu time cai quem perde é você, independente da lane');
+    agent.add('6. Assistir gameplays vai melhorar seu desempenho');
+    agent.add('7. Tente ser positivo');
+    agent.add('8. NÃO seja tóxico ou negativo com seu time');
+    agent.add('9. NÃO teste herói em ranked');
+    agent.add('É pra isso que existe o modo vs.bot e normal');
+    agent.add('10. NÃO roube os monstros da jungle do seu time e SIM do inimigo');
+    agent.add('Fazendo isso você só atrapalha o seu time');
+    agent.add('11. NÃO fique somente matando ou farmando, DERRUBE torres!');
+    agent.add('Converta kills em objetivos e torres');
+    agent.add('12. Preste atenção na estrutura e composição do time'); 
+    agent.add('Más escolhas de classe podem levar a derrota antes da partida começar'); 
+    agent.add('Geralmente temos: Magos no mid, atiradores e suporte na lane do dragão, assassinos na jungle, guerreiros na lane do demônio');
+    agent.add('Lembrando que o mapa é espelhado'); 
+    agent.add('A lane do dragão ou do demônio pode ser no top ou no bot'); 
+    agent.add('A melhor forma de identificar isso é olhando p o mini mapa como nessa foto:');
+    agent.add(new Image(minimap_lane));
+    agent.add('Só os monstros da jungle que são fixos');
+    agent.add('13. Não existe build certa, existe build mais recomendada');
+    agent.add('Você deve fazer seus itens de acordo com seus inimigos, pois cada partida é única');
+    agent.add('E por enquanto isso é tudo');
+    agent.add('Ah, lembrei, última e mais importante dica:'); 
+    agent.add('Arena Of Valor, assim como todo MOBA, é um jogo de estratégia'); 
+    agent.add('Você não precisa de muita mecânica, ou de heróis extremamente fortes (apesar de que isso ajuda muito)'); 
+    agent.add('Você só precisa de atenção, principalmente no mapa e na classe que você estiver jogando'); 
+    agent.add('Ah e qualquer dúvida sobre builds ou arcanas é só falar comigo! ;)');
   }
 
   if (filtro.classe) {
     switch(filtro.classe){
       case 'Mago':
-        agent.add('Apesar de serem');
-        agent.add('Bem frágeis');
-        agent.add('Os Magos são');
-        agent.add('Mt mt fortes');
-        agent.add('A principal função deles');
-        agent.add('É causar dano');
-        agent.add('Como a maioria dos heróis do jogo');
-        agent.add('Causam somente dano físico');
-        agent.add('Basta comprar mais armadura');
-        agent.add('Que o dano');
-        agent.add('É menor');
-        agent.add('Por isso magos são importantes');
-        agent.add('São suas habilidades');
-        agent.add('Que causam dano mágico');
-        agent.add('Ignorando a armadura');
-        filtro.tipo = 'AP';
+        agent.add('Hm, magos, tão frágeis mas tão fortes');
+        agent.add('Existem magos Burst, responsáveis por causar dano mágico explosivo e magos de controle, que causam muito stuns e atordoam o time inimigo');
+        agent.add('Ambos foram feitos para participar de team fights, pois sua principal função é causar dano aos heróis inimigos');
+        agent.add('Então, ao jogar com mago esteja sempre rotacionando para ajudar seu time, pois eles precisam muito de você');
         break;
       case 'Atirador':
-        agent.add('Os Atiradores são');
-        agent.add('Os heróis com maior dano');
-        agent.add('Podendo dizer que');
-        agent.add('A defesa deles é o ataque');
-        agent.add('Pois são frágeis');
-        agent.add('E é por isso');
-        agent.add('Que precisam farmar');
-        agent.add('E juntar bastante Gold');
-        agent.add('Para terminar seus itens');
-        agent.add('O mais rápido possível');
-        agent.add('E ficar forte');
-        agent.add('Para derrubar torres');
+        agent.add('Hm, atiradores, tão frágeis mas tão fortes');
+        agent.add('Foram feitos para ser a maior fonte de dano físico, por isso são os responsáveis por focar em objetivos');
+        agent.add('Posicionamento é tudo, então estejam sempre em alerta e nunca fique sozinho pois é a classe mais focada por assassinos e magos');
+        agent.add('Além disso use o limite da distancia de ataque (range) ao seu favor, nunca deixe seus inimigos chegarem próximo de você');
+        agent.add('Nunca fique batendo parado, sempre que atacar alguém vá se movimentando, mantendo a distancia limite');
+        agent.add('Devido a essa característica eles são os heróis que conseguem derrubar torres com maior facilidade, portanto, foca as torres!');
         break;
       case 'Assassino':
-        agent.add('Os Assassino são especializados');
-        agent.add('Em causar muito dano');
-        agent.add('De uma só vez');
-        agent.add('Por isso são');
-        agent.add('Os mais adequados');
-        agent.add('A derrotar montros da Jungle');
-        agent.add('E principalmente');
-        agent.add('Matar Magos e Atiradores');
-        agent.add('Ou quem tiver de bobeira');
-        agent.add('Pelo mapa sozinho');
-        agent.add('Por isso');
-        agent.add('Aproveite bem a moite');
-        agent.add('Garantindo o elemento surpresa');
-        agent.add('E sempre atacando no momento certo');
+        agent.add('Hm, assassinos, sempre com sede de sangue');
+        agent.add('Geralmente são heróis que causam dano explosivo ou burst');
+        agent.add('São responsáveis por assegurar todos os objetivos e farmar tudo: monstros, heróis e torres');
+        agent.add('Seu foco é fazer seus inimigos sentirem medo de andar sozinhos por ai');
+        agent.add('E fica ligado de entrar no momento certo da luta, pois seu papel é finalizar os inimigos');
         break;
       case 'Guerreiro':
-        agent.add('Guerreiros são parecidos com tanques');
-        agent.add('Porém');
-        agent.add('Possuem mais dano');
-        agent.add('Que um tanque');
-        agent.add('O que diminui um pouco sua defesa');
-        agent.add('Seu foco é');
-        agent.add('Ter um alto dano físico');
-        agent.add('Para ataques basicos');
-        agent.add('Mas também');
-        agent.add('Ter itens de defesa');
-        agent.add('Para aguentar dano');
+        agent.add('Hm, guerreiros, sempre surpreendendo o jungle inimigo');
+        agent.add('Eles são parecidos com tanques, porém possuem mais dano e menos defesa que um');
+        agent.add('Geralmente são heróis que fazem split push, e são bons contra assassinos');
+        agent.add('Evite fazer builds full dano/tank em guerreiros, seu forte é justamente esse mix de ataque e defesa');
         break;
       case 'Tanque':
-        agent.add('A principal função do Tanque');
-        agent.add('É proteger o time');
-        agent.add('Principalmente');
-        agent.add('Seu aliado');
-        agent.add('Que mais causa dano');
-        agent.add('Como atiradores e magos');
-        agent.add('São responsáveis por iniciar as batalhas');
-        agent.add('Ter controle de grupo');
-        agent.add('Sendo fundametais');
-        agent.add('Na decisão de avançar ou recuar');
-        agent.add('E o mais importante');
-        agent.add('É não morrer');
-        agent.add('São eles que protegem o time');
+        agent.add('Hm, tanques, sempre carregando seu time nas costas');
+        agent.add('São os principais quando o assunto é proteger aliados');
+        agent.add('Responsáveis por inicias as batalhas e são fundamentais na decisão de avançar ou recuar');
+        agent.add('Tente ao máximo sobreviver e saiba que seu papel é tomar dano no lugar do seu ADC então sempre acompanhe seu time');
         break;
       case 'Suporte':
-        agent.add('Os suportes foram feitos');
-        agent.add('Para estar perto de um aliado');
-        agent.add('Seu foco');
-        agent.add('É ter controle de grupo');
-        agent.add('Porém');
-        agent.add('Eles podem causar um pouco de dano');
-        agent.add('E apesar de serem');
-        agent.add('Os menos populares');
-        agent.add('Com eles o time fica');
-        agent.add('Muito mais forte');
+        agent.add('Hm, suportes, sempre carregando seu time nas costas');
+        agent.add('Seu foco enquanto suporte é ter controle de grupo, incomodando o time inimigo e sempre ao lado de um herói que causa dano');
+        agent.add('Tente ao máximo rotacionar dando visão para garantir segurança do seu time assim como controle de mapa');
         break;
     }
   }
@@ -4027,7 +3922,8 @@ function checarDicas(agent) {
   if(filtro.papel && !filtro.hero){
     switch(filtro.papel) {
       case 'Lane':
-        agent.add('');
+        agent.add('É a função mais fácil, você só precisa manter seu olho no jungle e no mid inimigo, se perceber que algum sumiu do mapa, limpe sua wave rapidamente e volte p debaixo de sua torre');
+        agent.add('Pelo menos durante o inicio da partida, uma vez que objetivos como dragão começam a ser feitos, você deve se comportar de acordo com sua classe');
         break;
       case 'Solo':
         agent.add('');
@@ -4036,7 +3932,10 @@ function checarDicas(agent) {
         agent.add('');
         break;
       case 'Mid':
-        agent.add('');
+        agent.add('Mid é o lugar mais importante no mapa, especialmente no inicio do jogo, uma vez que você perde o mid, você perde bastante controle de mapa e consequentemente perde objetivos');
+        agent.add('Sua função é causar pressão no mapa sempre indo ajudar as outras lanes e retornar para proteger a sua');
+        agent.add('O ideal é sempre fazer essas rotações acompanhando seu jungle e seu suporte, o controle e poder de dano é muito maior');
+        agent.add('Em outras palavras, acompanhe seu jungle nas rotações para fazer dragão e ganks em outras lanes');
         break;
       case 'Jungle':
         agent.add('');
