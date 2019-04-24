@@ -3922,17 +3922,17 @@ function checarDicas(agent) {
   if(filtro.papel && !filtro.hero){
     switch(filtro.papel) {
       case 'Lane':
-        agent.add('É a função mais fácil, você só precisa manter seu olho no jungle e no mid inimigo, se perceber que algum sumiu do mapa, limpe sua wave rapidamente e volte p debaixo de sua torre');
-        agent.add('Pelo menos durante o inicio da partida, uma vez que objetivos como dragão começam a ser feitos, você deve se comportar de acordo com sua classe');
+        agent.add('');
         break;
       case 'Solo':
-        agent.add('');
+        agent.add('Cuidar da solo, conhecida também como lane do demônio, é a função mais fácil, você só precisa manter seu olho no jungle e no mid inimigo durante o early game, se perceber que algum está indo para sua lane, limpe sua wave rapidamente e volte para debaixo de sua torre');
+        agent.add('Passando early game seu foco depende do seu herói, sendo um split pusher, tente fazer pressão no mapa, sempre aproveitando rotações do time adversário para puxar uma lane, não espere que seu time te ajude, seu papel é chamar atenção contrária as tfs que seu time faz, caso seja um tank, seu foco é ajudar seu time nas tfs');
         break;
       case 'Suporte':
-        agent.add('');
+        agent.add('A função mais');
         break;
       case 'Mid':
-        agent.add('Mid é o lugar mais importante no mapa, especialmente no inicio do jogo, uma vez que você perde o mid, você perde bastante controle de mapa e consequentemente perde objetivos');
+        agent.add('Mid é o lugar mais importante no mapa, especialmente no early game, uma vez que você perde o mid, você perde bastante controle de mapa e consequentemente perde objetivos');
         agent.add('Sua função é causar pressão no mapa sempre indo ajudar as outras lanes e retornar para proteger a sua');
         agent.add('O ideal é sempre fazer essas rotações acompanhando seu jungle e seu suporte, o controle e poder de dano é muito maior');
         agent.add('Em outras palavras, acompanhe seu jungle nas rotações para fazer dragão e ganks em outras lanes');
