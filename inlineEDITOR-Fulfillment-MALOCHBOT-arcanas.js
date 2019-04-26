@@ -42,7 +42,10 @@ const BALDUM_SOLO_URL         = 'https://imgur.com/tLQjb78.jpg';
 const BATMAN_URL              = 'https://imgur.com/jUjPPns.jpg';
 const BUTTERFLY_AD_URL        = 'https://imgur.com/Uu5PMbN.jpg';
 const BUTTERFLY_TANK_URL      = 'https://imgur.com/wathWg2.jpg';
-const CAPHENY_URL             = '';
+const CAPHENY_LANE_URL        = 'https://imgur.com/ywPtZ5M.jpg';
+const CAPHENY_LANE2_URL       = 'https://imgur.com/XFOSKjm.jpg';
+const CAPHENY_LANE3_URL       = 'https://imgur.com/t2zgSkQ.jpg';
+const CAPHENY_JG_URL          = 'https://imgur.com/91yUc0g.jpg';
 const CHAUGNAR_AP_URL         = 'https://imgur.com/t1DegVc.jpg';
 const CHAUGNAR_TANK_URL       = 'https://imgur.com/ttaxPaS.jpg';
 const CRESHT_SOLO_URL         = 'https://i.imgur.com/7LBcLt1.jpg';
@@ -165,7 +168,7 @@ const HEROIS_SOLO     = ["Florentino", "Riktor", "Maloch", "Marja", "Superman", 
                         "Arduin", "Rourke", "Zuka", "Baldum", "Arthur", "Omega", "KilGroth", "Zanis", "Gildur", 
                         "Wukong", "Astrid", "Taara", "Veres", "Valhein"];
 
-const HEROIS_LANE     = ["Elsu", "TelAnnas", "Valhein", "TheJoker", "Yorn", "Wisp", "Lindis", "Violet", "Fennik", "Moren", "Hayate"];
+const HEROIS_LANE     = ["Elsu", "TelAnnas", "Valhein", "TheJoker", "Yorn", "Wisp", "Lindis", "Violet", "Fennik", "Moren", "Hayate", "Capheny"];
 
 const HEROIS_MID      = ["Elsu", "Sephera", "Tulen", "Liliana", "Raz", "Ignis", "Natalya", "TheFlash", "Kahlii", "Lauriel", 
                         "Aleister", "Ilumia", "Jinnar", "Mganga", "Krixi", "Diaochan", "Preyta", "Gildur", "Veera", "Azzenka", 
@@ -176,7 +179,7 @@ const HEROIS_SUPORTE  = ["Annette", "YBneth", "Gildur", "TeeMee", "Baldum", "Sep
 
 const HEROIS_JUNGLE   = ["Lindis", "Rourke", "Quillen", "Violet", "Nakroth", "Zephys", "Murad", "Elsu", "Kriknak", "Zill", 
                         "Slimz", "Ryoma", "Moren", "Zanis", "Wukong", "Wisp", "Fennik", "Butterfly", "Tulen", "Raz", "Batman", 
-                        "Wonder Woman", "Astrid", "Airi", "Amily", "Zuka", "Florentino", "Darcy", "Hayate"];
+                        "Wonder Woman", "Astrid", "Airi", "Amily", "Zuka", "Florentino", "Darcy", "Hayate", "Capheny"];
 
 const talento_flick              = '';
 const talento_punir              = '';
@@ -259,7 +262,7 @@ const CONCLUIDO          = '';
 //              Lista de Ultimas Builds Adicionadas 08/03/2018    //
 ////////////////////////////////////////////////////////////////////
 
-const ULTIMASBUILDS_1 = "Airi, Alice, Aleister, Amily, Annette, Baldum, D´Arcy, Fennik, Florentino, Hayate, Ilumia, Lauriel, Lindis, Maloch, Max, Mina, Moren, Omen, Raz, Riktor, Rourke, Roxie, Ryoma, Sephera, Superman, TeeMee, Tel´Annas, The Flash, Tulen, Valhein, Wisp e Y´Bneth";
+const ULTIMASBUILDS_1 = "Ah da Capheny eu sei que tem. E já peço desculpas, as builds ainda não estão atualizadas de acordo com último patch de abril, mas garanto que é por um bom motivo!";
 const ULTIMASBUILDS_2 = "";
 const ULTIMASBUILDS_3 = "";
 
@@ -366,11 +369,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
   function ultimasBuilds(agent){
 
-    agent.add("Só um instante");
-    agent.add("Pronto, atualizei as builds dos seguintes heróis:");
+    //agent.add("Só um instante");
+    //agent.add("Pronto, atualizei as builds dos seguintes heróis:");
     agent.add(ULTIMASBUILDS_1);
-    agent.add('Caso esteja sentindo falta de alguma build');
-    agent.add('É só comentar no post fixo da página que em breve eu adiciono aqui!');       
+    //agent.add('Caso esteja sentindo falta de alguma build');
+    //agent.add('É só comentar no post fixo da página que em breve eu adiciono aqui!');       
 
   }
 
@@ -957,8 +960,40 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
       case 'Capheny':
 
-        agent.add('Hm, então quer dizer que resolveu jogar de Capheny... Infelizmente não tenho builds para ela!');
-        agent.add('Talvez eu tenha quando ela for lançada...');
+        agent.add('Hm, então quer dizer que resolveu jogar de Capheny...');
+        agent.add('Deixa eu ver o que tenho para você...');
+        if (!filtro.funcao) {
+          agent.add('Tenho builds na jungle e na lane');
+          agent.add('Caso jogue na lane, da uma testada nessa:');
+          agent.add(new Image(CAPHENY_LANE3_URL));
+          agent.add('Caso jungle:');
+          agent.add(new Image(CAPHENY_JG_URL));
+          agent.add('E te digo, o laser é só um detalhe, o forte dela é o auto attack. Tenta sempre se movimentar enquanto atacar pra tirar o melhor dela, ah, e a ult dela continua ativada mesmo se você for preso pela Arum, então fica ligado!');
+          agent.add('Tenta esse combo: 1-AA-2-AA-1-AA-AA-AA...');
+          agent.add('Lembrando que a passiva dela é a cada 1% de velocidade de ataque = 2 de dano e o limite máximo de velocidade de ataque é 200%');
+          } else {
+          if (getRole(filtro.funcao).includes(filtro.hero)) {
+            switch(filtro.funcao){
+              case 'Lane':
+                agent.add('Aqui, tenho essa:');
+                agent.add(new Image(CAPHENY_LANE3_URL));
+                agent.add('Mas dependendo do time inimigo, pode ser assim também:');
+                agent.add(new Image(CAPHENY_LANE2_URL));
+                agent.add('Lembrando que a passiva dela é a cada 1% de velocidade de ataque = 2 de dano, por isso recomendo botas de guerra');
+                break;
+              case 'Jungle':
+                agent.add('Aqui oh:');
+                agent.add(new Image(CAPHENY_JG_URL));
+                agent.add('Lembrando que a passiva dela é a cada 1% de velocidade de ataque = 2 de dano, por isso recomendo botas de guerra');
+                break;
+            }
+          } else {
+            agent.add('Opa, pera ai, '+filtro.funcao+' ?');
+            agent.add(FUNCAO_ERRADA_1);
+            agent.add(FUNCAO_ERRADA_2);
+            agent.add('A Capheny é melhor se utilizada na lane ou na jungle!');
+          }
+        }
         break;
 
       case 'Chaugnar':
@@ -3240,8 +3275,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         case 'Capheny':
 
-          agent.add('Infelizmente ainda não está em nosso servidor');
-          agent.add('Assim que tiver noticias dela, te informo melhor, ta bom?');
+          agent.add('As arcanas recomendadas para jogar de Capheny são:'); 
+          agent.add('Vermelhas: Descontrole x10');
+          agent.add('Roxas: Guerrilha x7 / Ladrão x3');
+          agent.add('Verdes: Ferrão x10');  
           break;
 
         case 'Chaugnar':
@@ -3831,7 +3868,7 @@ function checarDicas(agent) {
     agent.add('Se quiser dicas de jogo por classes de heróis');
     agent.add('Como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:');
     agent.add('´dicas + classe´');
-    agent.add('tempo de leitura de 35seg');
+    agent.add('tempo de leitura de 20seg');
     agent.add('Para dicas em determinado papel do jogo');
     agent.add('Como mid, suporte, lane, jungle ou solo');
     agent.add('´dicas + papel´');
