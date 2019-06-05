@@ -4237,7 +4237,15 @@ function checarDicas(agent) {
 
       case 'Max':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.combo){
+          agent.add('As habilidades do Max foram feitas para situações específicas, portanto não existe um combo específico para ele\n\nMinha dica é, não use sua ult para tentar matar aquele inimigo que escapou com pouco hp, use nas tfs para afastar ou retirar atiradores e assassinos da batalha');  
+        }else{
+          agent.add('O Max é um guerreiro muito forte capaz de mudar o resultado de tfs se souber usar sua ult global no momento certo');
+          agent.add('Tenha em mente duas coisas: O Max não é um tank e seu foco é ultar no atirador ou no assassino inimigo, retirando/afastando eles das tfs');
+          agent.add('Ao jogar de Max, é importante que você tenha uma boa noção de mapa, pois sua ult apesar de ter longo tempo de recarga ajuda a informar o posicionamento do time inimigo');
+          agent.add('O ideal é evitar de usar sua ult a longa distancia, pois dependendo da distância, o inimigo pode voltar base antes de você chegar ou o time inimigo pode estar só esperando você chegar para te atacar');
+          agent.add('Use sua segunda skill para cancelar habilidades dos inimigos, não use somente para causar dano. E lembre-se, nem sempre vale a pena usar sua ult para tentar matar aquele inimigo que fugiu com pouco hp, o ideal é usar sua ult para ajudar nas tfs que já estão rolando');
+        }
         break;
 
       case 'Mganga':
@@ -4418,7 +4426,7 @@ function checarDicas(agent) {
           agent.add('Tulen é um mago de alta mobilidade, com bastante dano explosivo e grande poder de finalização de seus inimigos com sua ult');
           agent.add('Comece o jogo upando sua segunda skill, pois isso te ajuda em possíveis ganks no early game e maximize a primeira skill, é sua maior fonte de dano além da passiva');
           agent.add('Apesar de acertar a longa distancia, as skills do Tulen foram feitas para ser usadas o mais próximo possível do inimigo');
-          agent.add('Acertando corretamente os 3 raios da primeira skill, e acertando a segunda skill no momento da partida e da chegada, garante os 5 stacks necessários para ativar a passiva');
+          agent.add('Acertando corretamente os 3 raios da primeira skill e acertando a segunda skill no momento da partida e da chegada, você garante os 5 stacks necessários para ativar a passiva');
           agent.add('Seu combo básico é:\n\nS1->S2->AA->ult\n\nMinha dica é, utilize a primeira skill nos minions, é mais fácil de acertar os 3 raios para pelo menos acumular stack antes da tf');
           agent.add('Lembrando que é importante que sua ult mate o alvo, pois além de ativar a passiva novamente após atingir um alvo, caso ele morra, seu cooldown é reduzido podendo ser usada novamente em poucos segundos em outro inimigo');
         }
