@@ -56,7 +56,10 @@ const DARCY_JG_URL            = 'https://i.imgur.com/ht4eUC2.jpg';
 const DIAOCHAN_MID_URL        = 'https://i.imgur.com/TD4SJKh.jpg';
 const DIAOCHAN_SUP_URL        = 'https://i.imgur.com/GFCHu1t.jpg';
 const ELSU_URL                = 'https://i.imgur.com/I7InEQ0.jpg';
-const ERROL_URL               = '';
+const ERROL_SOLO_URL          = 'https://imgur.com/veD54DX.jpg';
+const ERROL_JG_URL            = 'https://imgur.com/HJQOdiL.jpg';
+const ERROL_JG2_URL           = 'https://imgur.com/M6G6ZBw.jpg';
+const ERROL_TROLL_URL         = 'https://imgur.com/YnahHwp.jpg';
 const FENNIK_URL              = 'https://imgur.com/KLhS9S4.jpg';
 const FENNIK_2_URL            = 'https://imgur.com/BVUKQz3.jpg';
 const FLORENTINO_URL          = 'https://i.imgur.com/hHPwhJp.jpg';
@@ -160,13 +163,13 @@ const ZILL_URL                = 'https://i.imgur.com/RC62pgL.jpg';
 const ZUKA_URL                = 'https://i.imgur.com/93Hu2Jl.jpg';
 
 ////////////////////////////////////////////////////////////////////
-//                   Lista de Roles por Heroi                     //
+//                   Lista de Roles por Heroi  HEROINOVO          //
 ////////////////////////////////////////////////////////////////////
 
 const HEROIS_SOLO     = ["Florentino", "Riktor", "Maloch", "Marja", "Superman", "Xeniel", "Omen", "YBneth", "Cresht", 
                         "Ryoma", "Max", "Arum", "Wonder Woman", "Skud", "Airi", "Roxie", "Amily", "LuBu", "Zephys", 
                         "Arduin", "Rourke", "Zuka", "Baldum", "Arthur", "Omega", "KilGroth", "Zanis", "Gildur", 
-                        "Wukong", "Astrid", "Taara", "Veres", "Valhein"];
+                        "Wukong", "Astrid", "Taara", "Veres", "Valhein", "Errol"];
 
 const HEROIS_LANE     = ["Elsu", "TelAnnas", "Valhein", "TheJoker", "Yorn", "Wisp", "Lindis", "Violet", "Fennik", "Moren", "Hayate", "Capheny"];
 
@@ -175,49 +178,43 @@ const HEROIS_MID      = ["Elsu", "Sephera", "Tulen", "Liliana", "Raz", "Ignis", 
                         "Annette", "Darcy"];
 
 const HEROIS_SUPORTE  = ["Annette", "YBneth", "Gildur", "TeeMee", "Baldum", "Sephera", "Peura", "Mina", "Grakk", "Chaugnar", "Alice",
-                        "Arum", "Thane", "Ormarr", "Cresht", "Riktor", "Xeniel", "Lumburr", "Arduin", "Superman", "Aleister", "Diaochan"];
+                        "Arum", "Thane", "Ormarr", "Cresht", "Riktor", "Xeniel", "Lumburr", "Arduin", "Superman", "Aleister", "Diaochan", "Errol"];
 
 const HEROIS_JUNGLE   = ["Lindis", "Rourke", "Quillen", "Violet", "Nakroth", "Zephys", "Murad", "Elsu", "Kriknak", "Zill", 
                         "Slimz", "Ryoma", "Moren", "Zanis", "Wukong", "Wisp", "Fennik", "Butterfly", "Tulen", "Raz", "Batman", 
-                        "Wonder Woman", "Astrid", "Airi", "Amily", "Zuka", "Florentino", "Darcy", "Hayate", "Capheny"];
-
-const talento_flick              = '';
-const talento_punir              = '';
-const talento_curar              = '';
-const talento_executar           = '';
-const talento_inativarTorre      = '';
+                        "Wonder Woman", "Astrid", "Airi", "Amily", "Zuka", "Florentino", "Darcy", "Hayate", "Capheny","Errol"];
 
 ////////////////////////////////////////////////////////////////////
 //                    TESTE de Herois Objeto                      //
 ////////////////////////////////////////////////////////////////////
 
-const AIRI_META = {
-  "heroi" : "Airi",
-  "meta" : {
-    "builds" : { 
-      "Solo" : { 
-        "properties" : {
-          "build_url": { "1" : AIRI_LANE_URL },
-          "dicas": { "1" : "blablabla", "2" : "blablabla", "3" : "blablabla" },
-          "talentos": { "1" : talento_executar},
-          "arcana": {"vermelha": "", "roxa": "", "verde":""}
-        }
-      },
-      "Jungle" : { 
-        "properties" : {
-          "build_url": { "1" : AIRI_LANE_URL },
-          "dicas": { "1" : "blablabla", "2" : "blablabla", "3" : "blablabla" },
-          "talentos": { "1" : talento_punir},
-          "arcana": {"vermelha": "", "roxa": "", "verde":""}
-        }
-      },
-    },
-    "arcanas" : {
-      "listas" : [{"vermelha": "", "roxa": "", "verde":""}, {"vermelha": "", "roxa": "", "verde":""}],
-      "opcional" : [{"vermelha": "", "roxa": "", "verde":""}],
-    }
-  }
-};
+// const AIRI_META = {
+//   "heroi" : "Airi",
+//   "meta" : {
+//     "builds" : { 
+//       "Solo" : { 
+//         "properties" : {
+//           "build_url": { "1" : AIRI_LANE_URL },
+//           "dicas": { "1" : "blablabla", "2" : "blablabla", "3" : "blablabla" },
+//           "talentos": { "1" : talento_executar},
+//           "arcana": {"vermelha": "", "roxa": "", "verde":""}
+//         }
+//       },
+//       "Jungle" : { 
+//         "properties" : {
+//           "build_url": { "1" : AIRI_LANE_URL },
+//           "dicas": { "1" : "blablabla", "2" : "blablabla", "3" : "blablabla" },
+//           "talentos": { "1" : talento_punir},
+//           "arcana": {"vermelha": "", "roxa": "", "verde":""}
+//         }
+//       },
+//     },
+//     "arcanas" : {
+//       "listas" : [{"vermelha": "", "roxa": "", "verde":""}, {"vermelha": "", "roxa": "", "verde":""}],
+//       "opcional" : [{"vermelha": "", "roxa": "", "verde":""}],
+//     }
+//   }
+// };
 
 ////////////////////////////////////////////////////////////////////
 //                     Lista de falas padrão                      //
@@ -235,6 +232,7 @@ const BUILD_EM_BREVE = "Me pergunta depois, nesse momento to pesquisando novas b
 
 const minimap_lane   = 'https://imgur.com/OsV1TTX.jpg';
 const rotacao_jungle = 'https://imgur.com/CqkiSZ5.jpg';
+const itens_jungle   = 'https://imgur.com/RO8NInz.jpg';
 
 ////////////////////////////////////////////////////////////////////
 //                     Lista de itens ImgURL                      //
@@ -247,6 +245,22 @@ const FLASHY_BOOTS    = 'https://imgur.com/Mch6l2p.jpg';
 const ENCHANTED_BOOTS = 'https://imgur.com/hsP2pCL.jpg';
 const WAR_BOOTS       = 'https://imgur.com/5IdduzO.jpg';
 const HERMES_BOOTS    = 'https://imgur.com/4ya8Bov.jpg';
+
+
+const ESSENCIAVENTO_SUP  = 'https://imgur.com/FrOCWr9.jpg';
+const ANELAMIGO_SUP      = 'https://imgur.com/bXfqq2l.jpg';
+const MARCAPOSEIDON_SUP  = 'https://imgur.com/49qLAdm.jpg';
+const BRACADEIRA_SUP     = 'https://imgur.com/39p5vAk.jpg';
+
+const talento_flick              = 'https://imgur.com/JTvWpkp.jpg';
+const talento_punir              = 'https://imgur.com/u4FlCtT.jpg';
+const talento_frosty             = 'https://imgur.com/bmd9FOv.jpg';
+const talento_curar              = 'https://imgur.com/XAwDaEV.jpg';
+const talento_executar           = 'https://imgur.com/sT2ulCU.jpg';
+const talento_inativarTorre      = 'https://imgur.com/yFdlflS.jpg';
+const talento_atordoar           = 'https://imgur.com/4eOzXzU.jpg';
+const talento_purificar          = 'https://imgur.com/AZf7cZi.jpg';
+const talento_sprint             = 'https://imgur.com/q8vAXah.jpg';
 
 ////////////////////////////////////////////////////////////////////
 //                     Lista de memes ImgURL                      //
@@ -262,10 +276,9 @@ const CONCLUIDO          = '';
 //              Lista de Ultimas Builds Adicionadas 08/03/2018    //
 ////////////////////////////////////////////////////////////////////
 
-const ULTIMASBUILDS_1 = "Ah da Capheny eu sei que tem. E já peço desculpas, as builds ainda não estão atualizadas de acordo com último patch de abril, mas garanto que é por um bom motivo!";
+const ULTIMASBUILDS_1 = "Ah da Capheny eu sei que tem, e Errol também chegou! E peço desculpas, as builds ainda não estão atualizadas de acordo com último patch de abril, mas garanto que é por um bom motivo!";
 const ULTIMASBUILDS_2 = "";
 const ULTIMASBUILDS_3 = "";
-
 
 ////////////////////////////////////////////////////////////////////
 //                      Lista de ARCANAS                          //
@@ -313,12 +326,37 @@ const ARCANA_GREEN_LIST            = [ARCANA_GREEN_FORTIFICACAO, ARCANA_GREEN_AC
 //                                                                                           GLOSSARIO                                                                  //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-////////////////////////////////////////////////////////////////////
-//                               JOGO                             //
-////////////////////////////////////////////////////////////////////
+const info_AoV = {"termo":"AoV", "definicao":"É a abreviação do nome Arena of Valor"};
+const info_pvp = {"termo":"pvp", "definicao":"É a abreviação de Player vs Player, que significa, jogador vs jogador. Em outras palavras, você joga contra pessoas reais."};
+const info_bots = {"termo":"bots", "definicao":"É tipo um parente meu, mas que foi programado para jogar ao invés falar com você."};
+const info_hp = {"termo":"hp", "definicao":"É a abreviação de Hit Points, que significa a quantidade de vida que um herói tem."};
+const info_mp = {"termo":"mp", "definicao":"É a abreviação de Mana Points, que significa a quantidade de mana que um herói tem."};
+const info_AD = {"termo":"AD", "definicao":"É a abreviação de Attack Damage, pode se referir a quantidade de dano que um herói dá com ataques normais, ou um tipo de herói que causa dano físico."};
+const info_AP = {"termo":"AP", "definicao":"É a abreviação de Ability Power, pode se referir a quantidade de poder de habilidade que um herói tem, ou um tipo de herói que causa dano mágico."};
+const info_OP = {"termo":"OP", "definicao":"É a abreviação de overpowered, mas de forma geral significa que aquele herói ou item ou arcana ou habilidade é muito forte."};
+const info_Nerf = {"termo":"Nerf", "definicao":"É quando um herói ou item ou monstro do jogo sofre um ajuste em seus atributos e ficam mais fracos."};
+const info_gank = {"termo":"gank", "definicao":"É a abreviação de Gang Kill, significa que um grupo de heróis se junta para atacar os inimigos, sem que o time inimigo perceba."};
+const info_farm = {"termo":"farm", "definicao":"Refere-se ao ato de matar os minions da sua lane, da jungle ou outro monstro, para ganhar gold e experiência."};
+const info_burst = {"termo":"burst", "definicao":"Refere-se a um herói que é capaz de causar muito dano em pouco tempo. Também conhecido como dano explosivo. Magos geralmente possuem essa capacidade, assim como alguns assassinos."};
+const info_cooldown = {"termo":"Cooldown", "definicao":"É o tempo de espera para se usar uma habilidade"};
+const info_CDR = {"termo":"CDR", "definicao":"É a abreviação de cooldown reduction, que significa redução de tempo de espera"};
+const info_autoattack = {"termo":"autoattack", "definicao":"Refere-se ao ataque básico normal de todo herói."};
+const info_poke = {"termo":"Poke", "definicao":"É quando um herói é capaz de causar dano a uma longa distância, de forma que ele possa abusar dessa habilidade sem sofrer nenhum dano do inimigo."};
+const info_carry = {"termo":"Carry", "definicao":"É o herói capaz de ganhar partidas. A medida que o tempo do jogo aumenta, e mais o herói consegue farmar mais forte ele fica."};
+const info_ADC = {"termo":"ADC", "definicao":"Refere-se a um herói capaz de ganhar partidas e são fortes causando dano físico. Geralmente o termo ADC é designado a atiradores, mas alguns guerreiros ou assassinos podem também ser considerados ADC."};
+const info_TF = {"termo":"TF", "definicao":"Refere-se a batalha entre os heróis dos dois times que pode ocorrer em alguma área do mapa."};
+const info_Roam = {"termo":"Roam", "definicao":"Refere-se ao ato de se mover pelo mapa de forma estratégica, dando visão de mapa para o time, enquanto procura oportunidades de ganks, kills e objetivos"};
+const info_SplitPush = {"termo":"SplitPush", "definicao":"Refere-se ao ato de se separar do time para puxar sozinho uma lane, forçando o time inimigo se dividir para defender pontos diferentes de ataque."};
+const info_proxy = {"termo":"proxy", "definicao":"Refere-se ao ato de farmar entre as torres 1 e torres 2 de uma lane. Geralmente feita na solo lane por players experientes. Você limpa a wave de minions antecipadamente e força o solo inimigo a defender a torre enquanto você fica livre para rotacionar pelo mapa."};
+const info_flick = {"termo":"flick", "definicao":"É o talento de teletransporte, chamado de instante."};
+const info_feedar = {"termo":"feedar", "definicao":"É o ato de morrer propositalmente para um herói inimigo, fazendo esse herói ficar muito forte."};
+const info_buff = {"termo":"buff", "definicao":"Pode significar que um herói ou item após um ajuste ficou mais forte, ou quando após usar uma habilidade o herói alvo se torna mais forte."};
+const info_stack = {"termo":"Stack", "definicao":"Refere-se aos benefícios incrementais obtidos ao realizar uma determinada tarefa, como matar um herói ou monstro."};
+const info_bait = {"termo":"bait", "definicao":"É quando você aparece numa posição favorável para o time inimigo te gankar, porém você faz isso de propósito enquanto jogadores do seu time estão escondidos esperando esse gank do time inimigo, para surpreender eles e seu time ter a vantagem da luta."};
+const info_dive = {"termo":"dive", "definicao":"É quando seu time ignora o dano que vai sofrer da torre e entra dentro do raio dela para matar algum inimigo. Geralmente é feito quando algum membro do time tem o talento inativar torre ou quando o tank do time entra primeiro no raio, pois assim ele vai aguentar o dano da torre."};
+const info_bush = {"termo":"bush", "definicao":"Também conhecido como matinho ou moita e espalhado em diversas partes do mapa, a bush é o nome comum usado para definir a região do matinho. Nessas regiões você consegue se esconder e somente com habilidades de revelação ou entrando na mesma bush, é que seu inimigo vai conseguir te ver."};
 
-const info_AOV = {"termo":"AoV", "definicao":"Uma abreviação do nome Arena of Valor"};
-const GLOSSARIO = [];
+const globalGlossario = [info_AoV,info_pvp,info_bots,info_hp,info_mp,info_AD,info_AP,info_OP,info_Nerf,info_gank,info_farm,info_burst,info_cooldown,info_CDR,info_autoattack,info_poke,info_carry,info_ADC,info_TF,info_Roam,info_SplitPush,info_proxy,info_flick,info_feedar,info_buff,info_stack,info_bait,info_dive,info_bush];
 
 /////////////////////////////////////////////////////////////////////
 //                          Inicio do BOT                          //
@@ -381,15 +419,15 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     agent.add("Serviços do Maloch Bot:");
     agent.add("1. Builds");
     agent.add("Você pode digitar");
-    agent.add("´build + nome do herói´");
-    agent.add("´build + nome do herói + nome da lane´");
+    agent.add("´build [herói] (lane)´");
     agent.add("2. Arcanas");
     agent.add("Você pode digitar");
     agent.add("´arcanas´ - Para entender melhor");
-    agent.add("´arcana + nome do herói´");
+    agent.add("´arcanas [herói]´");
     agent.add("3. Listar últimas builds adicionadas");
     agent.add("Você pode digitar");
     agent.add("´últimas builds´");
+    agent.add("Legenda: entre [ ] é obrigatório, entre ( ) opcional");
   }
 
   function listarAlgo(agent){
@@ -510,9 +548,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
   function detalharItens(agent){
     var boots    = agent.parameters.boots;
     var detalhar = agent.parameters.detalhes;
-
     let filtro = { bota:boots, detalhe:detalhar }; 
-
     if(filtro.detalhe && filtro.bota){
       switch(filtro.bota){
         case 'boots':
@@ -568,12 +604,28 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('Ideal para ROAMING, agilizar nas rotações e outros heróis com baixa mobilidade');
           agent.add('Ao levar dano ou atacar algum inimigo perde o efeito Ligeiro');
           break;
-          
       }
     }
-
-
   }
+
+  function glossarioExplicar(agent){
+    const glossario = agent.parameters.Conceitos;
+    const termo     = agent.parameters.glossaryTerms;
+    var i;
+    
+    if(!termo){
+      agent.add('Não entendi o termo que você disse, tenta de outro jeito!');
+    }
+
+    if(glossario && termo){
+      for (i in globalGlossario){
+        if(globalGlossario[i].termo == termo){
+          agent.add(globalGlossario[i].definicao);
+        }
+      }
+    }
+  }
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                 BUILDS                                                                               //
@@ -1162,9 +1214,48 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
       case 'Errol':
 
-        agent.add('Errol... deixa eu ver...');
-        agent.add('Infelizmente ainda não está em nosso servidor');
-        agent.add('Assim que tiver noticias dele, te informo melhor, ta bom?'); 
+        agent.add('Hm, então quer dizer que resolveu jogar de Errol...');
+        agent.add('Deixa eu ver o que tenho');
+        if (!filtro.funcao) {
+          agent.add('Tenho builds na jungle e na lane do Demônio');
+          agent.add('Caso jogue na solo, da uma testada nessa:'); 
+          agent.add(new Image(ERROL_SOLO_URL));
+          agent.add('Serve bem pra split push e ganks no mid.');
+          agent.add('Caso jogue na jungle'); 
+          agent.add(new Image(ERROL_JG_URL));
+          agent.add('Com essa build seu foco é gank! Mas não esquece das torres');
+          agent.add('Maximiza a segunda skill dele primeiro, é a maior fonte de dano e só entra numa luta depois de stackar a passiva e ativar o roubo de vida. Com cuidado pois ele não fica imune a controle enquanto usa as habilidades');
+          agent.add('E você pode fazer Capa de Gelo no lugar da Omniarma, fica mais fácil de combar com a segunda skill');
+          agent.add('Ah, vê se não testa herói novo em ranked');
+        } else {
+          if (getRole(filtro.funcao).includes(filtro.hero)) {
+            switch(filtro.funcao){
+              case 'Solo':
+                agent.add('Aqui, tenho essa:');
+                agent.add(new Image(ERROL_SOLO_URL));
+                agent.add('Seu foco é split push e ganks no mid!');
+                break;
+              case 'Jungle':
+                agent.add('Posso te sugerir qualquer uma dessas:');
+                agent.add(new Image(ERROL_JG_URL));
+                agent.add(new Image(ERROL_JG2_URL));
+                agent.add('Seu foco aqui é participar de ganks e caso tenha um assassino no outro time te indico a segunda!');
+                break;
+              case 'Suporte':
+                agent.add('Olha não te indico muito mas já que vc quer');
+                agent.add(new Image(ERROL_TROLL_URL));
+                break;
+              }
+          } else {
+            agent.add('Opa, pera ai, '+filtro.funcao+' ?');
+            agent.add(FUNCAO_ERRADA_1);
+            agent.add(FUNCAO_ERRADA_2);
+            agent.add('O Errol é melhor se utilizado na Solo ou na Jungle!');
+		        agent.add('Mas se quiser ser o troll da partida');
+		        agent.add('Da pra usar ele suporte, mas não recomendo:');
+		        agent.add(new Image(ERROL_TROLL_URL));
+          }
+        }
         break;
 
       case 'Fennik':
@@ -1992,8 +2083,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Quillen':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Quillen...');
-        agent.add('É, pelo visto alguém gosta de jogar com heróis quebrados...');
-        agent.add('Mas chega de papo');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(QUILLEN_URL));
@@ -2964,72 +3053,32 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
     if(arcanas && !filtro.explicar && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.tipo){
       agent.add('Para informações sobre arcanas digite:');
-      agent.add('´arcana informações´');
-      agent.add('Tempo de leitura de 1min30seg');
+      agent.add('´arcanas informações´');
+      agent.add('Leitura longa');
       agent.add('Para arcanas mais indicadas para iniciantes:');
-      agent.add('´arcana para iniciantes´');
-      agent.add('Tempo de leitura de 35seg');
+      agent.add('´arcanas para iniciantes´');
       agent.add('Se quiser arcanas “genéricas” para classes de heróis');
       agent.add('Como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:');
-      agent.add('´arcana + classe´');
-      agent.add('Tempo de leitura de 35seg');
+      agent.add('´arcanas [classe]´');
       agent.add('Se quiser saber as arcanas recomendadas para um herói:');
-      agent.add('´arcana + nome do herói´, não contém texto explicativo');
+      agent.add('´arcanas [herói]´');
     }
 
     if(arcanas && filtro.explicar){
-      agent.add('As arcanas são atributos extras');
-      agent.add('Que você equipa ao seu herói');
-      agent.add('Antes da partida começar');
-      agent.add('Esses atributos extra'); 
-      agent.add('Vão te dar vantagens sobre seus inimigos');
-      agent.add('Existem três tipos de arcanas:');
-      agent.add('Vermelha, Roxa e Verde');
-      agent.add('Elas possuem 3 níveis');
-      agent.add('E o mais indicado ');
-      agent.add('É comprar somente arcanas nvl 3');
-      agent.add('E minhas dicas de arcana');
-      agent.add('Vão ser para esse nível');
-      agent.add('Lembrando que');
-      agent.add('Por causa do preço elevado');
-      agent.add('O ideal mesmo ');
-      agent.add('É começar investindo seu Gold nelas');
-      agent.add('Além de serem as melhores');
-      agent.add('São as mais utilizadas');
-      agent.add('Nos elo mais alto');
-      agent.add('Se você quer evoluir na ranked');
-      agent.add('Você precisa ter ');
-      agent.add('Pelo menos duas página');
-      agent.add('De arcanas no nível 3');
-      agent.add('Com as arcanas certas');
-      agent.add('Seu herói será mais forte');
-      agent.add('Que outros');
-      agent.add('Que possuirem arcanas inferiores'); 
-      agent.add('Caso você seja iniciante');
-      agent.add('E não sabe direito ainda');
-      agent.add('A classe de herói deseja jogar');
-      agent.add('Basta digitar');
-      agent.add('´Melhores arcanas para iniciante´');
-      agent.add('E caso já saiba');
-      agent.add('A classe que quer jogar');
-      agent.add('Basta digitar o nome');
-      agent.add('Por exemplo:');
-      agent.add('´melhores arcanas para mago´');
-      agent.add('Lembrando que as classes são:');
-      agent.add('Atirador, Assassino, Guerreiro');
-      agent.add('Suporte, Tanque e Mago');
-      agent.add('Ahh, lembrando ');
-      agent.add('É apenas uma sugestão');
-      agent.add('Principalmente');
-      agent.add('Para quem é novo no jogo');
-      agent.add('Agora');
-      agent.add('Se você já entende');
-      agent.add('E quer uma específica');
-      agent.add('Para determinado herói');
-      agent.add('Basta solicitar arcanas');
-      agent.add('E o nome do herói');
-      agent.add('Que eu te falo as melhores');
-      agent.add('Segundo os Pro Players!');
+      agent.add('O texto é meio longo');
+      agent.add('Mas vale a pena ler');
+      agent.add('Minha recomendação é');
+      agent.add('Esperar eu concluir');
+      agent.add('E depois subir');
+      agent.add('E ler com calma');
+      agent.add('As arcanas são atributos extras que você equipa ao seu herói antes da partida começar\n\nEsses atributos extra vão te dar vantagens sobre seus inimigos, pois seu poder fica maior já no inicio na partida');
+      agent.add('Existem três tipos de arcanas:\n\nVermelha, Roxa e Verde\n\nE cada cor é divida em 3 níveis. O mais indicado é ter páginas com arcanas de nível 3, que é o mais alto e oferece melhores atributos');
+      agent.add('Todas as minhas recomendações de arcanas vão ser para esse nível\n\nLembrando que por causa do preço elevado o ideal mesmo é começar investindo seu gold nessas arcanas');
+      agent.add('Elas podem não fazer muita diferença no início, mas se deseja evoluir na ranked você vai precisar ter pelo menos duas páginas de arcanas no nível 3');
+      agent.add('Caso você seja iniciante e não sabe com que classe quer jogar, você pode digitar:\n\n´melhores arcanas para iniciante´\n\nQue te indico a combinação que funciona muito bem em qualquer herói');
+      agent.add('Mas caso já saiba basta me pedir de forma específica, por exemplo:\n\n´melhores arcanas para mago´\n\nLembrando que as classes são: Atirador, Assassino, Guerreiro, Suporte, Tanque e Mago');
+      agent.add('Ahh, lembrando, é apenas a minha sugestão, principalmente para quem é novo no jogo.\n\nA medida que você entende e tem gold suficiente para comprar mais páginas e arcanas, você pode montar conforme desejar');
+      agent.add('Agora, se você já entende e quer arcanas específicas para um determinado herói, basta solicitar:\n\n´arcanas [herói]´\n\nE eu te falo as mais indicadas de acordo com a opinião de pro players');
       agent.add('Mas e ai');
       agent.add('Quer alguma dica de arcanas?');
       agent.add('Se sim');
@@ -3037,29 +3086,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     }
 
     if (filtro.iniciante) {
-      agent.add('As melhores arcanas para iniciante');
-      agent.add('São arcanas para Tanks/Suportes');
-      agent.add('Pois basicamente');
-      agent.add('Funciona com todos os heróis');
-      agent.add('E é uma boa alternativa');
-      agent.add('Caso você não saiba direito');
-      agent.add('Com que tipo de herói');
-      agent.add('Você gosta de jogar');
-      agent.add('As arcanas são:');
-      agent.add('Vermelhas: Indomável');
-      agent.add('Roxas: Benevolência');
-      agent.add('Verdes: Coragem');
-      agent.add('Se você tiver uma página'); 
-      agent.add('Com 10 de cada'); 
-      agent.add('No total');
-      agent.add('A soma disso vai ser:');
-      agent.add('+10% de Velocidade de Ataque');
-      agent.add('+1162 de HP máximo');
-      agent.add('+23 de Armadura');
-      agent.add('Regeneração de 52 HP');
-      agent.add('a cada 5 segundos');
-      agent.add('+4% de Velocidade de movimento');
-      agent.add('+6% de redução de recarga de habilidade');
+      agent.add('As melhores arcanas para iniciante são arcanas para tanks e suportes, e é uma boa alternativa caso você não saiba com que classe de herói você mais gosta de jogar');
+      agent.add('Basicamente elas funcionam muito bem com todos os heróis, pois garantem atributos importantes de sustain para o seu herói');
+      agent.add('As arcanas são:\n\nVermelhas: Indomável\nRoxas: Benevolência\nVerdes: Coragem');
+      agent.add('Se você tiver uma página com 10 de cada o total vai ser:'); 
+      agent.add('+10% de Velocidade de Ataque\n+1162 de HP máximo\n+23 de Armadura\n+Regeneração de 52 HP a cada 5 segundos\n+4% de Velocidade de movimento\n+6% de redução de recarga de habilidade');
     }
 
     if (filtro.classe && !filtro.tipo) {
@@ -3088,79 +3119,36 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     if(filtro.tipo && !filtro.hero){
       switch(filtro.tipo) {
         case 'AD':
-          agent.add('As arcanas mais recomendadas');
-          agent.add('Para heróis desse tipo são:');
-          agent.add('Indomável, Guerrilha/Tirania (5 de cada) e Ferrão');
-          agent.add('Se você tiver uma página'); 
-          agent.add('Com 10 de cada'); 
-          agent.add('No total');
-          agent.add('A soma disso vai ser:');
-          agent.add('+637 de HP');
-          agent.add('+23 de Armadura');
-          agent.add('+2.5% de chance de crítico');
-          agent.add('+15% de Velocidade de ataque');
-          agent.add('+5% de Velocidade de movimento');
-          agent.add('+9 de Dano físico');
-          agent.add('+64 de Perfuração de armadura');
+          agent.add('As arcanas mais recomendadas para heróis desse tipo são:');
+          agent.add('Vermelhas: Indomável\nRoxas: Guerrilha/Tirania\nVerdes: Ferrão');
+          agent.add('Se você tiver uma página com 10 de cada o total vai ser:'); 
+          agent.add('+637 de HP\n+23 de Armadura\n+2.5% de chance de crítico\n+15% de Velocidade de ataque\n+5% de Velocidade de movimento\n+9 de Dano físico\n+64 de Perfuração de armadura');
           break;
         case 'ADC':
-          agent.add('As arcanas mais recomendadas');
-          agent.add('Para heróis desse tipo são:');
-          agent.add('Atrocidade, Guerrilha e Ferrão');
-          agent.add('Se você tiver uma página'); 
-          agent.add('Com 10 de cada'); 
-          agent.add('No total');
-          agent.add('A soma disso vai ser:');
-          agent.add('+16% de chance de crítico');
-          agent.add('+10% de Velocidade de ataque');
-          agent.add('+10% de Velocidade de movimento');
-          agent.add('+9 de Dano físico');
-          agent.add('+64 de Perfuração de armadura');
+          agent.add('As arcanas mais recomendadas para heróis desse tipo são:');
+          agent.add('Vermelhas: Atrocidade\nRoxas: Guerrilha\nVerdes: Ferrão');
+          agent.add('Se você tiver uma página com 10 de cada o total vai ser:'); 
+          agent.add('+16% de chance de crítico\n+10% de Velocidade de ataque\n+10% de Velocidade de movimento\n+9 de Dano físico\n+64 de Perfuração de armadura');
           break;
         case 'ADA':
-          agent.add('As arcanas mais recomendadas');
-          agent.add('Para heróis desse tipo são:');
-          agent.add('Massacre, Assassino e Ferrão');
-          agent.add('Se você tiver uma página'); 
-          agent.add('Com 10 de cada'); 
-          agent.add('No total');
-          agent.add('A soma disso vai ser:');
-          agent.add('+45 de Dano físico');
-          agent.add('+100 de Perfuração de armadura');
-          agent.add('+10% de Velocidade de movimento');
+          agent.add('As arcanas mais recomendadas para heróis desse tipo são:');
+          agent.add('Vermelhas: Massacre\nRoxas: Assassino\nVerdes: Ferrão');
+          agent.add('Se você tiver uma página com 10 de cada o total vai ser:'); 
+          agent.add('+45 de Dano físico\n+100 de Perfuração de armadura\n+10% de Velocidade de movimento');
           break;
         case 'AP':
-          agent.add('As arcanas mais recomendadas');
-          agent.add('Para heróis desse tipo são:');
-          agent.add('Violação, Benevolência e Agitação');
-          agent.add('Servem para quase todos (80%) os magos do jogo praticamente.');
-          agent.add('E são as mais recomendadas entre os Pro Players!');
-          agent.add('Se você tiver uma página'); 
-          agent.add('Com 10 de cada'); 
-          agent.add('No total');
-          agent.add('A soma disso vai ser:');
-          agent.add('+42 de Dano mágico');
-          agent.add('+88 de Perfuração mágica');
-          agent.add('+450 de HP máximo');
-          agent.add('Regeneração de 52 HP a cada 5 segundos');
-          agent.add('+4% de Velocidade de movimento');
-          agent.add('+6% de Velocidade de ataque');
+          agent.add('As arcanas mais recomendadas para heróis desse tipo são:');
+          agent.add('Vermelhas: Violação\nRoxas: Benevolência\nVerdes: Agitação');
+          agent.add('Servem para quase todos (80%) os magos do jogo praticamente e são as mais recomendadas entre os Pro Players!');
+          agent.add('Se você tiver uma página com 10 de cada o total vai ser:'); 
+          agent.add('+42 de Dano mágico\n+88 de Perfuração mágica\n+450 de HP máximo\n+Regeneração de 52 HP a cada 5 segundos\n+4% de Velocidade de movimento\n+6% de Velocidade de ataque');
           break;
         case 'Tank':
-          agent.add('As arcanas mais recomendadas');
-          agent.add('Para heróis desse tipo são:');
-          agent.add('Indomável, Benevolência e Coragem');
+          agent.add('As arcanas mais recomendadas para heróis desse tipo são:');
+          agent.add('Vermelhas: Indomável\nRoxas: Benevolência\nVerdes: Coragem');
           agent.add('É a melhor opção para os suportes e tanks do jogo');
-          agent.add('Se você tiver uma página'); 
-          agent.add('Com 10 de cada'); 
-          agent.add('No total');
-          agent.add('A soma disso vai ser:');
-          agent.add('+10% de Velocidade de Ataque');
-          agent.add('+1162 de HP máximo');
-          agent.add('+23 de Armadura');
-          agent.add('Regeneração de 52 HP a cada 5 segundos');
-          agent.add('+4% de Velocidade de movimento');
-          agent.add('+6% de redução de recarga de habilidade');
+          agent.add('Se você tiver uma página com 10 de cada o total vai ser:'); 
+          agent.add('+10% de Velocidade de Ataque\n+1162 de HP máximo\n+23 de Armadura\n+Regeneração de 52 HP a cada 5 segundos\n+4% de Velocidade de movimento\n+6% de redução de recarga de habilidade');
           break;  
       }
     }
@@ -3323,8 +3311,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         case 'Errol':
 
-          agent.add('Infelizmente ainda não está em nosso servidor');
-          agent.add('Assim que tiver noticias dele, te informo melhor, ta bom?'); 
+          agent.add('As arcanas recomendadas para jogar de Errol são:');
+          agent.add('Vermelhas: Massacre x8 / Atrocidade x2');
+          agent.add('Roxas: Guerrilha x10');
+          agent.add('Verdes: Ferrão x10');
           break;
 
         case 'Fennik':
@@ -3851,74 +3841,117 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 function checarDicas(agent) {
 
   const dicas    = agent.parameters.Dicas;
-  const heroi    = agent.parameters.heroi;
+  const heroi    = agent.parameters.herois;
   const classes  = agent.parameters.classes;
   const begginer = agent.parameters.levelPlayer;
-  const role     = agent.parameters.role;
+  const role     = agent.parameters.roles;
+  const itens    = agent.parameters.itens;
+  const combar   = agent.parameters.combo;
 
-  let filtro = { hero:heroi, classe:classes, iniciante:begginer, papel:role }; 
+  let filtro = { hero:heroi, classe:classes, iniciante:begginer, papel:role, item:itens, combo:combar}; 
 
-  if(dicas && !filtro.hero && !filtro.classe && !filtro.iniciante){
+  if(dicas && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.item && !filtro.papel){
     agent.add('Se quiser dicas para iniciantes digite:');
     agent.add('´dicas para iniciantes´');
-    agent.add('tempo de leitura de 35seg');
-    agent.add('Para dicas sobre algum herói:');
-    agent.add('´dicas + nome do herói´');
-    agent.add('tempo de leitura 1min');
-    agent.add('Se quiser dicas de jogo por classes de heróis');
+    agent.add('Se quiser dicas básicas por classes de heróis');
     agent.add('Como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:');
-    agent.add('´dicas + classe´');
-    agent.add('tempo de leitura de 20seg');
-    agent.add('Para dicas em determinado papel do jogo');
-    agent.add('Como mid, suporte, lane, jungle ou solo');
-    agent.add('´dicas + papel´');
-    agent.add('tempo de leitura 1min');
+    agent.add('´dicas [classe]´');
+    agent.add('Para dicas em determinada lane do jogo');
+    agent.add('Como mid, suporte, lane, jungle ou solo:');
+    agent.add('´dicas [lane]´');   
+    agent.add('Para dicas sobre algum herói:');
+    agent.add('´dicas [herói]´');
+    agent.add('Algumas dicas possuem texto longo, portanto aguarde o bot terminar de responder para facilitar leitura');
   }
 
-  if (filtro.iniciante) {
-    agent.add('E ae, então você começou a jogar agora');
-    agent.add('E ta precisando de ajuda né? Sem problemas');
+  if(filtro.item){
+    if(!filtro.papel){
+        agent.add('Dicas de itens são separadas por lane');
+        agent.add('Como mid, suporte, lane, jungle ou solo');
+        agent.add('Para isso é só digitar: dicas itens [lane]');
+    }
+    else{
+        switch(filtro.papel){
+            case 'Suporte':
+              agent.add('Os itens de suporte são 4:');
+              agent.add('Essência do Vento');
+              agent.add(new Image(ESSENCIAVENTO_SUP));
+              agent.add('Usada principalmente para proteger aliados de dano explosivo, mas também te ajuda em roaming e possiveis baits.');
+              agent.add('Após ativo, o aliado com menor HP ganha (800 + level do heroi x 80) um escudo e +30% de velocidade de movimento por 3 segundos');
+              agent.add('Anel do Amigo');
+              agent.add(new Image(ANELAMIGO_SUP));
+              agent.add('Melhor item contra inimigos que ficam invisível');
+              agent.add('Após ativo, revela inimigos próximos por 4 segundos e os aliados próximos ganham +50% de velocidade de movimento por 2 segundos');
+              agent.add('Marca do Poseidon');
+              agent.add(new Image(MARCAPOSEIDON_SUP));
+              agent.add('Melhor item contra inimigos que possuem muito poke e danos constantes');
+              agent.add('Não pode ser ativado, mas garante regeneração de HP e mana por segundo a você e todos os aliados próximos');
+              agent.add('Braçadeiras Purificadas');
+              agent.add(new Image(BRACADEIRA_SUP));
+              agent.add('Melhor item contra inimigos que possuem muito controle de grupo');
+              agent.add('Após ativo, remove todos os efeitos de controle de grupo de todos os aliados próximos');
+              break;
+            case 'Jungle':
+              agent.add('No momento não tenho dicas para esses itens');
+              break;
+            case 'Mid':
+              agent.add('No momento não tenho dicas para esses itens');
+              break;
+            case 'Lane':
+              agent.add('No momento não tenho dicas para esses itens');
+              break;
+            case 'Solo':
+              agent.add('No momento não tenho dicas para esses itens');
+              break;
+        }
+    }
+  }
+
+  if (filtro.iniciante && !filtro.classe && !filtro.item && !filtro.papel && !filtro.hero) {
+    agent.add('Então você começou a jogar agora e ta precisando de ajuda né?');
+    agent.add('Sem problemas ;)');
+    agent.add('O texto é meio longo');
+    agent.add('Mas vale a pena ler');
+    agent.add('Recomendo esperar eu concluir tudo');
+    agent.add('E depois subir e ler com calma');
     agent.add('As dicas que eu tenho para você são essas:');
-    agent.add('1. Guarde todo seu gold inicial para comprar arcanas');
-    agent.add('2. Consiga novos heróis de missões e eventos');
-    agent.add('3. Aprenda com seus erros e de outros players');
-    agent.add('4. Olhe sempre o mapa, ele é seu melhor amigo durante uma partida');
-    agent.add('5. Limpe as waves de minions, elas te ajudam a levar objetivos e te dão maior visão do mapa');
-    agent.add('Não existe "sua" lane, existe "nossas" lanes.');
-    agent.add('Quando uma torre do seu time cai quem perde é você, independente da lane');
-    agent.add('6. Assistir gameplays vai melhorar seu desempenho');
-    agent.add('7. Tente ser positivo');
-    agent.add('8. NÃO seja tóxico ou negativo com seu time');
-    agent.add('9. NÃO teste herói em ranked');
-    agent.add('É pra isso que existe o modo vs.bot e normal');
-    agent.add('10. NÃO roube os monstros da jungle do seu time e SIM do inimigo');
-    agent.add('Fazendo isso você só atrapalha o seu time');
-    agent.add('11. NÃO fique somente matando ou farmando, DERRUBE torres!');
-    agent.add('Converta kills em objetivos e torres');
-    agent.add('12. Preste atenção na estrutura e composição do time'); 
-    agent.add('Más escolhas de classe podem levar a derrota antes da partida começar'); 
-    agent.add('Geralmente temos: Magos no mid, atiradores e suporte na lane do dragão, assassinos na jungle, guerreiros na lane do demônio');
-    agent.add('Lembrando que o mapa é espelhado'); 
-    agent.add('A lane do dragão ou do demônio pode ser no top ou no bot'); 
-    agent.add('A melhor forma de identificar isso é olhando p o mini mapa como nessa foto:');
+    agent.add('1. Guarde todo seu gold inicial para comprar arcanas!\n\nSão elas que fazem seu herói ficar mais forte que o dos outros');
+    agent.add('2. Consiga novos heróis de missões e eventos!\n\nO ideal é jogar com esses heróis e descobrir a função que você mais se identifica');
+    agent.add('3. Olhe sempre o mapa, ele é seu melhor amigo durante uma partida!\n\nÉ olhando para o mapa que você identifica rotações do time inimigo e evita tomar ganks');
+    agent.add('4. Limpe as waves de minions!\n\nElas te ajudam a levar objetivos e te dão maior visão do mapa');
+    agent.add('5. Assistir gameplays vai melhorar seu desempenho!');
+    agent.add('6. NÃO seja tóxico ou negativo com seu time!');
+    agent.add('7. NÃO teste herói em ranked!\n\nÉ pra isso que existe o modo vs bot e normal');
+    agent.add('8. NÃO roube os monstros da jungle do seu time e SIM do time inimigo!\n\nCaso você faça isso vai estar atrapalhando o seu time, principalmente seu jungler');
+    agent.add('9. NÃO fique somente matando ou farmando, DERRUBE torres!\n\nEm outras palavras, converta kills em objetivos e torres! \n\nAh e não existe essa de "sua" lane, existem "nossas" lanes, pois quando uma torre do seu time cai, todo o time perde, independente da lane');
+    agent.add('10. Preste atenção na estrutura e composição do time!\n\nMás escolhas de classe podem levar a derrota antes da partida começar\n\nGeralmente temos:'); 
+    agent.add('Magos no mid, atiradores e suportes na lane do dragão, assassinos na jungle, guerreiros na lane do demônio');
+    agent.add('Lembrando que o mapa é espelhado, a lane do dragão ou do demônio pode ser no top ou no bot e a melhor forma de identificar isso é olhando para o mini mapa'); 
+    agent.add('Segue imagem:');
     agent.add(new Image(minimap_lane));
     agent.add('Só os monstros da jungle que são fixos');
-    agent.add('13. Não existe build certa, existe build mais recomendada');
-    agent.add('Você deve fazer seus itens de acordo com seus inimigos, pois cada partida é única');
+    agent.add('11. Não existe build certa, existe build mais recomendada!\n\nVocê deve fazer seus itens de acordo com seus inimigos, pois cada partida é única. As builds que recomendo são apenas uma base, você pode sempre mudar');
     agent.add('E por enquanto isso é tudo');
-    agent.add('Ah, lembrei, última e mais importante dica:'); 
-    agent.add('Arena Of Valor, assim como todo MOBA, é um jogo de estratégia'); 
-    agent.add('Você não precisa de muita mecânica, ou de heróis extremamente fortes (apesar de que isso ajuda muito)'); 
-    agent.add('Você só precisa de atenção, principalmente no mapa e na classe que você estiver jogando'); 
+    agent.add('Ah, lembrei'); 
+    agent.add('A última e mais IMPORTANTE dica:');
+    agent.add('Arena Of Valor, assim como todo MOBA, é um jogo de estratégia onde ganha o time que derrubar primeiro o núcleo, logo derrubar torres é mais importante que kills.\n\nVocê não precisa de muita mecânica ou de heróis extremamente fortes, você só precisa de atenção, principalmente no mapa e na classe que você estiver jogando');
     agent.add('Ah e qualquer dúvida sobre builds ou arcanas é só falar comigo! ;)');
   }
+  
+  if(filtro.classe && !filtro.iniciante && !filtro.papel){
+    if(filtro.classe == 'Suporte'){
+        filtro.papel = 'Suporte';
+    }else{
+        filtro.iniciante = 'Iniciante';
+    }
+  }
 
-  if (filtro.classe) {
+  if (filtro.classe && filtro.iniciante && !filtro.item && !filtro.hero) {
     switch(filtro.classe){
       case 'Mago':
         agent.add('Hm, magos, tão frágeis mas tão fortes');
         agent.add('Existem magos Burst, responsáveis por causar dano mágico explosivo e magos de controle, que causam muito stuns e atordoam o time inimigo');
-        agent.add('Ambos foram feitos para participar de team fights, pois sua principal função é causar dano aos heróis inimigos');
+        agent.add('Ambos foram feitos para participar das batalhas, pois sua principal função é causar dano aos heróis inimigos');
         agent.add('Então, ao jogar com mago esteja sempre rotacionando para ajudar seu time, pois eles precisam muito de você');
         break;
       case 'Atirador':
@@ -3926,12 +3959,12 @@ function checarDicas(agent) {
         agent.add('Foram feitos para ser a maior fonte de dano físico, por isso são os responsáveis por focar em objetivos');
         agent.add('Posicionamento é tudo, então estejam sempre em alerta e nunca fique sozinho pois é a classe mais focada por assassinos e magos');
         agent.add('Além disso use o limite da distancia de ataque (range) ao seu favor, nunca deixe seus inimigos chegarem próximo de você');
-        agent.add('Nunca fique batendo parado, sempre que atacar alguém vá se movimentando, mantendo a distancia limite');
+        agent.add('Nunca fique batendo parado nem pule no meio de uma batalha, sempre que atacar alguém vá se movimentando, mantendo a distancia limite do seu alcance');
         agent.add('Devido a essa característica eles são os heróis que conseguem derrubar torres com maior facilidade, portanto, foca as torres!');
         break;
       case 'Assassino':
         agent.add('Hm, assassinos, sempre com sede de sangue');
-        agent.add('Geralmente são heróis que causam dano explosivo ou burst');
+        agent.add('Geralmente são heróis que causam dano explosivo (burst)');
         agent.add('São responsáveis por assegurar todos os objetivos e farmar tudo: monstros, heróis e torres');
         agent.add('Seu foco é fazer seus inimigos sentirem medo de andar sozinhos por ai');
         agent.add('E fica ligado de entrar no momento certo da luta, pois seu papel é finalizar os inimigos');
@@ -3945,7 +3978,7 @@ function checarDicas(agent) {
       case 'Tanque':
         agent.add('Hm, tanques, sempre carregando seu time nas costas');
         agent.add('São os principais quando o assunto é proteger aliados');
-        agent.add('Responsáveis por inicias as batalhas e são fundamentais na decisão de avançar ou recuar');
+        agent.add('Responsáveis por iniciar as batalhas e fundamentais no momento de avançar ou recuar');
         agent.add('Tente ao máximo sobreviver e saiba que seu papel é tomar dano no lugar do seu ADC então sempre acompanhe seu time');
         break;
       case 'Suporte':
@@ -3956,456 +3989,523 @@ function checarDicas(agent) {
     }
   }
 
-  if(filtro.papel && !filtro.hero){
+  if(filtro.papel && !filtro.hero && !filtro.item){
     switch(filtro.papel) {
       case 'Lane':
-        agent.add('');
+        agent.add('Ao jogar na Lane sua função é farmar ao máximo e principalmente derrotar o dragão que é o primeiro objetivo do jogo aos 2min');
+        agent.add('É nessa lane que os minions vão dar mais experiência e gold');
+        agent.add('Portanto evite morrer ao máximo, e esteja sempre de olho em possíveis ganks do jungler ou do mid inimigo');
         break;
       case 'Solo':
-        agent.add('Cuidar da solo, conhecida também como lane do demônio, é a função mais fácil, você só precisa manter seu olho no jungle e no mid inimigo durante o early game, se perceber que algum está indo para sua lane, limpe sua wave rapidamente e volte para debaixo de sua torre');
-        agent.add('Passando early game seu foco depende do seu herói, sendo um split pusher, tente fazer pressão no mapa, sempre aproveitando rotações do time adversário para puxar uma lane, não espere que seu time te ajude, seu papel é chamar atenção contrária as tfs que seu time faz, caso seja um tank, seu foco é ajudar seu time nas tfs');
+        agent.add('Jogar na solo lane, conhecida também como lane do demônio, é a função mais fácil entre as demais.');
+        agent.add('Você só precisa manter seu olho no jungle e no mid inimigo durante o early game, se perceber que algum está indo para sua lane, limpe sua wave rapidamente e volte para debaixo de sua torre');
+        agent.add('Passando early game seu foco depende do seu herói, caso seja um tank, seu foco é ajudar seu time')
+        agent.add('Sendo um split pusher, tente fazer pressão no mapa, observe no mapa rotações do time adversário para puxar uma lane, não espere que seu time te ajude, seu papel é chamar atenção contrária as batalhas que seu time faz');
         break;
       case 'Suporte':
-        agent.add('A função mais');
+        agent.add('Apesar de ser a função mais subestimada, um suporte tem o trabalho mais importante durante todo o jogo');
+        agent.add('No inicio do jogo ganhe visão para o seu time, faça pressão no mid, na jungle e acompanhe sempre as rotações que seu jungle faz\n\nSuportes foram feitos para estar ao lado de outro herói que cause dano, ou seja, nada de split push ou abandonar seu time');
+        agent.add('E pode até não parecer, mas um bom suporte afeta muito o jogo Seu time vai ter controle de mapa, não vai tomar ganks surpresas e vai completar objetivos muito mais rápido');
+        agent.add('Além disso você precisa entender os itens de suporte: ');
+        agent.add('Itens do vento são para suportes que fazem roaming, enquanto itens da água foram feitos caso você fique duo lane com outro herói');
+        agent.add('Para entender melhor cada um, você pode digitar: ´dicas itens suporte´');
         break;
       case 'Mid':
-        agent.add('Mid é o lugar mais importante no mapa, especialmente no early game, uma vez que você perde o mid, você perde bastante controle de mapa e consequentemente perde objetivos');
-        agent.add('Sua função é causar pressão no mapa sempre indo ajudar as outras lanes e retornar para proteger a sua');
-        agent.add('O ideal é sempre fazer essas rotações acompanhando seu jungle e seu suporte, o controle e poder de dano é muito maior');
-        agent.add('Em outras palavras, acompanhe seu jungle nas rotações para fazer dragão e ganks em outras lanes');
+        agent.add('Mid é o lugar mais importante no mapa, especialmente no early game. Uma vez que você perde sua primeira torre do mid por exemplo, você perde bastante controle de mapa e consequentemente perde objetivos');
+        agent.add('Por isso tome bastante cuidado nas rotações do começo do jogo, ganks no mid são bem comuns');
+        agent.add('Sua função ao jogar nessa lane é poder causar pressão em todo o mapa, limpando rapidamente sua wave e saindo para ajudar as outras lanes');
+        agent.add('O ideal é sempre fazer essas rotações acompanhando seu jungler e seu suporte, o controle e poder de dano na batalhe é muito maior');
+        agent.add('Lembrando que seu foco, como mago nessa lane é participar de todas as batalhas, pois limpando a wave seus próprios minions são capazes de derrubar a torre');
         break;
       case 'Jungle':
-        agent.add('');
+        agent.add('Jogar na jungle é a função mais difícil e complexa do jogo, pois você precisa ter total consciência de mapa');
+        agent.add('Um bom jungler consegue prever rotações, assim como consegue se mover pelo mapa de forma imprevisível, surpreendendo sempre o time inimigo');
+        agent.add('E infelizmente existe um mal entendido de que o jungler precisa iniciar os ganks, e a menos que o seu herói tenha uma boa habilidade de iniciação, isso é um mito');
+        agent.add('Um jungler é um herói especialista em finalizações, seu papel é matar os heróis mais frágeis. Não espere que um nakroth ganhe uma luta pulando em cima de um Xeniel full hp.');
+        agent.add('Sobre itens da jungle, minha recomendação é essa:');
+        agent.add(new Image(itens_jungle));
+        agent.add('Você deve sempre seguir essa ordem de compra, pois é isso que garante um gank mais forte no lvl 4');
+        agent.add('Completando primeiro o item da jungle tier 2 seu talento punir vai poder ser usado em heróis inimigos e você já vai estar com a passiva do item ativo');
+        agent.add('Sobre rotações, essa é a mais básica:');
+        agent.add(new Image(rotacao_jungle));
+        agent.add('Você deve iniciar pelo lado do demônio para conseguir gankar a lane do dragão aos 1:50 aproximadamente');
+        agent.add('E aos 2min de game completar o primeiro objetivo do jogo que é o Dragão');
+        agent.add('Sempre convertendo kills em objetivos!');
         break;  
     }
   }
 
   if(filtro.hero) {
-
     switch(filtro.hero){
 
       case 'Airi':
-        agent.add('As arcanas recomendadas para ir de Airi são:');
+
+        agent.add('Não tenho dicas para esse herói ainda');
         break; 
 
       case 'Aleister':
-
-        agent.add('As arcanas recomendadas para jogar de Aleister são:');
+        
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Alice':
 
-        agent.add('As arcanas recomendadas para jogar de Alice são:');
+        
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Amily':
 
-        agent.add('As arcanas recomendadas para jogar de Amily são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Annette':
 
-        agent.add('As arcanas recomendadas para jogar de Annette são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Arduin':
 
-        agent.add('As arcanas recomendadas para jogar de Arduin são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Arthur':
 
-        agent.add('As arcanas recomendadas para jogar de Arthur são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Arum':
 
-        agent.add('As arcanas recomendadas para jogar de Arum são:'); 
+        agent.add('Não tenho dicas para esse herói ainda'); 
         break;
 
       case 'Astrid':
 
-        agent.add('As arcanas recomendadas para jogar de Astrid são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Azzenka':
 
-        agent.add('As arcanas recomendadas para jogar de Azzen´ka são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Baldum':
 
-        agent.add('As arcanas recomendadas para jogar de Baldum são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Batman':
 
-        agent.add('As arcanas recomendadas para jogar de Batman são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Butterfly':
 
-        agent.add('As arcanas recomendadas para jogar de Butterfly são:'); 
+        agent.add('Não tenho dicas para esse herói ainda'); 
         break;       
 
       case 'Capheny':
 
-        agent.add('Infelizmente ainda não está em nosso servidor');
-        agent.add('Assim que tiver noticias dela, te informo melhor, ta bom?');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Chaugnar':
 
-        agent.add('As arcanas recomendadas para jogar de Chaugnar são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Cresht':
 
-        agent.add('As arcanas recomendadas para jogar de Cresht são:'); 
+        agent.add('Não tenho dicas para esse herói ainda'); 
         break;
 
       case 'Darcy':
 
-        agent.add('As arcanas recomendadas para jogar de D´Arcy são: ');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;  
 
       case 'Diaochan':
 
-        agent.add('As arcanas recomendadas para jogar de Diaochan são:'); 
+        agent.add('Não tenho dicas para esse herói ainda'); 
         break; 
 
       case 'Elsu':
 
-        agent.add('As arcanas recomendadas para jogar de Elsu são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;  
 
       case 'Errol':
 
-        agent.add('Infelizmente ainda não está em nosso servidor');
-        agent.add('Assim que tiver noticias dele, te informo melhor, ta bom?'); 
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Fennik':
 
-        agent.add('As arcanas recomendadas para jogar de Fennik são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Florentino':
 
-        agent.add('Eita, quer apelar mesmo de Florentino ein?');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
 
       case 'Gildur':
 
-        agent.add('As arcanas recomendadas para jogar de Gildur são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break; 
 
       case 'Grakk':
 
-        agent.add('As arcanas recomendadas para jogar de Grakk são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Hayate':
 
-        agent.add('As arcanas recomendadas para jogar de Hayate são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Ignis':
 
-        agent.add('As arcanas recomendadas para jogar de Ignis são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Ilumia':
 
-        agent.add('As arcanas recomendadas para jogar de Ilumia são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break; 
 
       case 'Jinnar':
 
-        agent.add('As arcanas recomendadas para jogar de Jinnar são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break; 
 
       case 'Kahlii':
 
-        agent.add('As arcanas recomendadas para jogar de Kahlii são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;  
 
       case 'KilGroth':
 
-        agent.add('As arcanas recomendadas para jogar de Kil´Groth são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Kriknak':
 
-        agent.add('As arcanas recomendadas para jogar de Kriknak são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Krixi':
 
-        agent.add('As arcanas recomendadas para jogar de Krixi são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Lauriel':
 
-        agent.add('As arcanas recomendadas para jogar de Lauriel são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Liliana':
 
-        agent.add('As arcanas recomendadas para jogar de Liliana são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Lindis':
 
-        agent.add('As arcanas recomendadas para jogar de Lindis são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'LuBu':
 
-        agent.add('As arcanas recomendadas para jogar de Lu Bu são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Lumburr':
 
-        agent.add('As arcanas recomendadas para jogar de Lumburr são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Maloch':
 
-        agent.add('As arcanas que eu te recomendo são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Marja':
 
-        agent.add('As arcanas recomendadas para jogar de Marja são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Max':
 
-        agent.add('As arcanas recomendadas para jogar de Max são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Mganga':
 
-        agent.add('As arcanas recomendadas para jogar de Mganga são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Mina':
 
-        agent.add('As arcanas recomendadas para jogar de Mina são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Moren':
 
-        agent.add('As arcanas recomendadas para jogar de Moren são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Murad':
 
-        agent.add('As arcanas recomendadas para jogar de Murad são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break; 
 
       case 'Nakroth':
 
-        agent.add('As arcanas recomendadas para jogar de Nakroth são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Natalya':
 
-        agent.add('As arcanas recomendadas para jogar de Natalya são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Omega':
 
-        agent.add('As arcanas recomendadas para jogar de Omega são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Ormarr':
 
-        agent.add('As arcanas recomendadas para jogar de Ormarr são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Omen':
 
-        agent.add('As arcanas recomendadas para jogar de Omen são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Peura':
 
-        agent.add('As arcanas recomendadas para jogar de Peura são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Preyta':
 
-        agent.add('As arcanas recomendadas para jogar de Preyta são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Quillen':
 
-        agent.add('As arcanas recomendadas para jogar de Quillen são:');
+        if(filtro.combo){
+          agent.add('Combo básico com o Quillen é:\n\nult->S2->S1->AA->ult->S2->S1->AA->ult...\n\nO Quillen é um assassino feito para situações 1x1, portanto seu foco é sempre atacar heróis que estiverem mal posicionados, fora das tfs, focando sempre no mago e no atirador!');  
+        }else{
+          agent.add('O Quillen é um dos assassinos mais rápidos do jogo, devido sua passiva de resetar habilidades após um abate tendo sempre sua ult disponível');
+          agent.add('A primeira skill é a maior fonte de dano dele, portanto maximize primeiro essa habilidade');
+          agent.add('Ao jogar de Quillen você precisa entender o tempo de invisibilidade de sua ult, pois ao usar ela antes de pular no meio de uma tf, ou você finaliza o inimigo para ter a habilidade disponível novamente e continuar o combo ou você vai morrer');
+          agent.add('O ideal é sempre rotacionar de forma que surpreenda, use sua ult para antecipar rotações e pegar justamente aquele atirador ou mago que chegou tarde para batalha');
+          agent.add('O combo básico do Quillen é:\n\nult->S2->S1->AA->ult->S2->S1->AA->ult...\n\nE esse ciclo continua até você matar todos os inimigos, seu foco é sempre situações de 1x1, nunca pule no meio de uma tf');
+          agent.add('Lembrando de atacar sempre nas costas dos inimigos, isso serve inclusive para os monstros da jungle, quanto mais dano você causa, mais rápido limpa a jungle e fica disponível para ajudar seus aliados');
+        }
         break;
 
       case 'Raz':
 
-        agent.add('As arcanas recomendadas para jogar de Raz são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Riktor':
 
-        agent.add('As arcanas recomendadas para jogar de Riktor são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Rourke':
 
-        agent.add('As arcanas recomendadas para jogar de Rourke são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Roxie':
 
-        agent.add('As arcanas recomendadas para jogar de Roxie são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Ryoma':
 
-        agent.add('As arcanas recomendadas para jogar de Ryoma são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Sephera':
 
-        agent.add('As arcanas recomendadas para jogar de Sephera são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Skud':
 
-        agent.add('As arcanas recomendadas para jogar de Skud são:');
-        break;  
+        if(filtro.combo){
+          agent.add('Combo básico com o Skud é:\n\nS2->Aguarda a contagem de 5 segundos->S1->AA->ult->S1\n\nO Skud foi feito para causar dano explosivo e bater em retirada, acerte seu soco carregado e use a ult para resetar a primeira skill e conseguir fugir');  
+        }else{
+          agent.add('O Skud é também conhecido como one punch man devido ao seu soco carregado, capaz de apagar facilmente heróis com pouca armadura');
+          agent.add('A segunda skill é a maior fonte de dano dele, portanto maximize primeiro essa habilidade');
+          agent.add('Você deve ter noção da contagem de 5 segundos após ativar a habilidade para conseguir acertar o soco na hora certa');
+          agent.add('O ideal é usar o dash da primeira habilidade para chegar o mais perto possível do seu alvo e acertar o soco na carga máxima');
+          agent.add('Ao usar a ult e acertar algum herói inimigo, sua primeira habilidade é resetada, podendo ser usada novamente tanto para escapar ou finalizar outro inimigo');
+          agent.add('Devido ao seu kit, o Skud é ideal para split pushs e rotações rapidas de ganks no mid, pois basta um soco para deitar magos, e principalmente, torres');
+          agent.add('Muito cuidado com controles de grupo, um stun é capaz de cancelar seu ataque explosivo. Vale a pena nesse caso usar a bota escolha de hermes, pois te garante mais velocidade nas rotações e ganks');
+        }
+        break;
+  
 
       case 'Slimz':
 
-        agent.add('As arcanas recomendadas para jogar de Slimz são:'); 
+        agent.add('Não tenho dicas para esse herói ainda'); 
         break;
 
       case 'Superman':
 
-        agent.add('As arcanas recomendadas para jogar de Superman são:'); 
+        agent.add('Não tenho dicas para esse herói ainda'); 
         break;
 
       case 'Taara':
 
-        agent.add('As arcanas recomendadas para jogar de Taara são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'TeeMee':
 
-        agent.add('As arcanas recomendadas para jogar de TeeMee são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'TelAnnas':
 
-        agent.add('As arcanas recomendadas para jogar de Tel´Annas são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
 
       case 'Thane':
 
-        agent.add('As arcanas recomendadas para jogar de Thane são:');
+        if(filtro.combo){
+          agent.add('As habilidades do Thane foram feitas para proteger e incomodar os inimigos, portanto não tem um combo básico específico');  
+        }else{
+          agent.add('Thane é um tanque/suporte com muito controle de grupo, capaz de aguentar muito dano e causar bastante estrago com sua ult');
+          agent.add('Nunca inicie uma tf usando de cara todas as suas habilidades, sua função é estar próximo das tfs de olho nos possíveis ganks do jungle ao seu adc/mago');
+          agent.add('Use suas habilidades nesses momentos, sempre focado em proteger seu atirador ou mago, seja empurrando os inimigos ou atordoando');
+          agent.add('Sua ult causa dano real, ou seja, ignora armadura e atinge em cheio na vida do inimigo, use com cuidado para não roubar kills, mas caso aconteça, é a vida');
+          agent.add('O importante é ajudar a matar, enquanto seu foco principal é proteger!');
+        }
         break;
 
       case 'TheFlash':
 
-        agent.add('As arcanas recomendadas para jogar de Flash são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
 
       case 'TheJoker':
 
-        agent.add('As arcanas recomendadas para jogar de Coringa são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Toro':
 
-        agent.add('Infelizmente ele não está em nosso servidor');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Tulen':
 
-        agent.add('As arcanas recomendadas para jogar de Tulen são:');
+        if(filtro.combo){
+          agent.add('Combo básico com Tulen é:\n\nS1->S2->AA->ult\n\nAcertando a primeira e a segunda skill corretamente, sua passiva já vai estar ativa, só restando a ult para finalizar o inimigo');  
+        }else{
+          agent.add('Tulen é um mago de alta mobilidade, com bastante dano explosivo e grande poder de finalização de seus inimigos com sua ult');
+          agent.add('Comece o jogo upando sua segunda skill, pois isso te ajuda em possíveis ganks no early game e maximize a primeira skill, é sua maior fonte de dano além da passiva');
+          agent.add('Apesar de acertar a longa distancia, as skills do Tulen foram feitas para ser usadas o mais próximo possível do inimigo');
+          agent.add('Acertando corretamente os 3 raios da primeira skill, e acertando a segunda skill no momento da partida e da chegada, garante os 5 stacks necessários para ativar a passiva');
+          agent.add('Seu combo básico é:\n\nS1->S2->AA->ult\n\nMinha dica é, utilize a primeira skill nos minions, é mais fácil de acertar os 3 raios para pelo menos acumular stack antes da tf');
+          agent.add('Lembrando que é importante que sua ult mate o alvo, pois além de ativar a passiva novamente após atingir um alvo, caso ele morra, seu cooldown é reduzido podendo ser usada novamente em poucos segundos em outro inimigo');
+        }
         break;
 
       case 'Valhein':
 
-        agent.add('As arcanas recomendadas para jogar de Valhein são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Veera':
 
-        agent.add('Você quis dizer, Valhein AP?');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Veres':
 
-        agent.add('As arcanas recomendadas para jogar de Veres são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Violet':
 
-        agent.add('As arcanas recomendadas para jogar de Violet são:');
+        if(filtro.combo){
+          agent.add('Combo básico com a Violet é:\n\nS1->AA->ult\n\nA Violet foi feita para dar poke nos inimigos com sua bazooka, mantendo sempre a distância para aproveitar o range de sua habilidade');  
+        }else{
+          agent.add('Violet é a atiradora com o maior range do jogo, capaz de matar com um tiro só no late game');
+          agent.add('A primeira skill é a maior fonte de dano dela, portanto maximize primeiro essa habilidade');
+          agent.add('Você deve aproveitar o longo range da bazooka sempre usando o limite do alcance da sua skill para acertar os inimigos de longe sem ter chance de você sofrer algum dano');
+          agent.add('O ideal é sempre rolar para trás, nunca para perto do inimigo, pois assim você garante que não vai sofrer nenhum dano');
+          agent.add('Caso esteja com dificuldades de acertar a ult, você pode sempre antes usar a segunda skill dela para causar slow nos inimigos');
+          agent.add('Ou fazer capa de gelo no lugar da omniarma e causar slow a longa distancia usando sua primeira skill, é uma boa quando estiver enfrentando heróis com muita mobilidade');
+        }
         break;
 
       case 'Wiro':
 
-        agent.add('As arcanas recomendadas para jogar de Wiro são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Wisp':
 
-        agent.add('As arcanas recomendadas para jogar de Wisp são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Wonder Woman':
 
-        agent.add('As arcanas recomendadas para jogar de Mulher Maravilha são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Wukong':
 
-        agent.add('As arcanas recomendadas para jogar de Wukong são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Xeniel':
 
-        agent.add('As arcanas recomendadas para jogar de Xeniel são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'YBneth':
 
-        agent.add('As arcanas recomendadas para jogar de Y´bneth são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Yorn':
 
-        agent.add('As arcanas recomendadas para jogar de Yorn são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Zanis':
 
-        agent.add('As arcanas recomendadas para jogar de Zanis são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Zephys':
 
-        agent.add('As arcanas recomendadas para jogar de Zephys são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Zill':
 
-        agent.add('As arcanas recomendadas para jogar de Zill são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
 
       case 'Zuka':
 
-        agent.add('As arcanas recomendadas para jogar de Zuka são:');
+        agent.add('Não tenho dicas para esse herói ainda');
         break;
     } 
   }
@@ -4425,6 +4525,8 @@ function checarDicas(agent) {
   intentMap.set('checarBuild', checarBuild);
   
   intentMap.set('checarBoots', checarBoots);
+  
+  intentMap.set('glossarioExplicar', glossarioExplicar);
 
   intentMap.set('listarAlgo', listarAlgo);
 
@@ -4435,7 +4537,7 @@ function checarDicas(agent) {
   intentMap.set('ultimasBuilds', ultimasBuilds);
 
   intentMap.set('listar_menu', listar_menu);
-
+  
   agent.handleRequest(intentMap);
 
 });
