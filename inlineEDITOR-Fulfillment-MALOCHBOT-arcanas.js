@@ -75,7 +75,8 @@ const ILUMIA_URL              = 'https://imgur.com/plkKEGm.jpg';
 const ILUMIA_2_URL            = 'https://imgur.com/zwh85GH.jpg';
 const JINNAR_URL              = 'https://i.imgur.com/iyrozwe.jpg';
 const KAHLII_URL              = 'https://i.imgur.com/xvVwP4v.jpg';
-const KILGROTH_URL            = 'https://i.imgur.com/aZIJI8i.jpg';
+const KILGROTH_URL            = 'https://imgur.com/6Jho5cM.jpg';
+const KILGROTH_2URL           = 'https://imgur.com/hLlppFl.jpg';
 const KRIKNAK_URL             = 'https://i.imgur.com/i0fLrfP.jpg';
 const KRIXI_URL               = 'https://i.imgur.com/QISvmts.jpg';
 const LAURIEL_URL             = 'https://i.imgur.com/lXwArqD.jpg';
@@ -154,6 +155,8 @@ const WUKONG_URL              = 'https://i.imgur.com/LiWNnBK.jpg';
 const XENIEL_URL              = 'https://i.imgur.com/hxaIr60.jpg';
 const YBNETH_URL              = 'https://imgur.com/0KSqHOr.jpg';
 const YBNETH_SOLO_URL         = 'https://imgur.com/ZMFe8ge.jpg';
+const YENA_1_URL              = 'https://imgur.com/91HBq0z.jpg';
+const YENA_2_URL              = 'https://imgur.com/1ZT7xCK.jpg';
 const YORN_URL                = 'https://i.imgur.com/lr5DiJi.jpg';
 const ZANIS_URL               = 'https://i.imgur.com/jtraB2D.jpg';
 const ZANIS_OFF_TANKURL       = 'https://i.imgur.com/SbYtVUR.jpg';
@@ -169,7 +172,7 @@ const ZUKA_URL                = 'https://i.imgur.com/93Hu2Jl.jpg';
 const HEROIS_SOLO     = ["Florentino", "Riktor", "Maloch", "Marja", "Superman", "Xeniel", "Omen", "YBneth", "Cresht", 
                         "Ryoma", "Max", "Arum", "Wonder Woman", "Skud", "Airi", "Roxie", "Amily", "LuBu", "Zephys", 
                         "Arduin", "Rourke", "Zuka", "Baldum", "Arthur", "Omega", "KilGroth", "Zanis", "Gildur", 
-                        "Wukong", "Astrid", "Taara", "Veres", "Valhein", "Errol"];
+                        "Wukong", "Astrid", "Taara", "Veres", "Valhein", "Errol", "Yena"];
 
 const HEROIS_LANE     = ["Elsu", "TelAnnas", "Valhein", "TheJoker", "Yorn", "Wisp", "Lindis", "Violet", "Fennik", "Moren", "Hayate", "Capheny"];
 
@@ -276,9 +279,9 @@ const CONCLUIDO          = '';
 //              Lista de Ultimas Builds Adicionadas 08/03/2018    //
 ////////////////////////////////////////////////////////////////////
 
-const ULTIMASBUILDS_1 = "Ah da Capheny eu sei que tem, e Errol também chegou! E peço desculpas, as builds ainda não estão atualizadas de acordo com último patch de abril, mas garanto que é por um bom motivo!";
-const ULTIMASBUILDS_2 = "";
-const ULTIMASBUILDS_3 = "";
+const ultimasAtualizacoes_1 = "Últimos heróis adicionados: Capheny, Errol, Yena!\n\nÚltimas builds adicionadas: Kilgroth\n\nBuilds atualizadas de acordo com patch de abril/2019";
+const ultimasAtualizacoes_2 = "";
+const ultimasAtualizacoes_3 = "";
 
 ////////////////////////////////////////////////////////////////////
 //                      Lista de ARCANAS                          //
@@ -355,8 +358,12 @@ const info_stack = {"termo":"Stack", "definicao":"Refere-se aos benefícios incr
 const info_bait = {"termo":"bait", "definicao":"É quando você aparece numa posição favorável para o time inimigo te gankar, porém você faz isso de propósito enquanto jogadores do seu time estão escondidos esperando esse gank do time inimigo, para surpreender eles e seu time ter a vantagem da luta."};
 const info_dive = {"termo":"dive", "definicao":"É quando seu time ignora o dano que vai sofrer da torre e entra dentro do raio dela para matar algum inimigo. Geralmente é feito quando algum membro do time tem o talento inativar torre ou quando o tank do time entra primeiro no raio, pois assim ele vai aguentar o dano da torre."};
 const info_bush = {"termo":"bush", "definicao":"Também conhecido como matinho ou moita e espalhado em diversas partes do mapa, a bush é o nome comum usado para definir a região do matinho. Nessas regiões você consegue se esconder e somente com habilidades de revelação ou entrando na mesma bush, é que seu inimigo vai conseguir te ver."};
+const info_range = {"termo":"range", "definicao":"É o alcance da habilidade, geralmente atribuido a heróis que podem usar habilidades a longo alcance, seja um atirador com seu auto attack ou um mago usando habilidades"};
+const info_melee = {"termo":"melee", "definicao":"É o termo dado a heróis ou habilidades de curto alcance, que só causam dano quando próximos do inimigo"};
+const info_frontline = {"termo":"frontline", "definicao":"É o que chamamos de linha de frente de uma batalha, geralmente são os tanks e guerreiros que pulam na frente e conseguem aguentar bastante dano para proteger a backline"};
+const info_backline = {"termo":"backline", "definicao":"É o que chamamos de linha de trás de uma batalha, geralmente são magos e atiradores que jogam de forma recuada, podendo usar habilidades e atacar sem sofrer dano. Sendo portanto o foco dos assassinos que chegam por trás na tf"};
 
-const globalGlossario = [info_AoV,info_pvp,info_bots,info_hp,info_mp,info_AD,info_AP,info_OP,info_Nerf,info_gank,info_farm,info_burst,info_cooldown,info_CDR,info_autoattack,info_poke,info_carry,info_ADC,info_TF,info_Roam,info_SplitPush,info_proxy,info_flick,info_feedar,info_buff,info_stack,info_bait,info_dive,info_bush];
+const globalGlossario = [info_backline,info_frontline,info_melee,info_range,info_AoV,info_pvp,info_bots,info_hp,info_mp,info_AD,info_AP,info_OP,info_Nerf,info_gank,info_farm,info_burst,info_cooldown,info_CDR,info_autoattack,info_poke,info_carry,info_ADC,info_TF,info_Roam,info_SplitPush,info_proxy,info_flick,info_feedar,info_buff,info_stack,info_bait,info_dive,info_bush];
 
 /////////////////////////////////////////////////////////////////////
 //                          Inicio do BOT                          //
@@ -405,11 +412,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
   }
 
-  function ultimasBuilds(agent){
+  function ultimasAtualizacoes(agent){
 
     //agent.add("Só um instante");
     //agent.add("Pronto, atualizei as builds dos seguintes heróis:");
-    agent.add(ULTIMASBUILDS_1);
+    agent.add(ultimasAtualizacoes_1);
     //agent.add('Caso esteja sentindo falta de alguma build');
     //agent.add('É só comentar no post fixo da página que em breve eu adiciono aqui!');       
 
@@ -417,17 +424,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
   function listar_menu(agent){
     agent.add("Serviços do Maloch Bot:");
-    agent.add("1. Builds");
-    agent.add("Você pode digitar");
-    agent.add("´build [herói] (lane)´");
-    agent.add("2. Arcanas");
-    agent.add("Você pode digitar");
-    agent.add("´arcanas´ - Para entender melhor");
-    agent.add("´arcanas [herói]´");
-    agent.add("3. Listar últimas builds adicionadas");
-    agent.add("Você pode digitar");
-    agent.add("´últimas builds´");
-    agent.add("Legenda: entre [ ] é obrigatório, entre ( ) opcional");
+    agent.add("Builds - digite:\n\n´build [herói] (lane)´");
+    agent.add("Arcanas - digite:\n\n´arcanas informações´ - menu de arcanas\n\n´arcanas [herói] ou arcanas [classe]´");
+    agent.add("Últimas atualizações do bot - digite:\n\n´últimas atualizações´");
+    agent.add("Legenda: entre [] é obrigatório, entre () opcional");
   }
 
   function listarAlgo(agent){
@@ -1517,14 +1517,17 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         agent.add('Hm, então quer dizer que resolveu jogar de Kil´Groth...');
         agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
-          agent.add('Aqui está:');
+          agent.add('Tenho duas');
           agent.add(new Image(KILGROTH_URL));
+          agent.add(new Image(KILGROTH_2URL));
+          agent.add('A primeira é pra usar com punir, a segunda quando estiver sem punir');
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
               case 'Solo':
-                agent.add('Por enquanto só tenho essa:');
+                agent.add('Tenho essas:');
                 agent.add(new Image(KILGROTH_URL));
+                agent.add(new Image(KILGROTH_2URL));
                 break;
               case 'Jungle':
                 agent.add('Talvez essa sirva:');
@@ -2855,6 +2858,42 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           }
         }
         break;
+    
+      case 'Yena':
+
+        agent.add('Hm, então quer dizer que resolveu jogar de Yena...');
+        agent.add('Deixa eu ver o que tenho para você...');
+        if (!filtro.funcao) {
+          agent.add('Pronto, tenho duas');
+          agent.add(new Image(YENA_1_URL)); 
+          agent.add(new Image(YENA_2_URL)); 
+          agent.add('A primeira é mais comum, a segunda é pra quando seu time ta carente de tank');
+          agent.add('Minha dica para jogar com ela é entender bem os dois modos de combate que ela tem');
+          agent.add('O primeiro modo é o modo assassino, nele sua velocidade de movimento é aumentada\n\nEnquanto o segundo é seu modo guerreiro, sua velocidade de ataque diminui mas aumenta o dano em 50%\n\nPara trocar de modo você deve usar sua ult');
+          agent.add('Lembrando que a cada golpe (ataque básico ou habilidade) que ela dá no inimigo no modo assassino acumula um stack, ao somar 5 stacks, o inimigo toma silence e reduz o movimento em 80%!');
+          agent.add('Sua primeira skill no modo assassino pode ser usada duas vezes se acertar um minion ou herói na primeira vez\n\nE no modo guerreiro é possível mudar a direção enquanto carrega a habilidade usando flick ou pode ser usada imediatamente apertando duas vezes');
+          agent.add('Enquanto usa sua segunda habilidade no modo guerreiro, você fica imune a controle, portanto saiba combar bem com isso\n\nAlém disso, sua segunda skill no modo assassino arremessa uma shuriken que ao ser coletada reduz o cooldown da mesma em 5 segundos, seu combo geralmente começa aqui');
+          agent.add('O combo mais comum é:\n\nS2-> S1 -> S1 -> S3 -> S2\n\nEnquanto o combo avançado:\n\nS1(nos minions) -> S2 -> S1 -> S3 -> S2 -> S1(apertar 2x) -> S2 -> S1(apertar 2x)');
+          agent.add('Inicie as lutas no modo assassino para dar engage rapidamente no mago e no atirador e causar muito dano com seus combos, e poder tankar os outros no modo guerreiro'); 
+          agent.add('E por favor, não testa herói novo em ranked!');
+        } else {
+          if (getRole(filtro.funcao).includes(filtro.hero)) {
+            switch(filtro.funcao){
+              case 'Solo':
+                agent.add('Tenho essas:');
+                agent.add(new Image(YENA_1_URL)); 
+                agent.add(new Image(YENA_2_URL)); 
+                agent.add('A primeira é mais comum, a segunda é pra quando seu time ta carente de tank');
+                break;
+            }
+          } else {
+            agent.add('Opa, pera ai, '+filtro.funcao+' ?');
+            agent.add(FUNCAO_ERRADA_1);
+            agent.add(FUNCAO_ERRADA_2);
+            agent.add('A Yena é melhor se utilizada na Solo Lane!');
+          }
+        }
+        break;
 
       case 'Yorn':
 
@@ -3046,14 +3085,18 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const sobre    = agent.parameters.Sobre;
     const classes  = agent.parameters.classes;
     const begginer = agent.parameters.levelPlayer;
-    const theBest  = agent.parameters.Superioridade;
+    const informacao  = agent.parameters.informacao;
     const tipoDano = agent.parameters.tiposDeBuild;
 
-    let filtro = { hero:heroi, classe:classes, iniciante:begginer, tipo:tipoDano, explicar:sobre }; 
+    let filtro = { hero:heroi, classe:classes, iniciante:begginer, tipo:tipoDano, explicar:sobre, info:informacao }; 
 
-    if(arcanas && !filtro.explicar && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.tipo){
-      agent.add('Para informações sobre arcanas digite:');
-      agent.add('´arcanas informações´');
+    if(arcanas && !filtro.info && !filtro.explicar && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.tipo){
+      agent.add('Entendi que você quer falar de arcanas, mas o que exatamente? Se quiser listar meus comandos, basta digitar, arcanas informações');
+    }
+
+    if(arcanas && filtro.info){
+      agent.add('Para entender melhor sobre arcanas digite:');
+      agent.add('´arcanas explicar´');
       agent.add('Leitura longa');
       agent.add('Para arcanas mais indicadas para iniciantes:');
       agent.add('´arcanas para iniciantes´');
@@ -3789,6 +3832,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('Verdes: Coragem x10');
           break;
 
+        case 'Yena':
+
+          agent.add('As arcanas recomendadas para jogar de Yena são:');
+          agent.add('Vermelhas: Atrocidade x1 / Indomável x9');
+          agent.add('Roxas: Benevolência x10');
+          agent.add('Verdes: Ferrão x10');
+          break;  
+
         case 'Yorn':
 
           agent.add('As arcanas recomendadas para jogar de Yorn são:');
@@ -3846,11 +3897,14 @@ function checarDicas(agent) {
   const begginer = agent.parameters.levelPlayer;
   const role     = agent.parameters.roles;
   const itens    = agent.parameters.itens;
-  const combar   = agent.parameters.combo;
 
-  let filtro = { hero:heroi, classe:classes, iniciante:begginer, papel:role, item:itens, combo:combar}; 
+  let filtro = { hero:heroi, classe:classes, iniciante:begginer, papel:role, item:itens, dica:dicas}; 
 
-  if(dicas && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.item && !filtro.papel){
+  if(dicas == "combo" && !filtro.hero){
+    agent.add('Entendi que você ta precisando aprender algum combo, mas não sei qual herói, para combos digite: ´combos [herói]´');
+  }
+
+  if(dicas == "dicas" && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.item && !filtro.papel){
     agent.add('Se quiser dicas para iniciantes digite:');
     agent.add('´dicas para iniciantes´');
     agent.add('Se quiser dicas básicas por classes de heróis');
@@ -3934,7 +3988,7 @@ function checarDicas(agent) {
     agent.add('E por enquanto isso é tudo');
     agent.add('Ah, lembrei'); 
     agent.add('A última e mais IMPORTANTE dica:');
-    agent.add('Arena Of Valor, assim como todo MOBA, é um jogo de estratégia onde ganha o time que derrubar primeiro o núcleo, logo derrubar torres é mais importante que kills.\n\nVocê não precisa de muita mecânica ou de heróis extremamente fortes, você só precisa de atenção, principalmente no mapa e na classe que você estiver jogando');
+    agent.add('O Arena Of Valor, assim como todo MOBA, é um jogo de estratégia e ganha o time que derrubar primeiro o núcleo.\n\nÉ como se fosse um tower defense mais dinâmico, onde saber o momento certo de avançar ou recuar é o que faz a diferença numa partida, logo derrubar torres é mais importante que kills.\n\nVocê não precisa de muita mecânica ou de heróis extremamente fortes, você só precisa de atenção, principalmente no mapa e na classe que você estiver jogando');
     agent.add('Ah e qualquer dúvida sobre builds ou arcanas é só falar comigo! ;)');
   }
   
@@ -3995,11 +4049,12 @@ function checarDicas(agent) {
         agent.add('Ao jogar na Lane sua função é farmar ao máximo e principalmente derrotar o dragão que é o primeiro objetivo do jogo aos 2min');
         agent.add('É nessa lane que os minions vão dar mais experiência e gold');
         agent.add('Portanto evite morrer ao máximo, e esteja sempre de olho em possíveis ganks do jungler ou do mid inimigo');
+        agent.add('Seu papel é limpar waves de minions e puxar lane o máximo possível!');
         break;
       case 'Solo':
         agent.add('Jogar na solo lane, conhecida também como lane do demônio, é a função mais fácil entre as demais.');
         agent.add('Você só precisa manter seu olho no jungle e no mid inimigo durante o early game, se perceber que algum está indo para sua lane, limpe sua wave rapidamente e volte para debaixo de sua torre');
-        agent.add('Passando early game seu foco depende do seu herói, caso seja um tank, seu foco é ajudar seu time')
+        agent.add('Passando early game seu foco depende do seu herói, caso seja um tank, seu foco é ajudar seu time');
         agent.add('Sendo um split pusher, tente fazer pressão no mapa, observe no mapa rotações do time adversário para puxar uma lane, não espere que seu time te ajude, seu papel é chamar atenção contrária as batalhas que seu time faz');
         break;
       case 'Suporte':
@@ -4022,6 +4077,7 @@ function checarDicas(agent) {
         agent.add('Um bom jungler consegue prever rotações, assim como consegue se mover pelo mapa de forma imprevisível, surpreendendo sempre o time inimigo');
         agent.add('E infelizmente existe um mal entendido de que o jungler precisa iniciar os ganks, e a menos que o seu herói tenha uma boa habilidade de iniciação, isso é um mito');
         agent.add('Um jungler é um herói especialista em finalizações, seu papel é matar os heróis mais frágeis. Não espere que um nakroth ganhe uma luta pulando em cima de um Xeniel full hp.');
+        agent.add('O ideal é que o mago e o suporte acompanhe o jungle nesses ganks, pois dessa forma você não vai pular numa tf em desvantagem');
         agent.add('Sobre itens da jungle, minha recomendação é essa:');
         agent.add(new Image(itens_jungle));
         agent.add('Você deve sempre seguir essa ordem de compra, pois é isso que garante um gank mais forte no lvl 4');
@@ -4040,317 +4096,550 @@ function checarDicas(agent) {
 
       case 'Airi':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break; 
 
       case 'Aleister':
         
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Alice':
 
-        
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Amily':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Annette':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Arduin':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Arthur':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Arum':
 
-        agent.add('Não tenho dicas para esse herói ainda'); 
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Astrid':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Azzenka':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('O Azzenka é um dos magos com o maior controle em área do jogo, capaz de causar muito dano, porém, tem uma das piores mobilidades');
+          agent.add('Sua segunda habilidade é sua maior fonte de dano, é sempre bom começar upando ela');
+          agent.add('Jogue com ele de forma recuada, sempre preocupado com seu posicionamento, pois você não possui nenhuma habilidade de escape');
+          agent.add('O ideal é ficar dando poke de longe com a primeira e a segunda, sempre na backline\n\nE tenha cuidado com sua ult, apesar de muito forte, se usada de forma errada pode não causar dano em ninguém já que ela explode no primeiro inimigo que atingir, podendo esse ser apenas um minion');
+          agent.add('Minha dica é, usar com sabedoria sua segunda skill, se ver dois inimigos lado a lado, esse é o momento certo, ela vai rebater nos 2 o suficiente para petrifica-los');
+        }
         break;
 
       case 'Baldum':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Batman':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Butterfly':
 
-        agent.add('Não tenho dicas para esse herói ainda'); 
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('A Butterfly é uma assassina capaz de virar tfs ao seu favor, devido sua passiva de resetar habilidades após um abate tendo sempre sua ult disponível');
+          agent.add('Já que não gasta mana, você pode usar sua primeira habilidade sempre para se movimentar mais rápido pelo mapa');
+          agent.add('Ao jogar de BF, você precisa entender que um assassino é focado em finalizações, ou seja, você não deve iniciar tfs, você deve chegar para finalizar quem já ta quase morto');
+          agent.add('O ideal é sempre rotacionar de forma que surpreenda, antecipando rotações e pegando justamente aquele atirador ou mago que chegou tarde para batalha, seu foco inicial são eles');
+          agent.add('Saber focar o herói inimigo certo vai te ajudar a decidir qual o melhor momento de pular no meio de uma tf, e por favor, não foca o tank!');
+        }
         break;       
 
       case 'Capheny':
-
-        agent.add('Não tenho dicas para esse herói ainda');
+        
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{  
+          agent.add('A Capheny é uma atiradora, focada no auto attack, capaz de causar muito dano em torres com seu laser');
+          agent.add('E te digo, o laser é só um detalhe, o forte dela é o auto attack. Tenta sempre se movimentar enquanto atacar pra tirar o melhor dela, você é muito fraca, posicionamento com a Capheny é TUDO!');
+          agent.add('O combo mais eficiente para ela é: S1 -> AA -> S2 -> AA -> S1 -> AA -> AA -> AA...');
+          agent.add('Lembrando que a passiva dela é a cada 1% de velocidade de ataque = 2 de dano e o limite máximo de velocidade de ataque é 200%');
+        }          
         break;
 
       case 'Chaugnar':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Cresht':
 
-        agent.add('Não tenho dicas para esse herói ainda'); 
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        } 
         break;
 
       case 'Darcy':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;  
 
       case 'Diaochan':
 
-        agent.add('Não tenho dicas para esse herói ainda'); 
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        } 
         break; 
 
       case 'Elsu':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;  
 
       case 'Errol':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Fennik':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Florentino':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
-
 
       case 'Gildur':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break; 
 
       case 'Grakk':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Hayate':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Ignis':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Ilumia':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break; 
 
       case 'Jinnar':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break; 
 
       case 'Kahlii':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;  
 
       case 'KilGroth':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Kriknak':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Krixi':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Lauriel':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Liliana':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Lindis':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'LuBu':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Lumburr':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Maloch':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Marja':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Max':
 
-        if(filtro.combo){
+        if(filtro.dica == "combo"){
           agent.add('As habilidades do Max foram feitas para situações específicas, portanto não existe um combo específico para ele\n\nMinha dica é, não use sua ult para tentar matar aquele inimigo que escapou com pouco hp, use nas tfs para afastar ou retirar atiradores e assassinos da batalha');  
         }else{
           agent.add('O Max é um guerreiro muito forte capaz de mudar o resultado de tfs se souber usar sua ult global no momento certo');
           agent.add('Tenha em mente duas coisas: O Max não é um tank e seu foco é ultar no atirador ou no assassino inimigo, retirando/afastando eles das tfs');
           agent.add('Ao jogar de Max, é importante que você tenha uma boa noção de mapa, pois sua ult apesar de ter longo tempo de recarga ajuda a informar o posicionamento do time inimigo');
           agent.add('O ideal é evitar de usar sua ult a longa distancia, pois dependendo da distância, o inimigo pode voltar base antes de você chegar ou o time inimigo pode estar só esperando você chegar para te atacar');
-          agent.add('Use sua segunda skill para cancelar habilidades dos inimigos, não use somente para causar dano. E lembre-se, nem sempre vale a pena usar sua ult para tentar matar aquele inimigo que fugiu com pouco hp, o ideal é usar sua ult para ajudar nas tfs que já estão rolando');
+          agent.add('Use sua segunda skill para cancelar habilidades dos inimigos, não use somente para causar dano.\n\nE lembre-se, nem sempre vale a pena usar sua ult para tentar matar aquele inimigo que fugiu com pouco hp, o ideal é usar sua ult para ajudar nas tfs que já estão rolando');
         }
         break;
 
       case 'Mganga':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Mina':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Moren':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Murad':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break; 
 
       case 'Nakroth':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Natalya':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Omega':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Ormarr':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Omen':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Peura':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Preyta':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Quillen':
 
-        if(filtro.combo){
-          agent.add('Combo básico com o Quillen é:\n\nult->S2->S1->AA->ult->S2->S1->AA->ult...\n\nO Quillen é um assassino feito para situações 1x1, portanto seu foco é sempre atacar heróis que estiverem mal posicionados, fora das tfs, focando sempre no mago e no atirador!');  
+        if(filtro.dica == "combo"){
+          agent.add('Combo básico com o Quillen é:\n\nult -> S2 -> S1 -> AA -> ult -> S2 -> S1 -> AA -> ult...\n\nO Quillen é um assassino feito para situações 1x1, portanto seu foco é sempre atacar heróis que estiverem mal posicionados, fora das tfs, focando sempre no mago e no atirador!');  
         }else{
           agent.add('O Quillen é um dos assassinos mais rápidos do jogo, devido sua passiva de resetar habilidades após um abate tendo sempre sua ult disponível');
           agent.add('A primeira skill é a maior fonte de dano dele, portanto maximize primeiro essa habilidade');
           agent.add('Ao jogar de Quillen você precisa entender o tempo de invisibilidade de sua ult, pois ao usar ela antes de pular no meio de uma tf, ou você finaliza o inimigo para ter a habilidade disponível novamente e continuar o combo ou você vai morrer');
           agent.add('O ideal é sempre rotacionar de forma que surpreenda, use sua ult para antecipar rotações e pegar justamente aquele atirador ou mago que chegou tarde para batalha');
-          agent.add('O combo básico do Quillen é:\n\nult->S2->S1->AA->ult->S2->S1->AA->ult...\n\nE esse ciclo continua até você matar todos os inimigos, seu foco é sempre situações de 1x1, nunca pule no meio de uma tf');
+          agent.add('O combo básico do Quillen é:\n\nult -> S2 -> S1 -> AA -> ult -> S2 -> S1 -> AA -> ult...\n\nE esse ciclo continua até você matar todos os inimigos, seu foco é sempre situações de 1x1, nunca pule no meio de uma tf');
           agent.add('Lembrando de atacar sempre nas costas dos inimigos, isso serve inclusive para os monstros da jungle, quanto mais dano você causa, mais rápido limpa a jungle e fica disponível para ajudar seus aliados');
         }
         break;
 
       case 'Raz':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Riktor':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Rourke':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Roxie':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Ryoma':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Sephera':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Skud':
 
-        if(filtro.combo){
-          agent.add('Combo básico com o Skud é:\n\nS2->Aguarda a contagem de 5 segundos->S1->AA->ult->S1\n\nO Skud foi feito para causar dano explosivo e bater em retirada, acerte seu soco carregado e use a ult para resetar a primeira skill e conseguir fugir');  
+        if(filtro.dica == "combo"){
+          agent.add('Combo básico com o Skud é:\n\nS2 -> Aguarda a contagem de 5 segundos -> S1 -> AA -> ult -> S1\n\nO Skud foi feito para causar dano explosivo e bater em retirada, acerte seu soco carregado e use a ult para resetar a primeira skill e conseguir fugir');  
         }else{
           agent.add('O Skud é também conhecido como one punch man devido ao seu soco carregado, capaz de apagar facilmente heróis com pouca armadura');
           agent.add('A segunda skill é a maior fonte de dano dele, portanto maximize primeiro essa habilidade');
@@ -4365,33 +4654,53 @@ function checarDicas(agent) {
 
       case 'Slimz':
 
-        agent.add('Não tenho dicas para esse herói ainda'); 
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Superman':
 
-        agent.add('Não tenho dicas para esse herói ainda'); 
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Taara':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'TeeMee':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'TelAnnas':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
 
       case 'Thane':
 
-        if(filtro.combo){
+        if(filtro.dica == "combo"){
           agent.add('As habilidades do Thane foram feitas para proteger e incomodar os inimigos, portanto não tem um combo básico específico');  
         }else{
           agent.add('Thane é um tanque/suporte com muito controle de grupo, capaz de aguentar muito dano e causar bastante estrago com sua ult');
@@ -4404,116 +4713,199 @@ function checarDicas(agent) {
 
       case 'TheFlash':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
 
       case 'TheJoker':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Toro':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Tulen':
 
-        if(filtro.combo){
-          agent.add('Combo básico com Tulen é:\n\nS1->S2->AA->ult\n\nAcertando a primeira e a segunda skill corretamente, sua passiva já vai estar ativa, só restando a ult para finalizar o inimigo');  
+        if(filtro.dica == "combo"){
+          agent.add('Combo básico com Tulen é:\n\nS1 -> S2 -> AA -> ult\n\nAcertando a primeira e a segunda skill corretamente, sua passiva já vai estar ativa, só restando a ult para finalizar o inimigo');  
         }else{
           agent.add('Tulen é um mago de alta mobilidade, com bastante dano explosivo e grande poder de finalização de seus inimigos com sua ult');
           agent.add('Comece o jogo upando sua segunda skill, pois isso te ajuda em possíveis ganks no early game e maximize a primeira skill, é sua maior fonte de dano além da passiva');
           agent.add('Apesar de acertar a longa distancia, as skills do Tulen foram feitas para ser usadas o mais próximo possível do inimigo');
           agent.add('Acertando corretamente os 3 raios da primeira skill e acertando a segunda skill no momento da partida e da chegada, você garante os 5 stacks necessários para ativar a passiva');
-          agent.add('Seu combo básico é:\n\nS1->S2->AA->ult\n\nMinha dica é, utilize a primeira skill nos minions, é mais fácil de acertar os 3 raios para pelo menos acumular stack antes da tf');
-          agent.add('Lembrando que é importante que sua ult mate o alvo, pois além de ativar a passiva novamente após atingir um alvo, caso ele morra, seu cooldown é reduzido podendo ser usada novamente em poucos segundos em outro inimigo');
+          agent.add('Seu combo básico é:\n\nS1 -> S2 -> AA -> ult\n\nMinha dica é, utilize a primeira skill nos minions, é mais fácil de acertar os 3 raios para pelo menos acumular stack antes da tf');
+          agent.add('Lembrando que é importante que sua ult mate o alvo, pois além de ativar a passiva novamente seu cooldown é reduzido podendo ser usada novamente em poucos segundos em outro inimigo');
         }
         break;
 
       case 'Valhein':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Veera':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Veres':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Violet':
 
-        if(filtro.combo){
-          agent.add('Combo básico com a Violet é:\n\nS1->AA->ult\n\nA Violet foi feita para dar poke nos inimigos com sua bazooka, mantendo sempre a distância para aproveitar o range de sua habilidade');  
+        if(filtro.dica == "combo"){
+          agent.add('Combo básico com a Violet é:\n\nS1 -> AA -> ult\n\nA Violet foi feita para dar poke nos inimigos com sua bazooka, mantendo sempre a distância para aproveitar o range de sua habilidade');  
         }else{
           agent.add('Violet é a atiradora com o maior range do jogo, capaz de matar com um tiro só no late game');
           agent.add('A primeira skill é a maior fonte de dano dela, portanto maximize primeiro essa habilidade');
           agent.add('Você deve aproveitar o longo range da bazooka sempre usando o limite do alcance da sua skill para acertar os inimigos de longe sem ter chance de você sofrer algum dano');
           agent.add('O ideal é sempre rolar para trás, nunca para perto do inimigo, pois assim você garante que não vai sofrer nenhum dano');
-          agent.add('Caso esteja com dificuldades de acertar a ult, você pode sempre antes usar a segunda skill dela para causar slow nos inimigos');
+          agent.add('Caso esteja com dificuldades de acertar a ult, você pode usar a segunda skill dela antes para causar slow nos inimigos');
           agent.add('Ou fazer capa de gelo no lugar da omniarma e causar slow a longa distancia usando sua primeira skill, é uma boa quando estiver enfrentando heróis com muita mobilidade');
         }
         break;
 
       case 'Wiro':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Wisp':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Wonder Woman':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Wukong':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Xeniel':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'YBneth':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
+      case 'Yena':
+
+        if(filtro.dica == "combo"){
+          agent.add('Combo básico com a Yena é:\n\nS2-> S1 -> S1 -> S3 -> S2\n\nCombo avançado:\n\nS1(nos minions) -> S2 -> S1 -> S3 -> S2 -> S1(apertar 2x) -> S2 -> S1(apertar 2x)');
+        }else{
+          agent.add('Minha dica para jogar com ela é entender bem os dois modos de combate que ela tem');
+          agent.add('O primeiro modo é o modo assassino, nele sua velocidade de movimento é aumentada\n\nEnquanto o segundo é seu modo guerreiro, sua velocidade de ataque diminui mas aumenta o dano em 50%\n\nPara trocar de modo você deve usar sua ult');
+          agent.add('Lembrando que a cada golpe (ataque básico ou habilidade) que ela dá no inimigo no modo assassino acumula um stack, ao somar 5 stacks, o inimigo toma silence e reduz o movimento em 80%!');
+          agent.add('Sua primeira skill no modo assassino pode ser usada duas vezes se acertar um minion ou herói na primeira vez\n\nE no modo guerreiro é possível mudar a direção enquanto carrega a habilidade usando flick ou pode ser usada imediatamente apertando duas vezes');
+          agent.add('Enquanto usa sua segunda habilidade no modo guerreiro, você fica imune a controle, portanto saiba combar bem com isso\n\nAlém disso, sua segunda skill no modo assassino arremessa uma shuriken que ao ser coletada reduz o cooldown da mesma em 5 segundos, seu combo geralmente começa aqui');
+          agent.add('O combo mais comum é:\n\nS2-> S1 -> S1 -> S3 -> S2\n\nEnquanto o combo avançado:\n\nS1(nos minions) -> S2 -> S1 -> S3 -> S2 -> S1(apertar 2x) -> S2 -> S1(apertar 2x)');
+          agent.add('Inicie as lutas no modo assassino para dar engage rapidamente no mago e no atirador e causar muito dano com seus combos, e poder tankar os outros no modo guerreiro'); 
+        }
+        break;
+        
       case 'Yorn':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Zanis':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Zephys':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Zill':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
 
       case 'Zuka':
 
-        agent.add('Não tenho dicas para esse herói ainda');
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
         break;
     } 
   }
@@ -4542,7 +4934,7 @@ function checarDicas(agent) {
 
   intentMap.set('checarArcanas', checarArcanas);
 
-  intentMap.set('ultimasBuilds', ultimasBuilds);
+  intentMap.set('ultimasAtualizacoes', ultimasAtualizacoes);
 
   intentMap.set('listar_menu', listar_menu);
   
