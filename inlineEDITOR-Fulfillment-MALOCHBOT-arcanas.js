@@ -3091,7 +3091,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     let filtro = { hero:heroi, classe:classes, iniciante:begginer, tipo:tipoDano, explicar:sobre, info:informacao }; 
 
     if(arcanas && !filtro.info && !filtro.explicar && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.tipo){
-      agent.add('Entendi que você quer falar de arcanas, mas o que exatamente? Se quiser listar meus comandos, basta digitar, arcanas informações');
+      agent.add('Entendi que você quer falar de arcanas, mas o que exatamente? Se quiser listar meus comandos, basta digitar: ´arcanas informações´');
     }
 
     if(arcanas && filtro.info){
@@ -3897,14 +3897,19 @@ function checarDicas(agent) {
   const begginer = agent.parameters.levelPlayer;
   const role     = agent.parameters.roles;
   const itens    = agent.parameters.itens;
+  const informacao = agent.parameters.informacao;
 
-  let filtro = { hero:heroi, classe:classes, iniciante:begginer, papel:role, item:itens, dica:dicas}; 
+  let filtro = { hero:heroi, classe:classes, iniciante:begginer, papel:role, item:itens, dica:dicas, info:informacao}; 
+  
+  if(dicas == "dicas" && !filtro.info && !filtro.papel && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.tipo){
+    agent.add('Entendi que você quer dicas, mas sobre o que? Se quiser listar meus comandos, basta digitar: ´dicas informações´');
+  }
 
   if(dicas == "combo" && !filtro.hero){
     agent.add('Entendi que você ta precisando aprender algum combo, mas não sei qual herói, para combos digite: ´combos [herói]´');
   }
 
-  if(dicas == "dicas" && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.item && !filtro.papel){
+  if(dicas == "dicas" && filtro.info && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.item && !filtro.papel){
     agent.add('Se quiser dicas para iniciantes digite:');
     agent.add('´dicas para iniciantes´');
     agent.add('Se quiser dicas básicas por classes de heróis');
