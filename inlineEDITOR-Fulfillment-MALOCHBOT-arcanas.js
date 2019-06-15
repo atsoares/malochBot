@@ -845,7 +845,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         agent.add('Hm, então quer dizer que resolveu jogar de Arum...'); 
         if (!filtro.funcao) {
-          agent.add('Deixa eu ver o que tenho para você...');
           agent.add('Caso queira jogar na SOLO lane:');
           agent.add(new Image(ARUM_SOLO_URL));
           agent.add('E tenho essa outra aqui se for jogar de SUPORTE:');
@@ -886,11 +885,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
               case 'Solo':
-                agent.add('Aqui está sua build:');
+                agent.add('Aqui está:');
                 agent.add(new Image(ASTRID_URL));
                 break;
               case 'Jungle':
-                agent.add('Aqui está sua build:');
+                agent.add('Aqui está:');
                 agent.add(new Image(ASTRID_JG_URL));
                 break;
             }
@@ -907,13 +906,13 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         agent.add('Hm, então quer dizer que resolveu jogar de Azzen´ka...');
         if (!filtro.funcao) {
-          agent.add('Aqui sua build:');
+          agent.add('Aqui está:');
           agent.add(new Image(AZZENKA_URL));
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
               case 'Mid':
-                agent.add('Aqui está sua build:');
+                agent.add('Aqui está:');
                 agent.add(new Image(AZZENKA_URL));
                 break;
             }
@@ -984,17 +983,15 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Butterfly':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Butterfly...'); 
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Caso seja iniciante, o ideal é começar por essa build aqui:');
           agent.add(new Image(BUTTERFLY_TANK_URL));
-          agent.add('Mas se você já domina a SELVA, pode seguir com essa outra.');
+          agent.add('Mas se você já domina a jungle, pode seguir com essa outra.');
           agent.add(new Image(BUTTERFLY_AD_URL));
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
               case 'Jungle':
-                agent.add('No momento eu tenho essas build:');
                 agent.add('Caso queira jogar com ela mais Tank tenho essa:');
                 agent.add(new Image(BUTTERFLY_TANK_URL));
                 agent.add('Mas se você já tem Tanks suficientes no seu time, usa essa:');
@@ -1013,16 +1010,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Capheny':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Capheny...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
-          agent.add('Tenho builds na jungle e na lane');
-          agent.add('Caso jogue na lane, da uma testada nessa:');
+          agent.add('Tenho builds na lane e na jungle');
           agent.add(new Image(CAPHENY_LANE3_URL));
-          agent.add('Caso jungle:');
           agent.add(new Image(CAPHENY_JG_URL));
-          agent.add('E te digo, o laser é só um detalhe, o forte dela é o auto attack. Tenta sempre se movimentar enquanto atacar pra tirar o melhor dela, ah, e a ult dela continua ativada mesmo se você for preso pela Arum, então fica ligado!');
-          agent.add('Tenta esse combo: 1-AA-2-AA-1-AA-AA-AA...');
-          agent.add('Lembrando que a passiva dela é a cada 1% de velocidade de ataque = 2 de dano e o limite máximo de velocidade de ataque é 200%');
           } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
@@ -1030,13 +1021,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 agent.add('Aqui, tenho essa:');
                 agent.add(new Image(CAPHENY_LANE3_URL));
                 agent.add('Mas dependendo do time inimigo, pode ser assim também:');
-                agent.add(new Image(CAPHENY_LANE2_URL));
-                agent.add('Lembrando que a passiva dela é a cada 1% de velocidade de ataque = 2 de dano, por isso recomendo botas de guerra');
+                agent.add(new Image(CAPHENY_LANE2_URL));;
                 break;
               case 'Jungle':
                 agent.add('Aqui oh:');
                 agent.add(new Image(CAPHENY_JG_URL));
-                agent.add('Lembrando que a passiva dela é a cada 1% de velocidade de ataque = 2 de dano, por isso recomendo botas de guerra');
                 break;
             }
           } else {
@@ -1051,7 +1040,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Chaugnar':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Chaugnar...');
-        agent.add('Deixa eu ver o que tenho para você...'); 
         if (!filtro.funcao) {
           agent.add('Se seu time já tiver outro tank, faz essa:');
           agent.add(new Image(CHAUGNAR_AP_URL));
@@ -1081,7 +1069,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Cresht':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Cresht...'); 
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Caso esteja jogando como SUPORTE, vai com essa:');
           agent.add(new Image(CRESHT_SUPORTE_URL));
@@ -1113,7 +1100,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Darcy':
 
         agent.add('Hm, então quer dizer que resolveu jogar de D´Arcy... ');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Pronto, essa aqui é a build mais comum Mid:');
           agent.add(new Image(DARCY_MID_URL));
@@ -1151,7 +1137,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Diaochan':
 
         agent.add('Diaochan? Claro só um instante'); 
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Pronto, essa aqui é a build mais comum Mid:');
           agent.add(new Image(DIAOCHAN_MID_URL));
@@ -1184,7 +1169,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Elsu':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Elsu...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Por enquanto só tenho essa:');
           agent.add(new Image(ELSU_URL));
@@ -1215,18 +1199,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Errol':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Errol...');
-        agent.add('Deixa eu ver o que tenho');
         if (!filtro.funcao) {
           agent.add('Tenho builds na jungle e na lane do Demônio');
           agent.add('Caso jogue na solo, da uma testada nessa:'); 
           agent.add(new Image(ERROL_SOLO_URL));
-          agent.add('Serve bem pra split push e ganks no mid.');
           agent.add('Caso jogue na jungle'); 
           agent.add(new Image(ERROL_JG_URL));
-          agent.add('Com essa build seu foco é gank! Mas não esquece das torres');
-          agent.add('Maximiza a segunda skill dele primeiro, é a maior fonte de dano e só entra numa luta depois de stackar a passiva e ativar o roubo de vida. Com cuidado pois ele não fica imune a controle enquanto usa as habilidades');
-          agent.add('E você pode fazer Capa de Gelo no lugar da Omniarma, fica mais fácil de combar com a segunda skill');
-          agent.add('Ah, vê se não testa herói novo em ranked');
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
@@ -1251,9 +1229,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             agent.add(FUNCAO_ERRADA_1);
             agent.add(FUNCAO_ERRADA_2);
             agent.add('O Errol é melhor se utilizado na Solo ou na Jungle!');
-		        agent.add('Mas se quiser ser o troll da partida');
-		        agent.add('Da pra usar ele suporte, mas não recomendo:');
-		        agent.add(new Image(ERROL_TROLL_URL));
           }
         }
         break;
@@ -1261,11 +1236,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Fennik':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Fennik...');
-        agent.add('Deixa eu ver o que tenho');
         if (!filtro.funcao) {
-          agent.add('Por enquanto só tenho essa:'); 
-          agent.add(new Image(FENNIK_URL));
-          agent.add('Espero que saiba jogar na Selva');
+          agent.add('Aqui, tenho duas:');
+          agent.add(FENNIK_URL);
+          agent.add(FENNIK_2_URL);
+                agent.add('Se você tiver iniciando com ele, te recomendo a primeira!');
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
@@ -1290,8 +1265,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
       case 'Florentino':
 
-        agent.add('Eita, quer apelar mesmo de Florentino ein?');
-        agent.add('Deixa eu ver o que tenho para você...');
+        agent.add('Hm, então quer dizer que resolveu jogar de Florentino?');
         if (!filtro.funcao) {
           agent.add('Aqui oh, build mais comum e eficiente dele:');
           agent.add(new Image(FLORENTINO_URL));
@@ -1320,7 +1294,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Gildur':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Gildur...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Caso queira jogar no MID ou SOLO lane:');
           agent.add(new Image(GILDUR_AP_URL));
@@ -1356,7 +1329,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Grakk':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Grakk...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(GRAKK_URL));        
@@ -1382,7 +1354,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Hayate':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Hayate... ');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Tenho duas');    
           agent.add('Caso queira jogar na jungle:');
@@ -1415,7 +1386,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Ignis':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Ignis...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(IGNIS_URL));
@@ -1439,7 +1409,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Ilumia':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Ilumia...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(ILUMIA_URL));
@@ -1467,7 +1436,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Jinnar':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Jinnar...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(JINNAR_URL));
@@ -1491,7 +1459,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Kahlii':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Kahlii...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(KAHLII_URL));
@@ -1515,7 +1482,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'KilGroth':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Kil´Groth...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Tenho duas');
           agent.add(new Image(KILGROTH_URL));
@@ -1546,7 +1512,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Kriknak':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Kriknak...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(KRIKNAK_URL));
@@ -1570,7 +1535,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Krixi':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Krixi...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(KRIXI_URL));
@@ -1594,7 +1558,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Lauriel':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Lauriel...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(LAURIEL_URL));
@@ -1622,7 +1585,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Liliana':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Liliana...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(LILIANA_URL)); 
@@ -1701,7 +1663,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Lumburr':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Lumburr...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(LUMBURR_URL));        
@@ -1731,7 +1692,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(MALOCH_URL));
-          agent.add('Mas com essa build eu nunca falho!');
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
@@ -1740,7 +1700,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 agent.add(new Image(MALOCH_URL));
                 agent.add(new Image(MALOCH_2_URL));
                 agent.add('Se você for iniciante, te recomendo a primeira!');
-                agent.add('A segunda possui um item ativo que em breve vou explicar melhor sobre eles!');
                 break;
             }
           } else {
@@ -1826,7 +1785,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Mina':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Mina...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(MINA_URL));        
@@ -1954,7 +1912,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Omega':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Omega...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(OMEGA_URL));        
@@ -1983,7 +1940,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Ormarr':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Ormarr...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(ORMARR_URL));        
@@ -2037,7 +1993,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Peura':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Peura...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(PEURA_URL));        
@@ -2141,7 +2096,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Riktor':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Riktor...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(RIKTOR_SOLO_URL));
@@ -2180,7 +2134,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Rourke':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Rourke...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(ROURKE_URL));
@@ -2214,7 +2167,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Roxie':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Roxie...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add('Se você gosta de dar invade e quer usar PUNIR como talento, vai com essa:');
@@ -2245,7 +2197,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Ryoma':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Ryoma...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add('Caso queira jogar na SELVA, usa essa:');
@@ -2326,7 +2277,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Slimz':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Slimz...'); 
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add('Caso queira jogar na SELVA, usa essa:');
@@ -2357,7 +2307,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Superman':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Superman...'); 
-        agent.add('Deixa eu ver o que temos de mais novo no meta...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add('Se você quer irritar seus inimigos como SUPORTE, dando visão para seu time e ajudando nas TFs, te recomendo essa build aqui:');
@@ -2415,7 +2364,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'TeeMee':
 
         agent.add('Hm, então quer dizer que resolveu jogar de TeeMee...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(TEEMEE_URL));        
@@ -2446,7 +2394,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'TelAnnas':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Tel´Annas...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(TELANNAS_URL));        
@@ -2474,7 +2421,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Thane':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Thane...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(THANE_URL));        
@@ -2612,8 +2558,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
       case 'Veera':
 
-        agent.add('Você quis dizer, Valhein AP?');
-        agent.add('Brincadeira... rsrsrs');
+        agent.add('Hm, então quer dizer que resolveu jogar de Veera...');
         if (!filtro.funcao) {
           agent.add('Aqui, uma build de Veera');
           agent.add(new Image(VEERA_URL));
@@ -2664,7 +2609,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Violet':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Violet...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui, uma build para jogar na lane:');
           agent.add(new Image(VIOLET_LANE_URL));
@@ -2696,7 +2640,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Wiro':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Wiro...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(WIRO_URL));
@@ -2720,7 +2663,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Wisp':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Wisp...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(WISP_URL));
@@ -2748,7 +2690,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Wonder Woman':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Mulher Maravilha...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(WONDERWOMAN_URL));
@@ -2775,7 +2716,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Wukong':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Wukong...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('♪ sopa de macaco ♪ sopa sopa de macaco ♪');
           agent.add('...');
@@ -2805,7 +2745,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Xeniel':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Xeniel...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(XENIEL_URL));
@@ -2832,7 +2771,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'YBneth':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Y´bneth...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Por enquanto só tenho essa:');
           agent.add(new Image(YBNETH_URL));        
@@ -2862,7 +2800,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Yena':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Yena...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Pronto, tenho duas');
           agent.add(new Image(YENA_1_URL)); 
@@ -2873,7 +2810,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('Lembrando que a cada golpe (ataque básico ou habilidade) que ela dá no inimigo no modo assassino acumula um stack, ao somar 5 stacks, o inimigo toma silence e reduz o movimento em 80%!');
           agent.add('Sua primeira skill no modo assassino pode ser usada duas vezes se acertar um minion ou herói na primeira vez\n\nE no modo guerreiro é possível mudar a direção enquanto carrega a habilidade usando flick ou pode ser usada imediatamente apertando duas vezes');
           agent.add('Enquanto usa sua segunda habilidade no modo guerreiro, você fica imune a controle, portanto saiba combar bem com isso\n\nAlém disso, sua segunda skill no modo assassino arremessa uma shuriken que ao ser coletada reduz o cooldown da mesma em 5 segundos, seu combo geralmente começa aqui');
-          agent.add('O combo mais comum é:\n\nS2-> S1 -> S1 -> S3 -> S2\n\nEnquanto o combo avançado:\n\nS1(nos minions) -> S2 -> S1 -> S3 -> S2 -> S1(apertar 2x) -> S2 -> S1(apertar 2x)');
+          agent.add('O combo mais comum é:\n\nS2-> S1 -> S1 -> ULT -> S2\n\nEnquanto o combo avançado:\n\nS1(nos minions) -> S2 -> S1 -> ULT -> S2 -> S1(apertar 2x) -> S2 -> S1(apertar 2x)');
           agent.add('Inicie as lutas no modo assassino para dar engage rapidamente no mago e no atirador e causar muito dano com seus combos, e poder tankar os outros no modo guerreiro'); 
           agent.add('E por favor, não testa herói novo em ranked!');
         } else {
@@ -2898,7 +2835,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Yorn':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Yorn...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(YORN_URL)); 
@@ -2923,7 +2859,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Zanis':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Zanis...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(ZANIS_OFF_TANKURL));
@@ -2954,7 +2889,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Zephys':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Zephys...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add('Bom, temos duas variações de build, fica ao seu critério qual a melhor');
@@ -2981,7 +2915,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Zill':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Zill...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(ZILL_URL));
@@ -3005,7 +2938,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Zuka':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Zuka...');
-        agent.add('Deixa eu ver o que tenho para você...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(ZUKA_URL));
@@ -4032,7 +3964,7 @@ function checarDicas(agent) {
         agent.add('Hm, guerreiros, sempre surpreendendo o jungle inimigo');
         agent.add('Eles são parecidos com tanques, porém possuem mais dano e menos defesa que um');
         agent.add('Geralmente são heróis que fazem split push, e são bons contra assassinos');
-        agent.add('Evite fazer builds full dano/tank em guerreiros, seu forte é justamente esse mix de ataque e defesa');
+        agent.add('Evite fazer builds full dano/tank em guerreiros, seu forte é justamente ter esse mix de ataque e defesa');
         break;
       case 'Tanque':
         agent.add('Hm, tanques, sempre carregando seu time nas costas');
@@ -4102,18 +4034,28 @@ function checarDicas(agent) {
       case 'Airi':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Combo básico:\n\nS1 -> S2 -> AA -> ULT -> AA -> AA -> S1\n\nO ideal é usar sua shuriken antes de iniciar, pois seu cooldown reduz 1 segundo a cada AA, podendo ser usada mais de uma vez no mesmo combo');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('A Airi é uma guerreira/assassina, com um split push forte devido sua alta mobilidade, capaz de causar dano explosivo e controle de grupo');
+          agent.add('Sua primeira habilidade é seu poke, maximize-a primeiro e aprenda a usar com maestria, o quanto você acerta a shuriken determina quão bom você é com ela');
+          agent.add('Sempre jogue de forma agressiva e aproveite para pular em cima de atiradores (sua maior prioridade) e outros heróis mais papeis\n\nMas tome cuidado para não ficar sem sua segunda habilidade, quando elas estão em cooldown nem pense ir pra cima');
+          agent.add('Nunca fique usando sua shuriken por trás dos tanks do seu time para depois tentar atravessar a frontline do time inimigo para ultar\n\nUsar a mobilidade da Airi para contornar da tf e surpreender a backline inimiga é o ideal, pois assim eles não tem tempo de reagir ou se reposicionar');
+          agent.add('Um combo que indico com ela é:\n\nS1 -> S2 -> AA -> ULT -> AA -> AA -> S1\n\nO ideal é usar sua shuriken antes de iniciar, pois seu cooldown reduz 1 segundo a cada AA, podendo ser usada mais de uma vez no mesmo combo');
+          agent.add('Lembrando que sua ULT, quanto mais inimigos tiver, maior vai ser o escudo que você ganha! Ah, e o Talento recomendado é Executar');
         }
         break; 
 
       case 'Aleister':
         
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Combo básico:\n\nS1 -> S2 -> ULT\n\nSe você estiver na moita, é fácil matar qualquer um com esse combo, mas o ideal é ficar usando a primeira e a segunda durante tfs e guardar sempre a ult para punir erros de posicionamento do time adversário');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Aleister é um mago com pouca mobilidade porém possui MUITO controle de grupo, causando slow e stuns que duram tempo suficiente para ajudar seus aliados que precisam chegar mais próximo do inimigo para finalizar');
+          agent.add('Sua segunda habilidade é sua maior fonte de dano e consequentemente sua melhor habilidade para limpar waves de minions, maximize-a primeiro');
+          agent.add('Devido seu kit capaz de causar muito dano e controle de grupo, o ideal ao jogar com Aleister é buildar itens que aumente sua velocidade de movimento, pois é extremamente importante a sua participação nas tfs\n\nDevido a grande área que suas habilidades atinge, é fácil limpar waves e rotacionar com ele, foque nisso!');
+          agent.add('O combo mais básico e eficiente dele é:\n\nS1 -> S2 -> ULT\n\nSe você estiver na moita, é fácil matar qualquer um com esse combo, mas o ideal é ficar usando a primeira e a segunda durante tfs e guardar sempre a ult para punir erros de posicionamento do time adversário');
+          agent.add('Aproveite do fato que infelizmente muitos se esquecem do dano absurdo que ele causa em quem ficar parado na sua segunda habilidade e use principalmente quando tiver inimigos debaixo da sua torre');
+          agent.add('Lembrando que o Aleister tem pouco potencial de finalização e nenhum escape, portanto mantenha sempre uma boa distancia de seus inimigos com suas habilidades criando oportunidades para seu jungle finaliza-los. Ah, e o Talento recomendado é Sprint');
         }
         break;
 
@@ -4129,18 +4071,28 @@ function checarDicas(agent) {
       case 'Amily':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Seu combo básico é:\n\nS1 -> S2 -> AA -> ULT -> AA\n\nCom o slow da sua primeira skill fica fácil pular em cima dos inimigos, principalmente pois além do dano você ganha regen de hp');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Amily é uma guerreira/tank com habilidades que a tornam quase uma assassina, devido sua excelente mobilidade e passiva que aumenta o dano ao lutar em 1x1');
+          agent.add('Maximize sua segunda habilidade, é sua maior fonte de dano');
+          agent.add('Suas habilidades foram feitas para situações de x1, portanto seu foco é ganks no mid, invades na jungle inimiga e split push, sempre roaming!\n\nPense nela como um herói de sustain, não de dano explosivo');
+          agent.add('Evite participar de tfs, sua passiva não funciona nessas situações e ela não é bem uma tank.\n\nMinha dica é, pular na tf após ela ter iniciado apenas para usar sua ult, e evite ficar nela se estiver enfrentando dano explosivo, é sua maior fraqueza');
+          agent.add('Falando em ult, essa é sua razão para ser forte em split push, capaz de tankar heróis como Omen na ult por exemplo\n\nAssim como todas suas habilidades ajudam no escape dela');
+          agent.add('Seu combo básico é:\n\nS1 -> S2 -> AA -> ULT -> AA\n\nCom o slow da sua primeira skill fica fácil pular em cima dos inimigos, principalmente pois além do dano você ganha regen de hp');
+          agent.add('Você pode usar tanto Executar, Flick ou Punir como talento, mas te indico Executar');
         }
         break;
 
       case 'Annette':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Vish, não tenho combos com a Annette :/');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Annette é uma maga/suporte com bastante controle de grupo. Todas suas habilidades causam algum tipo de controle seja slow ou stun.');
+          agent.add('Priorize a sua primeira habilidade, é sua maior fonte de dano\n\nJá na segunda habilidade, você precisa mirar de forma que acerte dois inimigos alinhados, para que sejam atordoados');
+          agent.add('Use sua ULT sempre que necessário para empurrar heróis melee que tentarem se aproximar de seus aliados\n\nMas tome cuidado para não ajudar seus inimigos afastando eles das habilidades em área de seus aliados');
+          agent.add('Por ser uma suporte, sua função durante uma partida é Roaming, esteja sempre próximo de seus aliados ganhando visão de mapa. E devido sua composição minha dica é buildar a Annette mais tank');
+          agent.add('O talento sugerido para ela é Curar');
         }
         break;
 
@@ -4214,7 +4166,7 @@ function checarDicas(agent) {
       case 'Butterfly':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Olha, não acredito que tenha um combo específico, BF é só apertar todas as skills perto do inimigo');
         }else{
           agent.add('A Butterfly é uma assassina capaz de virar tfs ao seu favor, devido sua passiva de resetar habilidades após um abate tendo sempre sua ult disponível');
           agent.add('Já que não gasta mana, você pode usar sua primeira habilidade sempre para se movimentar mais rápido pelo mapa');
@@ -4227,11 +4179,11 @@ function checarDicas(agent) {
       case 'Capheny':
         
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Combo básico:\n\nS1 -> AA -> S2 -> AA -> S1 -> AA -> AA -> AA...');
         }else{  
           agent.add('A Capheny é uma atiradora, focada no auto attack, capaz de causar muito dano em torres com seu laser');
-          agent.add('E te digo, o laser é só um detalhe, o forte dela é o auto attack. Tenta sempre se movimentar enquanto atacar pra tirar o melhor dela, você é muito fraca, posicionamento com a Capheny é TUDO!');
-          agent.add('O combo mais eficiente para ela é: S1 -> AA -> S2 -> AA -> S1 -> AA -> AA -> AA...');
+          agent.add('E te digo, o laser é só um detalhe, o forte dela é o auto attack.\n\nTenta sempre se movimentar enquanto atacar pra tirar o melhor dela, posicionamento com a Capheny é TUDO!');
+          agent.add('O combo mais eficiente para ela é:\n\nS1 -> AA -> S2 -> AA -> S1 -> AA -> AA -> AA...');
           agent.add('Lembrando que a passiva dela é a cada 1% de velocidade de ataque = 2 de dano e o limite máximo de velocidade de ataque é 200%');
         }          
         break;
@@ -4576,13 +4528,13 @@ function checarDicas(agent) {
       case 'Quillen':
 
         if(filtro.dica == "combo"){
-          agent.add('Combo básico com o Quillen é:\n\nult -> S2 -> S1 -> AA -> ult -> S2 -> S1 -> AA -> ult...\n\nO Quillen é um assassino feito para situações 1x1, portanto seu foco é sempre atacar heróis que estiverem mal posicionados, fora das tfs, focando sempre no mago e no atirador!');  
+          agent.add('Combo básico com o Quillen é:\n\nULT -> S2 -> S1 -> AA -> ULT -> S2 -> S1 -> AA -> ULT...\n\nO Quillen é um assassino feito para situações 1x1, portanto seu foco é sempre atacar heróis que estiverem mal posicionados, fora das tfs, focando sempre no mago e no atirador!');  
         }else{
-          agent.add('O Quillen é um dos assassinos mais rápidos do jogo, devido sua passiva de resetar habilidades após um abate tendo sempre sua ult disponível');
+          agent.add('O Quillen é um dos assassinos mais rápidos do jogo, devido sua passiva de resetar habilidades após um abate tendo sempre sua ULT disponível');
           agent.add('A primeira skill é a maior fonte de dano dele, portanto maximize primeiro essa habilidade');
-          agent.add('Ao jogar de Quillen você precisa entender o tempo de invisibilidade de sua ult, pois ao usar ela antes de pular no meio de uma tf, ou você finaliza o inimigo para ter a habilidade disponível novamente e continuar o combo ou você vai morrer');
-          agent.add('O ideal é sempre rotacionar de forma que surpreenda, use sua ult para antecipar rotações e pegar justamente aquele atirador ou mago que chegou tarde para batalha');
-          agent.add('O combo básico do Quillen é:\n\nult -> S2 -> S1 -> AA -> ult -> S2 -> S1 -> AA -> ult...\n\nE esse ciclo continua até você matar todos os inimigos, seu foco é sempre situações de 1x1, nunca pule no meio de uma tf');
+          agent.add('Ao jogar de Quillen você precisa entender o tempo de invisibilidade de sua ULT, pois ao usar ela antes de pular no meio de uma tf, ou você finaliza o inimigo para ter a habilidade disponível novamente e continuar o combo ou você vai morrer');
+          agent.add('O ideal é sempre rotacionar de forma que surpreenda, use sua ULT para antecipar rotações e pegar justamente aquele atirador ou mago que chegou tarde para batalha');
+          agent.add('O combo básico do Quillen é:\n\nULT -> S2 -> S1 -> AA -> ULT -> S2 -> S1 -> AA -> ULT...\n\nE esse ciclo continua até você matar todos os inimigos, seu foco é sempre situações de 1x1, nunca pule no meio de uma tf');
           agent.add('Lembrando de atacar sempre nas costas dos inimigos, isso serve inclusive para os monstros da jungle, quanto mais dano você causa, mais rápido limpa a jungle e fica disponível para ajudar seus aliados');
         }
         break;
@@ -4644,13 +4596,13 @@ function checarDicas(agent) {
       case 'Skud':
 
         if(filtro.dica == "combo"){
-          agent.add('Combo básico com o Skud é:\n\nS2 -> Aguarda a contagem de 5 segundos -> S1 -> AA -> ult -> S1\n\nO Skud foi feito para causar dano explosivo e bater em retirada, acerte seu soco carregado e use a ult para resetar a primeira skill e conseguir fugir');  
+          agent.add('Combo básico com o Skud é:\n\nS2 -> Aguarda a contagem de 5 segundos -> S1 -> AA -> ULT -> S1\n\nO Skud foi feito para causar dano explosivo e bater em retirada, acerte seu soco carregado e use a ULT para resetar a primeira skill e conseguir fugir');  
         }else{
           agent.add('O Skud é também conhecido como one punch man devido ao seu soco carregado, capaz de apagar facilmente heróis com pouca armadura');
           agent.add('A segunda skill é a maior fonte de dano dele, portanto maximize primeiro essa habilidade');
           agent.add('Você deve ter noção da contagem de 5 segundos após ativar a habilidade para conseguir acertar o soco na hora certa');
           agent.add('O ideal é usar o dash da primeira habilidade para chegar o mais perto possível do seu alvo e acertar o soco na carga máxima');
-          agent.add('Ao usar a ult e acertar algum herói inimigo, sua primeira habilidade é resetada, podendo ser usada novamente tanto para escapar ou finalizar outro inimigo');
+          agent.add('Ao usar a ULT e acertar algum herói inimigo, sua primeira habilidade é resetada, podendo ser usada novamente tanto para escapar ou finalizar outro inimigo');
           agent.add('Devido ao seu kit, o Skud é ideal para split pushs e rotações rapidas de ganks no mid, pois basta um soco para deitar magos, e principalmente, torres');
           agent.add('Muito cuidado com controles de grupo, um stun é capaz de cancelar seu ataque explosivo. Vale a pena nesse caso usar a bota escolha de hermes, pois te garante mais velocidade nas rotações e ganks');
         }
@@ -4708,10 +4660,10 @@ function checarDicas(agent) {
         if(filtro.dica == "combo"){
           agent.add('As habilidades do Thane foram feitas para proteger e incomodar os inimigos, portanto não tem um combo básico específico');  
         }else{
-          agent.add('Thane é um tanque/suporte com muito controle de grupo, capaz de aguentar muito dano e causar bastante estrago com sua ult');
+          agent.add('Thane é um tanque/suporte com muito controle de grupo, capaz de aguentar muito dano e causar bastante estrago com sua ULT');
           agent.add('Nunca inicie uma tf usando de cara todas as suas habilidades, sua função é estar próximo das tfs de olho nos possíveis ganks do jungle ao seu adc/mago');
           agent.add('Use suas habilidades nesses momentos, sempre focado em proteger seu atirador ou mago, seja empurrando os inimigos ou atordoando');
-          agent.add('Sua ult causa dano real, ou seja, ignora armadura e atinge em cheio na vida do inimigo, use com cuidado para não roubar kills, mas caso aconteça, é a vida');
+          agent.add('Sua ULT causa dano real, ou seja, ignora armadura e atinge em cheio na vida do inimigo, use com cuidado para não roubar kills, mas caso aconteça, é a vida');
           agent.add('O importante é ajudar a matar, enquanto seu foco principal é proteger!');
         }
         break;
@@ -4747,14 +4699,14 @@ function checarDicas(agent) {
       case 'Tulen':
 
         if(filtro.dica == "combo"){
-          agent.add('Combo básico com Tulen é:\n\nS1 -> S2 -> AA -> ult\n\nAcertando a primeira e a segunda skill corretamente, sua passiva já vai estar ativa, só restando a ult para finalizar o inimigo');  
+          agent.add('Combo básico com Tulen é:\n\nS1 -> S2 -> AA -> ULT\n\nAcertando a primeira e a segunda skill corretamente, sua passiva já vai estar ativa, só restando a ULT para finalizar o inimigo');  
         }else{
-          agent.add('Tulen é um mago de alta mobilidade, com bastante dano explosivo e grande poder de finalização de seus inimigos com sua ult');
+          agent.add('Tulen é um mago de alta mobilidade, com bastante dano explosivo e grande poder de finalização de seus inimigos com sua ULT');
           agent.add('Comece o jogo upando sua segunda skill, pois isso te ajuda em possíveis ganks no early game e maximize a primeira skill, é sua maior fonte de dano além da passiva');
           agent.add('Apesar de acertar a longa distancia, as skills do Tulen foram feitas para ser usadas o mais próximo possível do inimigo');
           agent.add('Acertando corretamente os 3 raios da primeira skill e acertando a segunda skill no momento da partida e da chegada, você garante os 5 stacks necessários para ativar a passiva');
-          agent.add('Seu combo básico é:\n\nS1 -> S2 -> AA -> ult\n\nMinha dica é, utilize a primeira skill nos minions, é mais fácil de acertar os 3 raios para pelo menos acumular stack antes da tf');
-          agent.add('Lembrando que é importante que sua ult mate o alvo, pois além de ativar a passiva novamente seu cooldown é reduzido podendo ser usada novamente em poucos segundos em outro inimigo');
+          agent.add('Seu combo básico é:\n\nS1 -> S2 -> AA -> ULT\n\nMinha dica é, utilize a primeira skill nos minions, é mais fácil de acertar os 3 raios para pelo menos acumular stack antes da tf');
+          agent.add('Lembrando que é importante que sua ULT mate o alvo, pois além de ativar a passiva novamente seu cooldown é reduzido podendo ser usada novamente em poucos segundos em outro inimigo');
         }
         break;
 
@@ -4788,13 +4740,13 @@ function checarDicas(agent) {
       case 'Violet':
 
         if(filtro.dica == "combo"){
-          agent.add('Combo básico com a Violet é:\n\nS1 -> AA -> ult\n\nA Violet foi feita para dar poke nos inimigos com sua bazooka, mantendo sempre a distância para aproveitar o range de sua habilidade');  
+          agent.add('Combo básico com a Violet é:\n\nS1 -> AA -> ULT\n\nA Violet foi feita para dar poke nos inimigos com sua bazooka, mantendo sempre a distância para aproveitar o range de sua habilidade');  
         }else{
           agent.add('Violet é a atiradora com o maior range do jogo, capaz de matar com um tiro só no late game');
           agent.add('A primeira skill é a maior fonte de dano dela, portanto maximize primeiro essa habilidade');
           agent.add('Você deve aproveitar o longo range da bazooka sempre usando o limite do alcance da sua skill para acertar os inimigos de longe sem ter chance de você sofrer algum dano');
           agent.add('O ideal é sempre rolar para trás, nunca para perto do inimigo, pois assim você garante que não vai sofrer nenhum dano');
-          agent.add('Caso esteja com dificuldades de acertar a ult, você pode usar a segunda skill dela antes para causar slow nos inimigos');
+          agent.add('Caso esteja com dificuldades de acertar a ULT, você pode usar a segunda skill dela antes para causar slow nos inimigos');
           agent.add('Ou fazer capa de gelo no lugar da omniarma e causar slow a longa distancia usando sua primeira skill, é uma boa quando estiver enfrentando heróis com muita mobilidade');
         }
         break;
@@ -4856,14 +4808,14 @@ function checarDicas(agent) {
       case 'Yena':
 
         if(filtro.dica == "combo"){
-          agent.add('Combo básico com a Yena é:\n\nS2-> S1 -> S1 -> S3 -> S2\n\nCombo avançado:\n\nS1(nos minions) -> S2 -> S1 -> S3 -> S2 -> S1(apertar 2x) -> S2 -> S1(apertar 2x)');
+          agent.add('Combo básico com a Yena é:\n\nS2a-> S1a -> S1a -> ULT -> S2b\n\nCombo avançado:\n\nS1a(nos minions) -> S2a -> S1a -> ULT -> S2b -> S1b(apertar 2x) -> S2b -> S1b(apertar 2x)\n\nLegenda - a: modo assassino\nb: modo guerreiro');
         }else{
           agent.add('Minha dica para jogar com ela é entender bem os dois modos de combate que ela tem');
-          agent.add('O primeiro modo é o modo assassino, nele sua velocidade de movimento é aumentada\n\nEnquanto o segundo é seu modo guerreiro, sua velocidade de ataque diminui mas aumenta o dano em 50%\n\nPara trocar de modo você deve usar sua ult');
+          agent.add('O primeiro modo é o modo assassino, nele sua velocidade de movimento é aumentada\n\nEnquanto o segundo é seu modo guerreiro, sua velocidade de ataque diminui mas aumenta o dano em 50%\n\nPara trocar de modo você deve usar sua ULT');
           agent.add('Lembrando que a cada golpe (ataque básico ou habilidade) que ela dá no inimigo no modo assassino acumula um stack, ao somar 5 stacks, o inimigo toma silence e reduz o movimento em 80%!');
           agent.add('Sua primeira skill no modo assassino pode ser usada duas vezes se acertar um minion ou herói na primeira vez\n\nE no modo guerreiro é possível mudar a direção enquanto carrega a habilidade usando flick ou pode ser usada imediatamente apertando duas vezes');
           agent.add('Enquanto usa sua segunda habilidade no modo guerreiro, você fica imune a controle, portanto saiba combar bem com isso\n\nAlém disso, sua segunda skill no modo assassino arremessa uma shuriken que ao ser coletada reduz o cooldown da mesma em 5 segundos, seu combo geralmente começa aqui');
-          agent.add('O combo mais comum é:\n\nS2-> S1 -> S1 -> S3 -> S2\n\nEnquanto o combo avançado:\n\nS1(nos minions) -> S2 -> S1 -> S3 -> S2 -> S1(apertar 2x) -> S2 -> S1(apertar 2x)');
+          agent.add('O combo mais comum é:\n\nS2a-> S1a -> S1a -> ULT -> S2b\n\nCombo avançado:\n\nS1a(nos minions) -> S2a -> S1a -> ULT -> S2b -> S1b(apertar 2x) -> S2b -> S1b(apertar 2x)\n\nLegenda - a: modo assassino\nb: modo guerreiro');
           agent.add('Inicie as lutas no modo assassino para dar engage rapidamente no mago e no atirador e causar muito dano com seus combos, e poder tankar os outros no modo guerreiro'); 
         }
         break;
