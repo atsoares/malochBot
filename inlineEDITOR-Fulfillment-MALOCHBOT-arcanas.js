@@ -25,15 +25,19 @@ const ALEISTER_2_URL          = 'https://imgur.com/RhL1pnj.jpg';
 const ALICE_URL               = 'https://i.imgur.com/SIOWB7C.jpg';
 const ALICE_2_URL             = 'https://i.imgur.com/mX6o3bY.jpg';
 const AMILY_URL               = 'https://imgur.com/0HrQnNr.jpg';
+const AMILY_2_URL             = 'https://imgur.com/wxoTfAW.jpg';
 const AMILY_JG_URL            = 'https://imgur.com/8f6LPRf.jpg';
 const ANNETE_URL              = 'https://imgur.com/vugGM4U.jpg';
 const ANNETE_2_URL            = 'https://imgur.com/Rrde3p5.jpg';
 const ANNETE_3_URL            = 'https://imgur.com/a1qj9Aa.jpg';
 const ARDUIN_URL              = 'https://imgur.com/qaEbbY0.jpg';
+const ARDUIN_2_URL            = 'https://imgur.com/xjvn5eh.jpg';
+const ARDUIN_SUP_URL          = 'https://imgur.com/tb7LekD.jpg';
 const ARTHUR_URL              = 'https://imgur.com/Lt4u18a.jpg';
 const ARUM_SOLO_URL           = 'https://imgur.com/kau4e65.jpg';
 const ARUM_SUPORTE_URL        = 'https://imgur.com/SFmP2ST.jpg';
 const ASTRID_URL              = 'https://imgur.com/hOgNLiF.jpg';
+const ASTRID_2_URL            = 'https://imgur.com/OifK29M.jpg';
 const ASTRID_JG_URL           = 'https://imgur.com/EJcDD5W.jpg';
 const AZZENKA_URL             = 'https://imgur.com/QnyDNsi.jpg';
 const BALDUM_URL              = 'https://imgur.com/7jMf2n7.jpg';
@@ -62,14 +66,17 @@ const ERROL_JG2_URL           = 'https://imgur.com/M6G6ZBw.jpg';
 const ERROL_TROLL_URL         = 'https://imgur.com/YnahHwp.jpg';
 const FENNIK_URL              = 'https://imgur.com/KLhS9S4.jpg';
 const FENNIK_2_URL            = 'https://imgur.com/BVUKQz3.jpg';
-const FLORENTINO_URL          = 'https://i.imgur.com/hHPwhJp.jpg';
+const FLORENTINO_OLD_URL      = 'https://i.imgur.com/hHPwhJp.jpg';
+const FLORENTINO_URL          = 'https://imgur.com/jjtgA0L.jpg';
+const FLORENTINO_2_URL        = 'https://imgur.com/ae5J91l.jpg';
 const FLORENTINO_JG_URL       = 'https://i.imgur.com/wxZjp2L.jpg';
 const GILDUR_AP_URL           = 'https://i.imgur.com/GE2Laoq.jpg';
 const GILDUR_SUPORTE_URL      = 'https://i.imgur.com/EpLwARh.jpg';
 const GRAKK_URL               = 'https://i.imgur.com/dq8Fg49.jpg';
 const HAYATE_JG_1_URL         = 'https://i.imgur.com/lRN58eR.jpg';
 const HAYATE_JG_2_URL         = 'https://i.imgur.com/8I25sn9.jpg';
-const HAYATE_LANE_URL         = 'https://i.imgur.com/fKzptzn.jpg';
+const HAYATE_LANE_OLD_URL     = 'https://i.imgur.com/fKzptzn.jpg';
+const HAYATE_LANE_URL         = 'https://imgur.com/V1RfE9z.jpg';
 const IGNIS_URL               = 'https://i.imgur.com/Py4TI4b.jpg';
 const ILUMIA_URL              = 'https://imgur.com/plkKEGm.jpg';
 const ILUMIA_2_URL            = 'https://imgur.com/zwh85GH.jpg';
@@ -109,7 +116,8 @@ const PREYTA_URL              = 'https://i.imgur.com/RJycCsJ.jpg';
 const QUILLEN_URL             = 'https://i.imgur.com/2JsprXf.jpg';
 const RAZ_URL                 = 'https://imgur.com/ZeNi6Vz.jpg';
 const RAZ_JG_URL              = 'https://imgur.com/ln9koiI.jpg';
-const RIKTOR_SOLO_URL         = 'https://i.imgur.com/KNyNiAf.jpg';
+const RIKTOR_SOLO_OLD_URL     = 'https://i.imgur.com/KNyNiAf.jpg';
+const RIKTOR_SOLO_URL         = 'https://imgur.com/vTu9cgE.jpg';
 const RIKTOR_ROAM_URL         = 'https://i.imgur.com/R0jrhp7.jpg';
 const RIKTOR_ROAM_2_URL       = 'https://imgur.com/Le9Z5Bb.jpg';
 const ROURKE_URL              = 'https://imgur.com/ZOMLOuM.jpg';
@@ -279,7 +287,7 @@ const CONCLUIDO          = '';
 //              Lista de Ultimas Builds Adicionadas 08/03/2018    //
 ////////////////////////////////////////////////////////////////////
 
-const ultimasAtualizacoes_1 = "Últimos heróis adicionados: Capheny, Errol, Yena!\n\nÚltimas builds adicionadas: Kilgroth\n\nBuilds atualizadas de acordo com patch de abril/2019";
+const ultimasAtualizacoes_1 = "Últimos heróis adicionados: Capheny, Errol, Yena!\n\nÚltimas builds adicionadas: Kilgroth, Astrid, Amily, Florentino, Arduin\n\nBuilds atualizadas de acordo com patch de abril/2019";
 const ultimasAtualizacoes_2 = "";
 const ultimasAtualizacoes_3 = "";
 
@@ -362,8 +370,9 @@ const info_range = {"termo":"range", "definicao":"É o alcance da habilidade, ge
 const info_melee = {"termo":"melee", "definicao":"É o termo dado a heróis ou habilidades de curto alcance, que só causam dano quando próximos do inimigo"};
 const info_frontline = {"termo":"frontline", "definicao":"É o que chamamos de linha de frente de uma batalha, geralmente são os tanks e guerreiros que pulam na frente e conseguem aguentar bastante dano para proteger a backline"};
 const info_backline = {"termo":"backline", "definicao":"É o que chamamos de linha de trás de uma batalha, geralmente são magos e atiradores que jogam de forma recuada, podendo usar habilidades e atacar sem sofrer dano. Sendo portanto o foco dos assassinos que chegam por trás na tf"};
+const info_kit = {"termo":"kit", "definicao":"É o conjunto de habilidades e mecânicas de cada herói."};
 
-const globalGlossario = [info_backline,info_frontline,info_melee,info_range,info_AoV,info_pvp,info_bots,info_hp,info_mp,info_AD,info_AP,info_OP,info_Nerf,info_gank,info_farm,info_burst,info_cooldown,info_CDR,info_autoattack,info_poke,info_carry,info_ADC,info_TF,info_Roam,info_SplitPush,info_proxy,info_flick,info_feedar,info_buff,info_stack,info_bait,info_dive,info_bush];
+const globalGlossario = [info_kit,info_backline,info_frontline,info_melee,info_range,info_AoV,info_pvp,info_bots,info_hp,info_mp,info_AD,info_AP,info_OP,info_Nerf,info_gank,info_farm,info_burst,info_cooldown,info_CDR,info_autoattack,info_poke,info_carry,info_ADC,info_TF,info_Roam,info_SplitPush,info_proxy,info_flick,info_feedar,info_buff,info_stack,info_bait,info_dive,info_bush];
 
 /////////////////////////////////////////////////////////////////////
 //                          Inicio do BOT                          //
@@ -428,7 +437,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     agent.add("Arcanas - digite:\n\n´arcanas informações´ - menu de arcanas\n\n´arcanas [herói] ou arcanas [classe]´");
     agent.add("Últimas atualizações do bot - digite:\n\n´últimas atualizações´");
     agent.add("Legenda: entre [] é obrigatório, entre () opcional");
-  }
+  } 
 
   function listarAlgo(agent){
   
@@ -633,17 +642,25 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
   function checarBuild(agent) {
 
-    const heroi    = agent.parameters.Heroi;
-    const build    = agent.parameters.Builds;
-    const role     = agent.parameters.role;
+    const heroi      = agent.parameters.Heroi;
+    const build      = agent.parameters.Builds;
+    const role       = agent.parameters.role;
+    const informacao = agent.parameters.informacao;
 
-    if (!heroi) {
-      agent.add('Não entendi de qual herói você quer uma build');
-      agent.add('Você tem certeza que digitou o nome certo?');
-      agent.add('Tenta de outro jeito!');
+    let filtro = { hero:heroi, funcao:role, info: informacao}; 
+    
+    if (build && !filtro.hero && !filtro.info && !filtro.funcao) {
+      agent.add('Entendi que você quer builds, mas de qual herói? Se quiser listar meus comandos, basta digitar: ´builds informações´');
     } 
 
-    let filtro = { hero:heroi, funcao:role }; 
+    if (build && !filtro.hero && !filtro.info && filtro.funcao) {
+      agent.add('Entendi que você quer jogar como '+filtro.funcao+', mas com qual herói? Se quiser listar meus comandos, basta digitar: ´builds informações´');
+    } 
+
+    if(build && filtro.info){
+      agent.add('Para solicitar builds digite:\n\n´build [herói] (lane)´');
+      agent.add("Legenda: entre [] é obrigatório, entre () opcional");
+    }
 
     switch(filtro.hero) {
     
@@ -736,13 +753,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         agent.add('Hm, então quer dizer que resolveu jogar de Amily...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
-          agent.add(new Image(AMILY_URL));
+          agent.add(new Image(AMILY_2_URL));
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
               case 'Solo':
-                agent.add('Aqui está sua build');
+                agent.add('Tenho essas:');
                 agent.add(new Image(AMILY_URL));
+                agent.add(new Image(AMILY_2_URL));
                 break;
               case 'Jungle':
                 agent.add('Aqui está sua build');
@@ -797,16 +815,18 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         agent.add('Hm, então quer dizer que resolveu jogar de Arduin...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
-          agent.add(new Image(ARDUIN_URL));
+          agent.add(new Image(ARDUIN_2_URL));
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
               case 'Solo':
-                agent.add('Aqui está sua build');
+                agent.add('Tenho essas:');
                 agent.add(new Image(ARDUIN_URL));
+                agent.add(new Image(ARDUIN_2_URL));
                 break;
               case 'Suporte':
-                agent.add(BUILD_EM_BREVE);
+                agent.add('Tenho essa:');
+                agent.add(new Image(ARDUIN_SUP_URL));
                 break;
               }
           } else {
@@ -880,13 +900,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         agent.add('Hm, então quer dizer que resolveu jogar de Astrid...');
         if (!filtro.funcao) {
           agent.add('Aqui está:');
-          agent.add(new Image(ASTRID_URL));
+          agent.add(new Image(ASTRID_2_URL));
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
               case 'Solo':
-                agent.add('Aqui está:');
+                agent.add('Tenho essas:');
                 agent.add(new Image(ASTRID_URL));
+                agent.add(new Image(ASTRID_2_URL));
                 break;
               case 'Jungle':
                 agent.add('Aqui está:');
@@ -1267,7 +1288,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         agent.add('Hm, então quer dizer que resolveu jogar de Florentino?');
         if (!filtro.funcao) {
-          agent.add('Aqui oh, build mais comum e eficiente dele:');
+          agent.add('Aqui oh:');
           agent.add(new Image(FLORENTINO_URL));
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
@@ -1277,8 +1298,9 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 agent.add(new Image(FLORENTINO_JG_URL));
                 break;
               case 'Solo':
-                agent.add('Pronto, achei uma build Solo:');
+                agent.add('Tenho essas:');
                 agent.add(new Image(FLORENTINO_URL));
+                agent.add(new Image(FLORENTINO_2_URL));
                 break;
               }
           } else {
@@ -2806,7 +2828,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add(new Image(YENA_2_URL)); 
           agent.add('A primeira é mais comum, a segunda é pra quando seu time ta carente de tank');
           agent.add('Minha dica para jogar com ela é entender bem os dois modos de combate que ela tem');
-          agent.add('O primeiro modo é o modo assassino, nele sua velocidade de movimento é aumentada\n\nEnquanto o segundo é seu modo guerreiro, sua velocidade de ataque diminui mas aumenta o dano em 50%\n\nPara trocar de modo você deve usar sua ult');
+          agent.add('O primeiro modo é o modo assassino, nele sua velocidade de movimento é aumentada\n\nEnquanto o segundo é seu modo guerreiro, sua velocidade de ataque diminui mas aumenta o dano em 50%\n\nPara trocar de modo você deve usar sua ULT');
           agent.add('Lembrando que a cada golpe (ataque básico ou habilidade) que ela dá no inimigo no modo assassino acumula um stack, ao somar 5 stacks, o inimigo toma silence e reduz o movimento em 80%!');
           agent.add('Sua primeira skill no modo assassino pode ser usada duas vezes se acertar um minion ou herói na primeira vez\n\nE no modo guerreiro é possível mudar a direção enquanto carrega a habilidade usando flick ou pode ser usada imediatamente apertando duas vezes');
           agent.add('Enquanto usa sua segunda habilidade no modo guerreiro, você fica imune a controle, portanto saiba combar bem com isso\n\nAlém disso, sua segunda skill no modo assassino arremessa uma shuriken que ao ser coletada reduz o cooldown da mesma em 5 segundos, seu combo geralmente começa aqui');
@@ -3027,16 +3049,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     }
 
     if(arcanas && filtro.info){
-      agent.add('Para entender melhor sobre arcanas digite:');
-      agent.add('´arcanas explicar´');
-      agent.add('Leitura longa');
-      agent.add('Para arcanas mais indicadas para iniciantes:');
-      agent.add('´arcanas para iniciantes´');
-      agent.add('Se quiser arcanas “genéricas” para classes de heróis');
-      agent.add('Como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:');
-      agent.add('´arcanas [classe]´');
-      agent.add('Se quiser saber as arcanas recomendadas para um herói:');
-      agent.add('´arcanas [herói]´');
+      agent.add('Para entender melhor sobre arcanas digite:\n\n´arcanas explicar´\n\nLeitura longa');
+      agent.add('Para arcanas mais indicadas para iniciantes:\n\n´arcanas para iniciantes´');
+      agent.add('Se quiser arcanas “genéricas” para classes de heróis como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:\n\n´arcanas [classe]´');
+      agent.add('Se quiser saber as arcanas recomendadas para um herói:\n\n´arcanas [herói]´');
     }
 
     if(arcanas && filtro.explicar){
@@ -3842,16 +3858,10 @@ function checarDicas(agent) {
   }
 
   if(dicas == "dicas" && filtro.info && !filtro.hero && !filtro.classe && !filtro.iniciante && !filtro.item && !filtro.papel){
-    agent.add('Se quiser dicas para iniciantes digite:');
-    agent.add('´dicas para iniciantes´');
-    agent.add('Se quiser dicas básicas por classes de heróis');
-    agent.add('Como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:');
-    agent.add('´dicas [classe]´');
-    agent.add('Para dicas em determinada lane do jogo');
-    agent.add('Como mid, suporte, lane, jungle ou solo:');
-    agent.add('´dicas [lane]´');   
-    agent.add('Para dicas sobre algum herói:');
-    agent.add('´dicas [herói]´');
+    agent.add('Se quiser dicas para iniciantes digite:\n\n´dicas para iniciantes´');
+    agent.add('Se quiser dicas básicas por classes de heróis como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:\n\n´dicas [classe]´');
+    agent.add('Para dicas em determinada lane do jogo como mid, suporte, lane, jungle ou solo:\n\n´dicas [lane]´');
+    agent.add('Para dicas sobre algum herói:\n\n´dicas [herói]´');
     agent.add('Algumas dicas possuem texto longo, portanto aguarde o bot terminar de responder para facilitar leitura');
   }
 
@@ -3991,7 +4001,7 @@ function checarDicas(agent) {
       case 'Solo':
         agent.add('Jogar na solo lane, conhecida também como lane do demônio, é a função mais fácil entre as demais.');
         agent.add('Você só precisa manter seu olho no jungle e no mid inimigo durante o early game, se perceber que algum está indo para sua lane, limpe sua wave rapidamente e volte para debaixo de sua torre');
-        agent.add('Passando early game seu foco depende do seu herói, caso seja um tank, seu foco é ajudar seu time');
+        agent.add('Passando early game seu foco depende do seu herói, caso seja um tank, seu foco é ajudar seu time, portanto fique atento a tfs rolando pelo mapa só não esqueça da sua lane');
         agent.add('Sendo um split pusher, tente fazer pressão no mapa, observe no mapa rotações do time adversário para puxar uma lane, não espere que seu time te ajude, seu papel é chamar atenção contrária as batalhas que seu time faz');
         break;
       case 'Suporte':
@@ -4038,8 +4048,8 @@ function checarDicas(agent) {
         }else{
           agent.add('A Airi é uma guerreira/assassina, com um split push forte devido sua alta mobilidade, capaz de causar dano explosivo e controle de grupo');
           agent.add('Sua primeira habilidade é seu poke, maximize-a primeiro e aprenda a usar com maestria, o quanto você acerta a shuriken determina quão bom você é com ela');
-          agent.add('Sempre jogue de forma agressiva e aproveite para pular em cima de atiradores (sua maior prioridade) e outros heróis mais papeis\n\nMas tome cuidado para não ficar sem sua segunda habilidade, quando elas estão em cooldown nem pense ir pra cima');
-          agent.add('Nunca fique usando sua shuriken por trás dos tanks do seu time para depois tentar atravessar a frontline do time inimigo para ultar\n\nUsar a mobilidade da Airi para contornar da tf e surpreender a backline inimiga é o ideal, pois assim eles não tem tempo de reagir ou se reposicionar');
+          agent.add('Sempre jogue de forma agressiva e aproveite para pular em cima de atiradores (sua maior prioridade) e outros heróis mais papeis\n\nMas tome cuidado para não ficar sem sua segunda habilidade, quando elas estão em cooldown a Airi fica muito vulnerável, então, nunca gaste ela totalmente para iniciar');
+          agent.add('Nunca fique usando sua shuriken por trás dos tanks do seu time para depois tentar atravessar a frontline do time inimigo para ultar\n\nUsar a mobilidade da Airi para contornar da tf e surpreender a backline inimiga é o gank correto, pois assim eles não tem tempo de reagir ou se reposicionar');
           agent.add('Um combo que indico com ela é:\n\nS1 -> S2 -> AA -> ULT -> AA -> AA -> S1\n\nO ideal é usar sua shuriken antes de iniciar, pois seu cooldown reduz 1 segundo a cada AA, podendo ser usada mais de uma vez no mesmo combo');
           agent.add('Lembrando que sua ULT, quanto mais inimigos tiver, maior vai ser o escudo que você ganha! Ah, e o Talento recomendado é Executar');
         }
@@ -4048,12 +4058,12 @@ function checarDicas(agent) {
       case 'Aleister':
         
         if(filtro.dica == "combo"){
-          agent.add('Combo básico:\n\nS1 -> S2 -> ULT\n\nSe você estiver na moita, é fácil matar qualquer um com esse combo, mas o ideal é ficar usando a primeira e a segunda durante tfs e guardar sempre a ult para punir erros de posicionamento do time adversário');
+          agent.add('Combo básico:\n\nS1 -> S2 -> ULT\n\nSe você estiver na moita, é fácil matar qualquer um com esse combo, mas o ideal é ficar usando a primeira e a segunda durante tfs e guardar sempre a ULT para punir erros de posicionamento do time adversário');
         }else{
           agent.add('Aleister é um mago com pouca mobilidade porém possui MUITO controle de grupo, causando slow e stuns que duram tempo suficiente para ajudar seus aliados que precisam chegar mais próximo do inimigo para finalizar');
           agent.add('Sua segunda habilidade é sua maior fonte de dano e consequentemente sua melhor habilidade para limpar waves de minions, maximize-a primeiro');
           agent.add('Devido seu kit capaz de causar muito dano e controle de grupo, o ideal ao jogar com Aleister é buildar itens que aumente sua velocidade de movimento, pois é extremamente importante a sua participação nas tfs\n\nDevido a grande área que suas habilidades atinge, é fácil limpar waves e rotacionar com ele, foque nisso!');
-          agent.add('O combo mais básico e eficiente dele é:\n\nS1 -> S2 -> ULT\n\nSe você estiver na moita, é fácil matar qualquer um com esse combo, mas o ideal é ficar usando a primeira e a segunda durante tfs e guardar sempre a ult para punir erros de posicionamento do time adversário');
+          agent.add('O combo mais básico e eficiente dele é:\n\nS1 -> S2 -> ULT\n\nSe você estiver na moita, é fácil matar qualquer um com esse combo, mas o ideal é ficar usando a primeira e a segunda durante tfs e guardar sempre a ULT para punir erros de posicionamento do time adversário');
           agent.add('Aproveite do fato que infelizmente muitos se esquecem do dano absurdo que ele causa em quem ficar parado na sua segunda habilidade e use principalmente quando tiver inimigos debaixo da sua torre');
           agent.add('Lembrando que o Aleister tem pouco potencial de finalização e nenhum escape, portanto mantenha sempre uma boa distancia de seus inimigos com suas habilidades criando oportunidades para seu jungle finaliza-los. Ah, e o Talento recomendado é Sprint');
         }
@@ -4062,9 +4072,15 @@ function checarDicas(agent) {
       case 'Alice':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('As habilidades do Alice foram feitas para proteger e incomodar os inimigos, portanto não tem um combo básico específico');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Alice, uma maga/suporte com bastante controle e buffs para seus aliados, possui um dos melhores kits para iniciar ganks e roamings');
+          agent.add('Maximize sua primeira habilidade, é sua maior fonte de dano');
+          agent.add('Entenda uma coisa, a Alice gasta muita mana com suas habilidades, portanto saber usar no momento certo é mais útil do que usar sem parar para limpar waves');
+          agent.add('Não fique usando sua primeira habilidade sempre que ver um inimigo, use-a para iniciar um gank, um stun ajuda muito um jungler a iniciar');
+          agent.add('Ah e seu escudo (S2) não protege tanto sim, a não ser que você build AP, o que não é muito interessante, use como fosse só um boost na velocidade do seu time\n\nTente usar sempre que tiver certeza de que seu time tiver decidido para onde ir, para não acabar ficando fora de posicionamento, ou quando um aliado sofrer algum slow');
+          agent.add('Sua ULT funciona bem com um mago de dano explosivo, pois além de causar slow e silence, aumenta o dano mágico sofrido\n\nMas você pode usar de forma defensiva protegendo seu atirador de dives do jungler inimigo');
+          agent.add('A Alice é umas das melhores suportes para rotacionar junto de outro herói, não fique sozinha nunca!');	
         }
         break;
 
@@ -4076,8 +4092,8 @@ function checarDicas(agent) {
           agent.add('Amily é uma guerreira/tank com habilidades que a tornam quase uma assassina, devido sua excelente mobilidade e passiva que aumenta o dano ao lutar em 1x1');
           agent.add('Maximize sua segunda habilidade, é sua maior fonte de dano');
           agent.add('Suas habilidades foram feitas para situações de x1, portanto seu foco é ganks no mid, invades na jungle inimiga e split push, sempre roaming!\n\nPense nela como um herói de sustain, não de dano explosivo');
-          agent.add('Evite participar de tfs, sua passiva não funciona nessas situações e ela não é bem uma tank.\n\nMinha dica é, pular na tf após ela ter iniciado apenas para usar sua ult, e evite ficar nela se estiver enfrentando dano explosivo, é sua maior fraqueza');
-          agent.add('Falando em ult, essa é sua razão para ser forte em split push, capaz de tankar heróis como Omen na ult por exemplo\n\nAssim como todas suas habilidades ajudam no escape dela');
+          agent.add('Evite participar de tfs, sua passiva não funciona nessas situações e ela não é bem uma tank.\n\nMinha dica é, pular na tf após ela ter iniciado apenas para usar sua ULT, e evite ficar nela se estiver enfrentando dano explosivo, é sua maior fraqueza');
+          agent.add('Falando em ULT, essa é sua razão para ser forte em split push, capaz de tankar heróis como Omen na ULT por exemplo\n\nAssim como todas suas habilidades ajudam no escape dela');
           agent.add('Seu combo básico é:\n\nS1 -> S2 -> AA -> ULT -> AA\n\nCom o slow da sua primeira skill fica fácil pular em cima dos inimigos, principalmente pois além do dano você ganha regen de hp');
           agent.add('Você pode usar tanto Executar, Flick ou Punir como talento, mas te indico Executar');
         }
@@ -4086,7 +4102,7 @@ function checarDicas(agent) {
       case 'Annette':
 
         if(filtro.dica == "combo"){
-          agent.add('Vish, não tenho combos com a Annette :/');
+          agent.add('As habilidades da Annette foram feitas para proteger e incomodar os inimigos, portanto não tem um combo básico específico');
         }else{
           agent.add('Annette é uma maga/suporte com bastante controle de grupo. Todas suas habilidades causam algum tipo de controle seja slow ou stun.');
           agent.add('Priorize a sua primeira habilidade, é sua maior fonte de dano\n\nJá na segunda habilidade, você precisa mirar de forma que acerte dois inimigos alinhados, para que sejam atordoados');
@@ -4099,18 +4115,27 @@ function checarDicas(agent) {
       case 'Arduin':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Seu combo normal é:\n\nS1 -> S2 -> S1 -> AA\n\nCombo completo:\n\nS1 -> ULT -> S2 -> S1 -> AA');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Arduin é um guerreiro/tank, com um kit forte para iniciar tfs e controlar os inimigos, muito forte na solo lane ou até mesmo como um suporte');
+          agent.add('Maximize sua segunda habilidade se estiver na solo, ou a primeira caso esteja como suporte');
+          agent.add('Não tenha medo de usar sua ULT, tem um cooldown curto, use para se aproximar de seus inimigos');
+          agent.add('Seu combo normal é:\n\nS1 -> S2 -> S1 -> AA\n\nCombo completo:\n\nS1 -> ULT -> S2 -> S1 -> AA');
+          agent.add('Lembrando que você é um tank, não tente pular sozinho numa tf, você precisa ter seu time junto!');
         }
         break;
-
+ 	 	
       case 'Arthur':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Seu combo normal é:\n\nS1 -> S2 -> AA\n\nCombo completo:\n\nS1 -> ULT -> S2 -> AA');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Arthur é um guerreiro/tank, capaz de aguentar e causar muito dano sem depender de mana para isso');
+          agent.add('Maximize sua primeira habilidade primeiro, mas no inicio do jogo upa primeiro sua segunda habilidade pois ela é mais útil nas tfs lvl 1 e ajuda na primeira wave clear');
+          agent.add('Inicie tfs usando sua primeira para colocar uma marca no inimigo e causar dano adicional, use sua segunda quando já estiver próximo dos inimigos');
+          agent.add('Quando estiver com sua ULT, foque usar sempre no mago ou no atirador inimigo, o combo com a ULT é forte o suficiente para matar esses heróis sem defesa.');
+          agent.add('Seu combo normal é:\n\nS1 -> S2 -> AA\n\nCombo completo:\n\nS1 -> ULT -> S2 -> AA');
+          agent.add('Lembrando que sua passiva faz o Arthur ser um tank natural contra heróis de dano físico, porém ele é muito dependente de sua build e arcanas, saiba buildar corretamente.');
         }
         break;
 
@@ -4140,7 +4165,7 @@ function checarDicas(agent) {
           agent.add('O Azzenka é um dos magos com o maior controle em área do jogo, capaz de causar muito dano, porém, tem uma das piores mobilidades');
           agent.add('Sua segunda habilidade é sua maior fonte de dano, é sempre bom começar upando ela');
           agent.add('Jogue com ele de forma recuada, sempre preocupado com seu posicionamento, pois você não possui nenhuma habilidade de escape');
-          agent.add('O ideal é ficar dando poke de longe com a primeira e a segunda, sempre na backline\n\nE tenha cuidado com sua ult, apesar de muito forte, se usada de forma errada pode não causar dano em ninguém já que ela explode no primeiro inimigo que atingir, podendo esse ser apenas um minion');
+          agent.add('O ideal é ficar dando poke de longe com a primeira e a segunda, sempre na backline\n\nE tenha cuidado com sua ULT, apesar de muito forte, se usada de forma errada pode não causar dano em ninguém já que ela explode no primeiro inimigo que atingir, podendo esse ser apenas um minion');
           agent.add('Minha dica é, usar com sabedoria sua segunda skill, se ver dois inimigos lado a lado, esse é o momento certo, ela vai rebater nos 2 o suficiente para petrifica-los');
         }
         break;
@@ -4422,7 +4447,7 @@ function checarDicas(agent) {
           agent.add('Tenha em mente duas coisas: O Max não é um tank e seu foco é ultar no atirador ou no assassino inimigo, retirando/afastando eles das tfs');
           agent.add('Ao jogar de Max, é importante que você tenha uma boa noção de mapa, pois sua ult apesar de ter longo tempo de recarga ajuda a informar o posicionamento do time inimigo');
           agent.add('O ideal é evitar de usar sua ult a longa distancia, pois dependendo da distância, o inimigo pode voltar base antes de você chegar ou o time inimigo pode estar só esperando você chegar para te atacar');
-          agent.add('Use sua segunda skill para cancelar habilidades dos inimigos, não use somente para causar dano.\n\nE lembre-se, nem sempre vale a pena usar sua ult para tentar matar aquele inimigo que fugiu com pouco hp, o ideal é usar sua ult para ajudar nas tfs que já estão rolando');
+          agent.add('Use sua segunda skill para cancelar habilidades dos inimigos, não use somente para causar dano.\n\nE lembre-se, nem sempre vale a pena usar sua ult para tentar matar aquele inimigo que fugiu com pouco hp, a prioridade é usar sua ult para ajudar nas tfs que já estão rolando');
         }
         break;
 
@@ -4532,7 +4557,8 @@ function checarDicas(agent) {
         }else{
           agent.add('O Quillen é um dos assassinos mais rápidos do jogo, devido sua passiva de resetar habilidades após um abate tendo sempre sua ULT disponível');
           agent.add('A primeira skill é a maior fonte de dano dele, portanto maximize primeiro essa habilidade');
-          agent.add('Ao jogar de Quillen você precisa entender o tempo de invisibilidade de sua ULT, pois ao usar ela antes de pular no meio de uma tf, ou você finaliza o inimigo para ter a habilidade disponível novamente e continuar o combo ou você vai morrer');
+          agent.add('Ao jogar de Quillen você precisa entender o tempo de invisibilidade de sua ULT,\n\nAo usar ela antes de pular no meio de uma tf, ou você finaliza o inimigo para ter a habilidade disponível novamente e continuar o combo ou você vai morrer');
+          agent.add('Por causa da sua ULT, geralmente seus inimigos vão buildar anel do amigo, uma dica é fingir que vai pular na tf e sair\n\nApenas para forçar o inimigo a usar anel do amigo e ficar sem no momento em que você de fato pula pra cima');
           agent.add('O ideal é sempre rotacionar de forma que surpreenda, use sua ULT para antecipar rotações e pegar justamente aquele atirador ou mago que chegou tarde para batalha');
           agent.add('O combo básico do Quillen é:\n\nULT -> S2 -> S1 -> AA -> ULT -> S2 -> S1 -> AA -> ULT...\n\nE esse ciclo continua até você matar todos os inimigos, seu foco é sempre situações de 1x1, nunca pule no meio de uma tf');
           agent.add('Lembrando de atacar sempre nas costas dos inimigos, isso serve inclusive para os monstros da jungle, quanto mais dano você causa, mais rápido limpa a jungle e fica disponível para ajudar seus aliados');
@@ -4705,7 +4731,7 @@ function checarDicas(agent) {
           agent.add('Comece o jogo upando sua segunda skill, pois isso te ajuda em possíveis ganks no early game e maximize a primeira skill, é sua maior fonte de dano além da passiva');
           agent.add('Apesar de acertar a longa distancia, as skills do Tulen foram feitas para ser usadas o mais próximo possível do inimigo');
           agent.add('Acertando corretamente os 3 raios da primeira skill e acertando a segunda skill no momento da partida e da chegada, você garante os 5 stacks necessários para ativar a passiva');
-          agent.add('Seu combo básico é:\n\nS1 -> S2 -> AA -> ULT\n\nMinha dica é, utilize a primeira skill nos minions, é mais fácil de acertar os 3 raios para pelo menos acumular stack antes da tf');
+          agent.add('Seu combo básico é:\n\nS1 -> S2 -> AA -> ULT\n\nMinha dica é, utilize a primeira skill nos minions, é mais fácil de acertar os 3 raios para pelo menos acumular stack antes da tf, mas não entre nela sem stacks da segunda habilidade.');
           agent.add('Lembrando que é importante que sua ULT mate o alvo, pois além de ativar a passiva novamente seu cooldown é reduzido podendo ser usada novamente em poucos segundos em outro inimigo');
         }
         break;
