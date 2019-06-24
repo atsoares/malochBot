@@ -178,7 +178,7 @@ const ZUKA_URL                = 'https://i.imgur.com/93Hu2Jl.jpg';
 ////////////////////////////////////////////////////////////////////
 
 const HEROIS_SOLO     = ["Florentino", "Riktor", "Maloch", "Marja", "Superman", "Xeniel", "Omen", "YBneth", "Cresht", 
-                        "Ryoma", "Max", "Arum", "Wonder Woman", "Skud", "Airi", "Roxie", "Amily", "LuBu", "Zephys", 
+                        "Ryoma", "Max", "Arum", "Wonder Woman", "Skud", "Airi", "Roxie", "Amily", "LuBu", 
                         "Arduin", "Rourke", "Zuka", "Baldum", "Arthur", "Omega", "KilGroth", "Zanis", "Gildur", 
                         "Wukong", "Astrid", "Taara", "Veres", "Valhein", "Errol", "Yena"];
 
@@ -436,7 +436,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     agent.add("Builds - digite:\n\n´build [herói] (lane)´");
     agent.add("Arcanas - digite:\n\n´arcanas informações´ - menu de arcanas\n\n´arcanas [herói] ou arcanas [classe]´");
     agent.add("Últimas atualizações do bot - digite:\n\n´últimas atualizações´");
-    agent.add("Legenda: entre [] é obrigatório, entre () opcional");
+    agent.add("Legenda:\n\nentre [] é obrigatório\nentre () opcional\n\nNão necessário digitar [] ou (), apenas palavras");
   } 
 
   function listarAlgo(agent){
@@ -659,7 +659,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
     if(build && filtro.info){
       agent.add('Para solicitar builds digite:\n\n´build [herói] (lane)´');
-      agent.add("Legenda: entre [] é obrigatório, entre () opcional");
+      agent.add("Legenda:\n\nentre [] é obrigatório\nentre () opcional\n\nNão necessário digitar [] ou (), apenas palavras");
     }
 
     switch(filtro.hero) {
@@ -1132,25 +1132,19 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
               case 'Jungle':
                 agent.add('Aqui sua build:');
                 agent.add(new Image(DARCY_JG_URL));
-                agent.add('E pelo pouco que treinei com ele minhas dicas são:');
-                agent.add('Usa a primeira skill para dar slow no inimigo');
-                agent.add('E antecipa o movimento do inimigo para usar a segunda.');
                 break;
               case 'Mid':
                 agent.add('Pronto, achei essa build:');
                 agent.add(new Image(DARCY_MID_URL));
                 agent.add('Mas também tenho essa');
                 agent.add(new Image(DARCY_MID_2_URL));
-                agent.add('E pelo pouco que treinei com ele minhas dicas são:');
-                agent.add('Usa a primeira skill para dar slow no inimigo');
-                agent.add('E antecipa o movimento do inimigo para usar a segunda.');
                 break;
             }
           } else {
             agent.add('Opa, pera ai, '+filtro.funcao+' ?');
             agent.add(FUNCAO_ERRADA_1);
             agent.add(FUNCAO_ERRADA_2);
-            agent.add('O D´Arcy é melhor se utilizado no Mid ou na Jungle!');
+            agent.add('O D´Arcy é melhor se utilizado na Jungle ou no Mid!');
           }
         }
         break;  
@@ -1216,6 +1210,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           }
         }
         break;  
+
+      case 'Enzo':
+
+        agent.add('Hm, então quer dizer que resolveu jogar de Enzo...');
+        agent.add('Infelizmente não tenho builds para ele, quem sabe quando for lançado oficialmente');
+        break;
 
       case 'Errol':
 
@@ -3053,6 +3053,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       agent.add('Para arcanas mais indicadas para iniciantes:\n\n´arcanas para iniciantes´');
       agent.add('Se quiser arcanas “genéricas” para classes de heróis como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:\n\n´arcanas [classe]´');
       agent.add('Se quiser saber as arcanas recomendadas para um herói:\n\n´arcanas [herói]´');
+      agent.add("Legenda:\n\nentre [] é obrigatório\nentre () opcional\n\nNão necessário digitar [] ou (), apenas palavras");
     }
 
     if(arcanas && filtro.explicar){
@@ -3298,7 +3299,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('Vermelhas: Atrocidade x10');
           agent.add('Roxas: Assassino x10');
           agent.add('Verdes: Ferrão x10');
-          break;  
+          break;
+
+        case 'Enzo':
+
+          agent.add('Infelizmente o Enzo ainda não foi lançado oficialmente no nosso servidor');
+          break; 
 
         case 'Errol':
 
@@ -4142,9 +4148,14 @@ function checarDicas(agent) {
       case 'Arum':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('A Arum não possui combo específico, portanto o ideal é entender que você não deve lutar sem seus três leões, e por favor use sua ULT quando tiver certeza de que vai sofrer dano ou que tem alguém ao lado para matar');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Arum é um tank com caracteristicas de um mago, capaz de aguentar muito dano enquanto se cura com seus leões');
+          agent.add('Maximize primeiro sua primeira habilidade, e sempre use-a antes de sair da base para economizar mana e stackar os três leões');
+          agent.add('Arum é uma dos tanks mais fortes no lvl 1, com seus leões ela consegue ganhar fácil situações 1v2, portanto, dar invades é essencial, avise seu time');
+          agent.add('Use sua ULT de forma inteligente, focando sempre heróis que dão muito trabalho, como assassinos e atiradores\n\nUsar sua ULT debaixo da torre inimiga é uma ótima forma de matar qualquer inimigo, seu kit te permite fazer isso com maestria');
+          agent.add('Sua segunda habilidade é melhor quando utilizada focando inimigos mais distantes, além de que é sempre bom usar antes de ultar pois sua ULT ativa os três leões');
+          agent.add('Te recomendo usar flick, cura ou desativar torres como talento\n\nEsse último é o melhor quando estiver na solo e quer garantir o kill com um dive na torre. Após matar o inimigo com seu ULT, use para escapar sem problemas');
         }
         break;
 
@@ -4234,9 +4245,14 @@ function checarDicas(agent) {
       case 'Darcy':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Seu combo é:\n\nS1 -> AA -> ULT -> S2 -> ULT -> S1 -> AA -> S2 ');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('D´Arcy é um mago burst, capaz de causar muito dano explosivo além de ter sustain e cura com seu kit');
+          agent.add('Maximize primeiro sua primeira habilidade, é sua maior fonte de dano e cura(quando está fortificada)');
+          agent.add('Sua primeira habilidade aumenta o próximo auto ataque do D´Arcy, útil principalmente em torres\n\nAlém disso, sua ULT pode ser combada com sua segunda, use a segunda 0.5 segundos após usar a ULT para acertar os inimigos');
+          agent.add('Seu combo é:\n\nS1 -> AA -> ULT -> S2 -> ULT -> S1 -> AA -> S2 ');
+          agent.add('Use sua primeira habilidade de forma defensiva e para dar pokes.\n\nMinha dica é, aprenda a usar ele na jungle, pois assim ele escala seu poder muito mais rápido e seu poke faz o time inimigo querer desinstalar o jogo');
+          
         }
         break;  
 
@@ -4257,7 +4273,12 @@ function checarDicas(agent) {
           agent.add('Não tenho dicas para esse herói ainda');
         }
         break;  
+      
+      case 'Enzo':
 
+        agent.add('Infelizmente o Enzo ainda não foi lançado oficialmente no nosso servidor');
+        break;
+        
       case 'Errol':
 
         if(filtro.dica == "combo"){
@@ -4526,9 +4547,14 @@ function checarDicas(agent) {
       case 'Omen':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Acredito que o Omen não tem nenhum combo específico pois seu dano vem básicamente de ataques normais, minha dica é stackar passiva dele nos minions ou no pássaro antes de atacar algum inimigo.');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Omen é um guerreiro com um sustain muito forte, capaz de ganhar partidas somente focando no split push');
+          agent.add('Ele é um dos melhores heróis para trocações 1x1, porém é importante entender contra quem ele está lutando para saber usar corretamente suas habilidades ao seu favor');
+          agent.add('Maximize sua segunda habilidade, é o que torna o Omen quase um tank capaz de duelar bem contra qualquer herói');
+          agent.add('Use sua primeira para atrair e agrupar inimigos. Dessa forma ao ativar sua passiva, ele vai causar dano em todos\n\nE é devido a isso que torna o Omen um dos melhores split pushers, seu wave clear é muito rápido');
+          agent.add('Sua ULT deve ser usada em atiradores, magos ou assassinos. Tente flanquear e atacar a backline sempre que for querer ajudar numa TF\n\nMas seu foco mesmo é torres, sempre tente chamar atenção oposta ao lado da TF');
+          agent.add('O talento recomendado é flick, você pode usar para combar com seu ULT, ou como escape. Mas também pode usar executar.');
         }
         break;
 
@@ -4638,9 +4664,14 @@ function checarDicas(agent) {
       case 'Slimz':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Não sei nenhum combo específico para ele :(');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('O Slimz é um atirador, com um dos mais demorados stuns do jogo e apesar de ter um early ruim, seu dano no late game derrete os tanks');
+          agent.add('Maximize primeiro a habilidade da lança, é sua habilidade mais forte');
+          agent.add('Sua segunda habilidade é seu melhor escape, melhor se utilizada para atravessar paredes\n\nEvite de usar para perseguir um inimigo, ao menos que tenha 95% de certeza que vale a pena, do contrário o Slimz se torna um alvo fácil');
+          agent.add('Sua ULT e sua passiva tornam o Slimz muito forte contra tanks, mas precisa ter um bom posicionamento para evitar complicações\n\nInclusive, você pode usar sua lança em um alvo qualquer apenas para ativar a passiva e aumentar a velocidade de movimento');
+          agent.add('Durante o inicio do jogo, jogue de forma passiva, o ideal é sempre ter um suporte com controle de grupo ao lado para facilitar de acertar a lança, que quanto mais longe está o alvo, mais tempo esse permanesse stunnado');
+          agent.add('O ideal é só partir pra cima depois de garantir que acertou a lança, pois te garante certeza do kill');
         }
         break;
 
@@ -4757,9 +4788,13 @@ function checarDicas(agent) {
       case 'Veres':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Não existe um combo específico, o ideal é saber stackar a passiva antes de pular numa tf, além de entender o range único de cada habilidade');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('A Veres é uma assassina burst, capaz de causar muito dano explosivo e dano puro através de sua passiva');
+          agent.add('Priorize sua primeira habilidade, é sua habilidade de maior de dano, e cada herói que você atinge usando ela é um stack de sua passiva');
+          agent.add('Entenda que para dominar a Veres você precisa se familiarizar com o range das suas habilidades\n\nCada uma possui um range específico, principalmente sua passiva que precisa acertar na distancia certa para causar o dano correto');
+          agent.add('Sua segunda skill empura inimigos próximos e puxa inimigos que estão mais distantes, e sua ULT e passiva foram feitas para finalizar quem estiver com pouco HP\n\nQuanto menos HP tem o inimigo, mais forte é o dano da Veres, portanto saiba o momento certo de entrar numa TF e nunca inicie uma');
+          agent.add('Devido suas habilidades causarem dano real é importante usar seu stack ao seu favor, sempre entrando e saindo da tf usando sua passiva onde tiver mais inimigos próximos\n\nFoca a backline!');
         }
         break;
 
