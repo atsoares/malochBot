@@ -44,6 +44,8 @@ const BALDUM_URL              = 'https://imgur.com/7jMf2n7.jpg';
 const BALDUM_2_URL            = 'https://imgur.com/tHEMoGz.jpg';
 const BALDUM_SOLO_URL         = 'https://imgur.com/tLQjb78.jpg';
 const BATMAN_URL              = 'https://imgur.com/jUjPPns.jpg';
+const BRUNHILDA_JG_URL        = 'https://imgur.com/i8hjCYw.jpg';
+const BRUNHILDA_LANE_URL      = 'https://imgur.com/XGx1nrj.jpg';
 const BUTTERFLY_AD_URL        = 'https://imgur.com/Uu5PMbN.jpg';
 const BUTTERFLY_TANK_URL      = 'https://imgur.com/wathWg2.jpg';
 const CAPHENY_LANE_URL        = 'https://imgur.com/ywPtZ5M.jpg';
@@ -52,6 +54,8 @@ const CAPHENY_LANE3_URL       = 'https://imgur.com/t2zgSkQ.jpg';
 const CAPHENY_JG_URL          = 'https://imgur.com/91yUc0g.jpg';
 const CHAUGNAR_AP_URL         = 'https://imgur.com/t1DegVc.jpg';
 const CHAUGNAR_TANK_URL       = 'https://imgur.com/ttaxPaS.jpg';
+const CHAUGNAR_SOLO_URL       = 'https://imgur.com/8a9HVZB.jpg';
+const CHAUGNAR_PUNIR_URL      = 'https://imgur.com/Ni37993.jpg';
 const CRESHT_SOLO_URL         = 'https://i.imgur.com/7LBcLt1.jpg';
 const CRESHT_SUPORTE_URL      = 'https://i.imgur.com/ENQPAJs.jpg';
 const DARCY_MID_URL           = 'https://i.imgur.com/rTtpWeP.jpg';
@@ -59,7 +63,9 @@ const DARCY_MID_2_URL         = 'https://i.imgur.com/jxnJDjG.jpg';
 const DARCY_JG_URL            = 'https://i.imgur.com/ht4eUC2.jpg';
 const DIAOCHAN_MID_URL        = 'https://i.imgur.com/TD4SJKh.jpg';
 const DIAOCHAN_SUP_URL        = 'https://i.imgur.com/GFCHu1t.jpg';
-const ELSU_URL                = 'https://i.imgur.com/I7InEQ0.jpg';
+const ELSU_URL                = 'https://imgur.com/v95AKCn.jpg';
+const ENZO_URL                = 'https://imgur.com/0wAGHYB.jpg';
+const ENZO2_URL               = 'https://imgur.com/mfzWXIL.jpg';
 const ERROL_SOLO_URL          = 'https://imgur.com/veD54DX.jpg';
 const ERROL_JG_URL            = 'https://imgur.com/HJQOdiL.jpg';
 const ERROL_JG2_URL           = 'https://imgur.com/M6G6ZBw.jpg';
@@ -108,11 +114,12 @@ const MURAD_URL               = 'https://i.imgur.com/ydMPPht.jpg';
 const NAKROTH_URL             = 'https://i.imgur.com/21TVzKd.jpg';
 const NATALYA_URL             = 'https://i.imgur.com/nAmInZD.jpg';
 const OMEGA_URL               = 'https://i.imgur.com/aRQ8Fv0.jpg';
-const OMEN_URL                = 'https://imgur.com/NUjaJmb.jpg';
+const OMEN_URL                = 'https://imgur.com/V6idNcU.jpg';
 const OMEN_2_URL              = 'https://imgur.com/V91Q13e.jpg';
 const ORMARR_URL              = 'https://i.imgur.com/9NlNyEG.jpg';
 const PEURA_URL               = 'https://i.imgur.com/cNEGBit.jpg';
 const PREYTA_URL              = 'https://i.imgur.com/RJycCsJ.jpg';
+const QI_URL                  = 'https://imgur.com/kh2BgJZ.jpg';
 const QUILLEN_URL             = 'https://i.imgur.com/2JsprXf.jpg';
 const RAZ_URL                 = 'https://imgur.com/ZeNi6Vz.jpg';
 const RAZ_JG_URL              = 'https://imgur.com/ln9koiI.jpg';
@@ -151,7 +158,7 @@ const TULEN_JUNGLE_URL        = 'https://i.imgur.com/KQzwd0q.jpg';
 const VALHEIN_URL             = 'https://imgur.com/vjUCqAV.jpg';
 const VALHEIN_2_URL           = 'https://imgur.com/ZDKaAo4.jpg';
 const VEERA_URL               = 'https://i.imgur.com/qPHPK8E.jpg';
-const VERES_URL               = 'https://i.imgur.com/9yN7ZAu.jpg';
+const VERES_URL               = 'https://imgur.com/olYygXS.jpg';
 const VERES_TANK_URL          = 'https://i.imgur.com/IjqyeDf.jpg';
 const VIOLET_LANE_URL         = 'https://i.imgur.com/XAIKkh3.jpg';
 const VIOLET_JG_URL           = 'https://i.imgur.com/o656Gox.jpg';
@@ -160,6 +167,7 @@ const WISP_URL                = 'https://imgur.com/WbOgG6K.jpg';
 const WISP_JG_URL             = 'https://imgur.com/gdHgZb5.jpg';
 const WONDERWOMAN_URL         = 'https://i.imgur.com/n8eVNAR.jpg';
 const WUKONG_URL              = 'https://i.imgur.com/LiWNnBK.jpg';
+const WUKONG_LANE_URL         = 'https://imgur.com/uucOaCQ.jpg';
 const XENIEL_URL              = 'https://i.imgur.com/hxaIr60.jpg';
 const YBNETH_URL              = 'https://imgur.com/0KSqHOr.jpg';
 const YBNETH_SOLO_URL         = 'https://imgur.com/ZMFe8ge.jpg';
@@ -173,6 +181,25 @@ const ZEPHYS_TANK_URL         = 'https://i.imgur.com/V5ocM82.jpg';
 const ZILL_URL                = 'https://i.imgur.com/RC62pgL.jpg';
 const ZUKA_URL                = 'https://i.imgur.com/93Hu2Jl.jpg';
 
+
+////////////////////////////////////////////////////////////////////
+//                             URL RUNAS                          //
+////////////////////////////////////////////////////////////////////
+
+const RUNAS_URL                = 'https://imgur.com/Jumv8Xa.jpg';
+const AUTOATTACK_ADC_URL       = 'https://imgur.com/bqjAvem.jpg';
+const SKILLBASED_ADC_URL       = 'https://imgur.com/aHpPRpG.jpg';
+const LONGRANGED_ADC_URL       = 'https://imgur.com/G3ESbt7.jpg';
+const BURST_ASSASSIN_URL       = 'https://imgur.com/FnZrBaY.jpg';
+const SUSTA_ASSASSIN_URL       = 'https://imgur.com/ZDhUhWg.jpg';
+const BURST_WARRIOR_URL        = 'https://imgur.com/lsdDZYa.jpg';
+const SUSTAIN_WARRIOR_URL      = 'https://imgur.com/FcY0lUI.jpg';
+const BURST_MAGE_URL           = 'https://imgur.com/79Oagiu.jpg';
+const POKE_MAGE_URL            = 'https://imgur.com/8hTGt6d.jpg';
+const SUPORT_TANK_TF_URL       = 'https://imgur.com/FcY0lUI.jpg';
+const SUPORT_TANK_CC_URL       = 'https://imgur.com/9qJiLO0.jpg';
+const SUPORT_LONGRANGE_URL     = 'https://imgur.com/pKCuppw.jpg';
+
 ////////////////////////////////////////////////////////////////////
 //                   Lista de Roles por Heroi  HEROINOVO          //
 ////////////////////////////////////////////////////////////////////
@@ -180,20 +207,20 @@ const ZUKA_URL                = 'https://i.imgur.com/93Hu2Jl.jpg';
 const HEROIS_SOLO     = ["Florentino", "Riktor", "Maloch", "Marja", "Superman", "Xeniel", "Omen", "YBneth", "Cresht", 
                         "Ryoma", "Max", "Arum", "Wonder Woman", "Skud", "Airi", "Roxie", "Amily", "LuBu", 
                         "Arduin", "Rourke", "Zuka", "Baldum", "Arthur", "Omega", "KilGroth", "Zanis", "Gildur", 
-                        "Wukong", "Astrid", "Taara", "Veres", "Valhein", "Errol", "Yena"];
+                        "Wukong", "Astrid", "Taara", "Veres", "Valhein", "Errol", "Yena", "Chaugnar", "Qi"];
 
-const HEROIS_LANE     = ["Elsu", "TelAnnas", "Valhein", "TheJoker", "Yorn", "Wisp", "Lindis", "Violet", "Fennik", "Moren", "Hayate", "Capheny"];
+const HEROIS_LANE     = ["Elsu", "TelAnnas", "Valhein", "TheJoker", "Yorn", "Wisp", "Lindis", "Violet", "Fennik", "Moren", "Hayate", "Capheny", "Brunhilda"];
 
-const HEROIS_MID      = ["Elsu", "Sephera", "Tulen", "Liliana", "Raz", "Ignis", "Natalya", "TheFlash", "Kahlii", "Lauriel", 
+const HEROIS_MID      = ["Sephera", "Tulen", "Liliana", "Raz", "Ignis", "Natalya", "TheFlash", "Kahlii", "Lauriel", 
                         "Aleister", "Ilumia", "Jinnar", "Mganga", "Krixi", "Diaochan", "Preyta", "Gildur", "Veera", "Azzenka", 
                         "Annette", "Darcy"];
 
 const HEROIS_SUPORTE  = ["Annette", "YBneth", "Gildur", "TeeMee", "Baldum", "Sephera", "Peura", "Mina", "Grakk", "Chaugnar", "Alice",
-                        "Arum", "Thane", "Ormarr", "Cresht", "Riktor", "Xeniel", "Lumburr", "Arduin", "Superman", "Aleister", "Diaochan", "Errol"];
+                        "Arum", "Thane", "Ormarr", "Cresht", "Riktor", "Xeniel", "Lumburr", "Arduin", "Superman", "Aleister", "Diaochan"];
 
 const HEROIS_JUNGLE   = ["Lindis", "Rourke", "Quillen", "Violet", "Nakroth", "Zephys", "Murad", "Elsu", "Kriknak", "Zill", 
                         "Slimz", "Ryoma", "Moren", "Zanis", "Wukong", "Wisp", "Fennik", "Butterfly", "Tulen", "Raz", "Batman", 
-                        "Wonder Woman", "Astrid", "Airi", "Amily", "Zuka", "Florentino", "Darcy", "Hayate", "Capheny","Errol"];
+                        "Wonder Woman", "Astrid", "Airi", "Amily", "Zuka", "Florentino", "Darcy", "Hayate", "Capheny","Errol", "Enzo"];
 
 ////////////////////////////////////////////////////////////////////
 //                    TESTE de Herois Objeto                      //
@@ -287,7 +314,7 @@ const CONCLUIDO          = '';
 //              Lista de Ultimas Builds Adicionadas 08/03/2018    //
 ////////////////////////////////////////////////////////////////////
 
-const ultimasAtualizacoes_1 = "Últimos heróis adicionados: Capheny, Errol, Yena!\n\nÚltimas builds adicionadas: Kilgroth, Astrid, Amily, Florentino, Arduin\n\nBuilds atualizadas de acordo com patch de abril/2019";
+const ultimasAtualizacoes_1 = "Últimos heróis adicionados: Brunhilda!\n\nÚltimas builds adicionadas: Brunhilda, Wukong\n\nBuilds atualizadas de acordo com patch de abril/2019";
 const ultimasAtualizacoes_2 = "";
 const ultimasAtualizacoes_3 = "";
 
@@ -371,8 +398,10 @@ const info_melee = {"termo":"melee", "definicao":"É o termo dado a heróis ou h
 const info_frontline = {"termo":"frontline", "definicao":"É o que chamamos de linha de frente de uma batalha, geralmente são os tanks e guerreiros que pulam na frente e conseguem aguentar bastante dano para proteger a backline"};
 const info_backline = {"termo":"backline", "definicao":"É o que chamamos de linha de trás de uma batalha, geralmente são magos e atiradores que jogam de forma recuada, podendo usar habilidades e atacar sem sofrer dano. Sendo portanto o foco dos assassinos que chegam por trás na tf"};
 const info_kit = {"termo":"kit", "definicao":"É o conjunto de habilidades e mecânicas de cada herói."};
+const info_taxaCrit = {"termo":"taxaCritica", "definicao":"É chance % de um ataque normal ser crítico, ou seja, ser um golpe mais forte"};
+const info_danoCrit = {"termo":"danoCritico", "definicao":"É o quão forte vai ser o ataque caso esse seja um ataque crítico"};
 
-const globalGlossario = [info_kit,info_backline,info_frontline,info_melee,info_range,info_AoV,info_pvp,info_bots,info_hp,info_mp,info_AD,info_AP,info_OP,info_Nerf,info_gank,info_farm,info_burst,info_cooldown,info_CDR,info_autoattack,info_poke,info_carry,info_ADC,info_TF,info_Roam,info_SplitPush,info_proxy,info_flick,info_feedar,info_buff,info_stack,info_bait,info_dive,info_bush];
+const globalGlossario = [info_danoCrit,info_taxaCrit,info_kit,info_backline,info_frontline,info_melee,info_range,info_AoV,info_pvp,info_bots,info_hp,info_mp,info_AD,info_AP,info_OP,info_Nerf,info_gank,info_farm,info_burst,info_cooldown,info_CDR,info_autoattack,info_poke,info_carry,info_ADC,info_TF,info_Roam,info_SplitPush,info_proxy,info_flick,info_feedar,info_buff,info_stack,info_bait,info_dive,info_bush];
 
 /////////////////////////////////////////////////////////////////////
 //                          Inicio do BOT                          //
@@ -415,12 +444,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     return papel;
   }
   
-  function testando(agent){
-
-    agent.add("Deu certo");
-
-  }
-
   function ultimasAtualizacoes(agent){
 
     //agent.add("Só um instante");
@@ -433,8 +456,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
   function listar_menu(agent){
     agent.add("Serviços do Maloch Bot:");
-    agent.add("Builds - digite:\n\n´build [herói] (lane)´");
-    agent.add("Arcanas - digite:\n\n´arcanas informações´ - menu de arcanas\n\n´arcanas [herói] ou arcanas [classe]´");
+    agent.add("Builds - digite:\n\n´build [herói] (lane)´\nex: build violet jg");
+    agent.add("Arcanas - digite:\n\n´arcanas informações´ - menu de arcanas\n\n´arcanas [herói] ou arcanas [classe]´\nex: arcanas tulen\narcanas atirador");
     agent.add("Últimas atualizações do bot - digite:\n\n´últimas atualizações´");
     agent.add("Legenda:\n\nentre [] é obrigatório\nentre () opcional\n\nNão necessário digitar [] ou (), apenas palavras");
   } 
@@ -446,42 +469,77 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     const cor      = agent.parameters.arcanas_cores;
     const theBest  = agent.parameters.Superioridade;
     const boots    = agent.parameters.boots;
+    const hero     = agent.parameters.herois;
+    const role     = agent.parameters.roles;
+    const lane     = agent.parameters.lanes;
 
-    let filtro = { lista:list, best:theBest, arcana:arcanas, botas:boots }; 
+    let filtro = { lista:list, best:theBest, arcana:arcanas, botas:boots, heroi:hero, funcao:role, papel:lane }; 
 
-     if(filtro.lista) {
-        if(filtro.arcana){ 
-          if(cor){
-            switch(cor){
-              case 'red':
-                agent.add('As arcanas vermelhas são:');
-                agent.add('Iluminação, Obliteração, Massacre, Sede de Sangue, Descontrole, Indomável, Violação, Conjuração, Atrocidade e Blitz.');
-                break;
-  
-              case 'purple':
-                agent.add('As arcanas roxas são:');
-                agent.add('Colosso, Oração, Ladrão, Tirania, Imortal, Banquete, Magia Negra, Benevolência, Assassino e Guerrilha.');
-                break;
-  
-              case 'green':
-                agent.add('As arcanas verdes são:');
-                agent.add('Fortificação, Aço Duro, Coragem, Proeza, Maldição, Ferrão, Agitação, Foco, Consumação e Cruzadas.');
-                break;
-            }
-          }
-          else{
-            agent.add('As arcanas são separadas por cores');
-            agent.add('Vermelha, Roxa ou Verde? Me diz qual cor você quer saber');
+    if(filtro.lista == "Listar") {
+      if(filtro.arcana){ 
+        if(cor){
+          switch(cor){
+            case 'red':
+              agent.add('As arcanas vermelhas são:');
+              agent.add('Iluminação, Obliteração, Massacre, Sede de Sangue, Descontrole, Indomável, Violação, Conjuração, Atrocidade e Blitz.');
+              break;
+
+            case 'purple':
+              agent.add('As arcanas roxas são:');
+              agent.add('Colosso, Oração, Ladrão, Tirania, Imortal, Banquete, Magia Negra, Benevolência, Assassino e Guerrilha.');
+              break;
+
+            case 'green':
+              agent.add('As arcanas verdes são:');
+              agent.add('Fortificação, Aço Duro, Coragem, Proeza, Maldição, Ferrão, Agitação, Foco, Consumação e Cruzadas.');
+              break;
           }
         }
-
-        if(filtro.botas){
-          agent.add('As lista de itens de movimento são:');
-          agent.add('Botas de Velocidade, Botas Sônicas, Bota Dourada, Botas Ofuscantes, Chutes Encatados, Botas de Guerra, Escolha de Hermes');
-          agent.add('Para saber mais detalhes de cada uma digite ´detalhar nome da bota´');
+        else{
+          agent.add('As arcanas são separadas por cores');
+          agent.add('Vermelha, Roxa ou Verde? Me diz qual cor você quer saber');
         }
-        
       }
+
+      if(filtro.botas){
+        agent.add('As lista de itens de movimento são:');
+        agent.add('Botas de Velocidade, Botas Sônicas, Bota Dourada, Botas Ofuscantes, Chutes Encatados, Botas de Guerra, Escolha de Hermes');
+        agent.add('Para saber mais detalhes de cada uma digite ´detalhar nome da bota´');
+      }
+      
+      if(filtro.funcao){
+        agent.add('Os heróis que podem jogar como '+filtro.funcao+' são:');
+        switch(filtro.funcao){
+          case 'Lane':
+            agent.add('Capheny, Elsu, Fennik, Hayate, Lindis, Moren, TelAnnas, The Joker, Valhein, Violet, Wisp, Yorn');
+            break;
+          case 'Solo':
+            agent.add('Airi, Amily, Arduin, Arthur, Arum, Astrid, Baldum, Chaugnar, Cresht, Errol, Florentino, Gildur, KilGroth, Lu Bu, Maloch, Marja, Max, Omega, Omen, Riktor, Rourke, Roxie, Ryoma, Skud, Superman, Taara, Valhein, Veres, Wonder Woman, Wukong, Xeniel, YBneth, Yena, Zanis, Zuka');
+            break;
+          case 'Jungle':
+            agent.add('Airi, Amily, Astrid, Batman, Butterfly, Capheny, Darcy, Elsu, Enzo, Errol, Fennik, Florentino, Hayate, Kriknak, Lindis, Moren, Murad, Nakroth, Quillen, Raz, Rourke, Ryoma, Slimz, Tulen, Violet, Wisp, Wonder Woman, Wukong, Zanis, Zephys, Zill, Zuka');
+            break;
+          case 'Mid':
+            agent.add('Aleister, Annette, Azzenka, DArcy, Diaochan, Elsu, Gildur, Ignis, Ilumia, Jinnar, Kahlii, Krixi, Lauriel, Liliana, Mganga, Natalya, Preyta, Raz, Sephera, The Flash, Tulen, Veera');
+            break;
+          case 'Suporte':
+            agent.add('Aleister, Alice, Annette, Arduin, Arum, Baldum, Chaugnar, Cresht, Diaochan, Gildur, Grakk, Lumburr, Mina, Ormarr, Peura, Riktor, Sephera, Superman, TeeMee, Thane, Xeniel, YBneth');
+            break;
+        }
+      }
+    
+    }
+
+    if(filtro.lista == "função") {
+      if(filtro.papel){
+        agent.add('As funções das lanes são divididas entre: Mid, Solo, Adc, Jungler, Suporte e cada função é responsável por determinada área do mapa, mas todos os heróis devem proteger as torres independente de qual lane seja');
+        agent.add('Se seu time perde uma torre do mid, não foi o herói do mid que perdeu, todo o time perdeu, pois a torre não volta mais, portanto tenha em mente que cada herói tem sua função na lane que está designado, mas todos devem proteger torres'); 
+        agent.add('Caso queira saber mais sobre cada função, basta me solicitar dicas e falar a lane');
+      }
+      if(filtro.herois){
+        agent.add('Os heróis são divididos entre: Mago, Atirador, Guerreiro, Assassino e Suporte. Para saber melhor sobre cada uma, basta pedir dicas dessa classe');
+      }
+    }
 
   }
 
@@ -644,7 +702,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
     const heroi      = agent.parameters.Heroi;
     const build      = agent.parameters.Builds;
-    const role       = agent.parameters.role;
+    const role       = agent.parameters.roles;
     const informacao = agent.parameters.informacao;
 
     let filtro = { hero:heroi, funcao:role, info: informacao}; 
@@ -658,7 +716,7 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     } 
 
     if(build && filtro.info){
-      agent.add('Para solicitar builds digite:\n\n´build [herói] (lane)´');
+      agent.add('Para solicitar builds digite:\n\n´build [herói] (lane)´\nex: build hayate ou build hayate jg');
       agent.add("Legenda:\n\nentre [] é obrigatório\nentre () opcional\n\nNão necessário digitar [] ou (), apenas palavras");
     }
 
@@ -1001,6 +1059,35 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         }
         break;
 
+      case 'Brunhilda':
+
+        agent.add('Hm, então quer dizer que resolveu jogar de Brunhilda...');
+        if (!filtro.funcao) {
+          agent.add('Tenho essa:');
+          agent.add(new Image(BRUNHILDA_LANE_URL));
+          agent.add('Caso queira ir jungle:');
+          agent.add(new Image(BRUNHILDA_JG_URL));
+        } else {
+          if (getRole(filtro.funcao).includes(filtro.hero)) {
+            switch(filtro.funcao){
+              case 'Jungle':
+		        agent.add('Tenho essa:');
+		        agent.add(new Image(BRUNHILDA_JG_URL));
+                break;
+              case 'Lane':
+		        agent.add('Tenho essa:');
+		        agent.add(new Image(BRUNHILDA_LANE_URL));
+                break;
+            }
+          } else {
+            agent.add('Mas você quer jogar como '+filtro.funcao+' ?');
+            agent.add(FUNCAO_ERRADA_1);
+            agent.add(FUNCAO_ERRADA_2);
+            agent.add('A Brunhilda é melhor se jogar na lane ou na jungle!');
+          }
+        }
+        break;
+
       case 'Butterfly':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Butterfly...'); 
@@ -1062,9 +1149,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         agent.add('Hm, então quer dizer que resolveu jogar de Chaugnar...');
         if (!filtro.funcao) {
-          agent.add('Se seu time já tiver outro tank, faz essa:');
-          agent.add(new Image(CHAUGNAR_AP_URL));
-          agent.add('Caso não, te aconselho fazer essa:');
+          agent.add('Caso queira jogar na Solo:');
+          agent.add(new Image(CHAUGNAR_SOLO_URL));
+          agent.add('Você pode terminar a Égide antes ou não dependendo do seu consumo de mana e trocar o primeiro item dependendo da necessidade.');
+          agent.add('Caso seja o suporte:');
           agent.add(new Image(CHAUGNAR_TANK_URL));
           agent.add('Lembrando que fica a sua escolha qual item de SUPORTE usar: Mas se tiver inimigo invisível, o ideal é usar Anel do Amigo.');
           } else {
@@ -1077,12 +1165,19 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 agent.add(new Image(CHAUGNAR_TANK_URL));
                 agent.add('Lembrando que fica a sua escolha qual item de SUPORTE usar: Mas se tiver inimigo invisível, o ideal é usar Anel do Amigo.');
                 break;
+              case 'Solo':
+                agent.add('Caso queira usar Flick ou Executar:');
+                agent.add(new Image(CHAUGNAR_SOLO_URL));
+                agent.add('Mas você pode usar Punir e ir com essa aqui:');
+                agent.add(new Image(CHAUGNAR_PUNIR_URL));
+                agent.add('Jogue igual uma Roxie, com proxy/invade e ajudando em tfs pois você fica muito tank!');
+                break;
             }
           } else {
             agent.add('Opa, pera ai, '+filtro.funcao+' ?');
             agent.add(FUNCAO_ERRADA_1);
             agent.add(FUNCAO_ERRADA_2);
-            agent.add('O Chaugnar é melhor se utilizado como suporte!');
+            agent.add('O Chaugnar é melhor se utilizado como suporte ou na solo!');
           }
         }
         break;
@@ -1214,7 +1309,30 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
       case 'Enzo':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Enzo...');
-        agent.add('Infelizmente não tenho builds para ele, quem sabe quando for lançado oficialmente');
+        if (!filtro.funcao) {
+          agent.add('Por enquanto só tenho essas:');
+          agent.add(new Image(ENZO_URL));
+          agent.add(new Image(ENZO2_URL));
+        } else {
+          if (getRole(filtro.funcao).includes(filtro.hero)) {
+            switch(filtro.funcao){
+              case 'Jungle':
+                agent.add('Aqui oh, tenho essas:');
+                agent.add(new Image(ENZO_URL));
+                agent.add(new Image(ENZO2_URL));
+                break;
+              case 'Suporte':
+                agent.add('Aqui oh, tenho essa:');
+                agent.add('Mentira, não tenho, pfv não joga com ele como suporte, herói foi feito pra bater e matar, não pra dar suporte, basta ler a passiva dele pra entender isso');
+                break;
+              }
+          } else {
+            agent.add('Opa, pera ai, '+filtro.funcao+' ?');
+            agent.add(FUNCAO_ERRADA_1);
+            agent.add(FUNCAO_ERRADA_2);
+            agent.add('O Enzo é melhor se utilizado na Jungle!');
+          }
+        }
         break;
 
       case 'Errol':
@@ -1259,8 +1377,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         agent.add('Hm, então quer dizer que resolveu jogar de Fennik...');
         if (!filtro.funcao) {
           agent.add('Aqui, tenho duas:');
-          agent.add(FENNIK_URL);
-          agent.add(FENNIK_2_URL);
+          agent.add(new Image(FENNIK_URL));
+          agent.add(new Image(FENNIK_2_URL));
                 agent.add('Se você tiver iniciando com ele, te recomendo a primeira!');
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
@@ -1270,8 +1388,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
                 break;
               case 'Jungle':
                 agent.add('Aqui, tenho duas:');
-                agent.add(FENNIK_URL);
-                agent.add(FENNIK_2_URL);
+                agent.add(new Image(FENNIK_URL));
+                agent.add(new Image(FENNIK_2_URL));
                 agent.add('Se você tiver iniciando com ele, te recomendo a primeira!');
                 break;
               }
@@ -1453,6 +1571,12 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
             agent.add('A Ilumia é melhor se utilizada no Mid!');
           }
         }
+        break; 
+
+      case 'Ishar':
+
+        agent.add('Hm, então quer dizer que resolveu jogar de Ishar...');
+        agent.add('Te digo assim que ela for lançada ta?');
         break; 
 
       case 'Jinnar':
@@ -2060,6 +2184,29 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         }
         break;
 
+      case 'Qi':
+
+        agent.add('Hm, então quer dizer que resolveu jogar de Qi...');
+        if (!filtro.funcao) {
+          agent.add('Aqui está:');
+          agent.add(new Image(QI_URL));
+        } else {
+          if (getRole(filtro.funcao).includes(filtro.hero)) {
+            switch(filtro.funcao){
+              case 'Solo':
+                agent.add('Por enquanto só tenho essa:');
+                agent.add(new Image(QI_URL));
+                break;
+            }
+          } else {
+            agent.add('Opa, pera ai, '+filtro.funcao+' ?');
+            agent.add(FUNCAO_ERRADA_1);
+            agent.add(FUNCAO_ERRADA_2);
+            agent.add('A Qi é melhor se utilizado na Solo!');
+          }
+        }
+        break; 
+        
       case 'Quillen':
 
         agent.add('Hm, então quer dizer que resolveu jogar de Quillen...');
@@ -2121,7 +2268,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
         if (!filtro.funcao) {
           agent.add('Aqui está:');
           agent.add(new Image(RIKTOR_SOLO_URL));
-          agent.add('Se souber jogar direitinho, usando o matinho ao seu favor, ele se torna um bom counter do rapaz das flores...');
           agent.add('Ah, e também tenho essa outra como SUPORTE:');
           agent.add(new Image(RIKTOR_ROAM_URL));
           agent.add('O controle de mapa que você tem, uma vez que domina a passiva dele, é muito forte!');
@@ -2133,7 +2279,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
               case 'Solo':
                 agent.add('Por enquanto só tenho essa:');
                 agent.add(new Image(RIKTOR_SOLO_URL));
-                agent.add('Se souber jogar direitinho, usando o matinho ao seu favor, ele se torna um bom counter do rapaz das flores...');
                 break;
               case 'Suporte':
                 agent.add('Tenho essas duas aqui:');
@@ -2739,27 +2884,30 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         agent.add('Hm, então quer dizer que resolveu jogar de Wukong...');
         if (!filtro.funcao) {
-          agent.add('♪ sopa de macaco ♪ sopa sopa de macaco ♪');
-          agent.add('...');
-          agent.add('Ops... é que eu lembrei de uma música');
-          agent.add('Mas aqui está:');
+          agent.add('Tenho essa pra jungle');
           agent.add(new Image(WUKONG_URL));
+          agent.add('Caso queira jogar na Lane:');
+          agent.add(new Image(WUKONG_LANE_URL));
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
               case 'Solo':
-                agent.add(BUILD_EM_BREVE);
+                agent.add('Aqui oh, tenho essa');
+                agent.add(new Image(WUKONG_LANE_URL));
+            	agent.add('♪ sopa de macaco ♪ sopa sopa de macaco ♪');
                 break;
               case 'Jungle':
                 agent.add('Por enquanto só tenho essa:');
                 agent.add(new Image(WUKONG_URL));
+                agent.add('♪ sopa de macaco ♪ sopa sopa de macaco ♪');
                 break;
             }
           } else {
             agent.add('Opa, pera ai, '+filtro.funcao+' ?');
             agent.add(FUNCAO_ERRADA_1);
             agent.add(FUNCAO_ERRADA_2);
-            agent.add('O Wukong é melhor se utilizado na Jungle!');
+            agent.add('O Wukong é melhor se utilizado na Jungle ou talvez na Solo!');
+            agent.add('♪ sopa de macaco ♪ sopa sopa de macaco ♪');
           }
         }
         break;
@@ -2826,15 +2974,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('Pronto, tenho duas');
           agent.add(new Image(YENA_1_URL)); 
           agent.add(new Image(YENA_2_URL)); 
-          agent.add('A primeira é mais comum, a segunda é pra quando seu time ta carente de tank');
-          agent.add('Minha dica para jogar com ela é entender bem os dois modos de combate que ela tem');
-          agent.add('O primeiro modo é o modo assassino, nele sua velocidade de movimento é aumentada\n\nEnquanto o segundo é seu modo guerreiro, sua velocidade de ataque diminui mas aumenta o dano em 50%\n\nPara trocar de modo você deve usar sua ULT');
-          agent.add('Lembrando que a cada golpe (ataque básico ou habilidade) que ela dá no inimigo no modo assassino acumula um stack, ao somar 5 stacks, o inimigo toma silence e reduz o movimento em 80%!');
-          agent.add('Sua primeira skill no modo assassino pode ser usada duas vezes se acertar um minion ou herói na primeira vez\n\nE no modo guerreiro é possível mudar a direção enquanto carrega a habilidade usando flick ou pode ser usada imediatamente apertando duas vezes');
-          agent.add('Enquanto usa sua segunda habilidade no modo guerreiro, você fica imune a controle, portanto saiba combar bem com isso\n\nAlém disso, sua segunda skill no modo assassino arremessa uma shuriken que ao ser coletada reduz o cooldown da mesma em 5 segundos, seu combo geralmente começa aqui');
-          agent.add('O combo mais comum é:\n\nS2-> S1 -> S1 -> ULT -> S2\n\nEnquanto o combo avançado:\n\nS1(nos minions) -> S2 -> S1 -> ULT -> S2 -> S1(apertar 2x) -> S2 -> S1(apertar 2x)');
-          agent.add('Inicie as lutas no modo assassino para dar engage rapidamente no mago e no atirador e causar muito dano com seus combos, e poder tankar os outros no modo guerreiro'); 
-          agent.add('E por favor, não testa herói novo em ranked!');
         } else {
           if (getRole(filtro.funcao).includes(filtro.hero)) {
             switch(filtro.funcao){
@@ -3051,8 +3190,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
     if(arcanas && filtro.info){
       agent.add('Para entender melhor sobre arcanas digite:\n\n´arcanas explicar´\n\nLeitura longa');
       agent.add('Para arcanas mais indicadas para iniciantes:\n\n´arcanas para iniciantes´');
-      agent.add('Se quiser arcanas “genéricas” para classes de heróis como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:\n\n´arcanas [classe]´');
-      agent.add('Se quiser saber as arcanas recomendadas para um herói:\n\n´arcanas [herói]´');
+      agent.add('Se quiser arcanas “genéricas” para classes de heróis como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:\n\n´arcanas [classe]´\nex: arcanas atirador');
+      agent.add('Se quiser saber as arcanas recomendadas para um herói:\n\n´arcanas [herói]´\nex: arcanas violet');
       agent.add("Legenda:\n\nentre [] é obrigatório\nentre () opcional\n\nNão necessário digitar [] ou (), apenas palavras");
     }
 
@@ -3245,6 +3384,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('Verdes: Ferrão x10'); 
           break;
 
+        case 'Brunhilda':
+
+          agent.add('As arcanas recomendadas para jogar de Brunhilda são:');
+          agent.add('Vermelhas: Atrocidade x10');
+          agent.add('Roxas: Guerrilha x10');
+          agent.add('Verdes: Ferrão x10');
+          break;
+        
         case 'Butterfly':
 
           agent.add('As arcanas recomendadas para jogar de Butterfly são:'); 
@@ -3303,7 +3450,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
         case 'Enzo':
 
-          agent.add('Infelizmente o Enzo ainda não foi lançado oficialmente no nosso servidor');
+          agent.add('As arcanas recomendadas para jogar de Enzo são:');
+          agent.add('Vermelhas: Atrocidade x10');
+          agent.add('Roxas: Ladrão x5 / Guerrilha x5');
+          agent.add('Verdes: Ferrão x10');
           break; 
 
         case 'Errol':
@@ -3370,6 +3520,11 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('Roxas: Benevolência x10');
           agent.add('Verdes: Agitação x10');         
           break; 
+
+        case 'Ishar':
+
+          agent.add('Te conto assim que ela for lançada, ta?');        
+          break;
 
         case 'Jinnar':
 
@@ -3563,6 +3718,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
           agent.add('Verdes: Agitação x10');     
           break;
 
+        case 'Qi':
+
+          agent.add('As arcanas recomendadas para jogar de Qi são:');
+          agent.add('Vermelhas: Massacre x10');
+          agent.add('Roxas: Benevolência x10');
+          agent.add('Verdes: Ferrão x10');     
+          break;
+        
         case 'Quillen':
 
           agent.add('As arcanas recomendadas para jogar de Quillen são:');
@@ -3839,6 +4002,408 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                 RUNAS                                                                               //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function checarRunas(agent) {
+
+  const runas    = agent.parameters.runas;
+  const heroi    = agent.parameters.heroi;
+  const sobre    = agent.parameters.Sobre;
+  const classes  = agent.parameters.classes;
+  const informacao  = agent.parameters.informacao;
+  const tipoDano = agent.parameters.tiposDeBuild;
+
+  let filtro = { hero:heroi, classe:classes, tipo:tipoDano, explicar:sobre, info:informacao }; 
+
+  if(runas && !filtro.info && !filtro.explicar && !filtro.hero && !filtro.classe && !filtro.tipo){
+    agent.add('Entendi que você quer falar de runas, mas o que exatamente? Se quiser listar meus comandos, basta digitar: runas informações´');
+  }
+
+  if(runas && filtro.info){
+    agent.add('Para entender melhor sobre runas digite:\n\n´runas explicar´');
+    agent.add('Para runas por classes de heróis como atirador, assassino, guerreiro, suporte, tanque ou mago, digite:\n\n´runas [classe]´\nex: runas atirador');
+    //agent.add('Se quiser saber as runas recomendadas para um herói:\n\n´runas [herói]´\nex: runas violet');
+    agent.add("Legenda:\n\nentre [] é obrigatório\nentre () opcional\n\nNão necessário digitar [] ou (), apenas palavras");
+  }
+
+  if(runas && filtro.explicar){
+    agent.add('As runas são pedras mágicas! Foram liberadas depois da grande batalha de Volkath! Com as runas, novos elementos de estratégia são adicionados ao jogo.');
+    agent.add('Este recurso complementará as novas arcanas. Enquanto arcana dão um atributo adicional ao herói, a runa irá adicionar um bônus à habilidade do herói além de possibilitar jogadas mais agressivas já no início da partida.');
+    agent.add('Existem quatro tipos de runas: Lokenheim, Veda, Afata e Liga dos Humanos. Embora cada runa corresponda a uma classe, elas podem ser usadas por todos, e muda de acordo com o estílo de jogo e função de cada herói.');
+    agent.add(new Image(RUNAS_URL));
+    agent.add('Lokheim (Poder do Abismo): mais indicada para heróis corpo-a-corpo, como guerreiros e assassinos; É a runa Vermelha!');
+    agent.add('Veda (Poder da Luz): mais indicada para heróis de ataque à distância, como atiradores e magos; É a runa Amarela!');
+    agent.add('Afata (Força da Natureza): mais indicada para suportes e tanques; É a runa Verde!');
+    agent.add('Liga dos Humanos (Poder Criativo): gameplay criativo, indicada para qualquer classe; É a runa Azul!');
+  }
+
+  if (filtro.classe && !filtro.tipo) {
+    switch(filtro.classe){
+      case 'Mago':
+        filtro.tipo = 'AP';
+        break;
+      case 'Atirador':
+        filtro.tipo = 'ADC';
+        break;
+      case 'Assassino':
+        filtro.tipo = 'ADA';
+        break;
+      case 'Guerreiro':
+        filtro.tipo = 'AD';
+        break;
+      case 'Tanque':
+        filtro.tipo = 'Tank';
+        break;
+      case 'Suporte':
+        filtro.tipo = 'Tank';
+        break;
+    }
+  }
+
+  if(filtro.tipo && !filtro.hero){
+    switch(filtro.tipo) {
+      case 'AD':
+        agent.add('As runas para está classe são dividas em:');
+        agent.add('Guerreiros Burst:'); 
+        agent.add(new Image(BURST_WARRIOR_URL));
+        agent.add('Guerreiros Sustain:'); 
+        agent.add(new Image(SUSTAIN_WARRIOR_URL));
+        break;
+      case 'ADC':
+        agent.add('As runas para está classe são dividas em:');
+        agent.add('Atiradores Auto Attack:'); 
+        agent.add(new Image(AUTOATTACK_ADC_URL));
+        agent.add('Atiradores de Longo Alcance:'); 
+        agent.add(new Image(LONGRANGED_ADC_URL));
+        agent.add('Atiradores dependentes de habilidades:'); 
+        agent.add(new Image(SKILLBASED_ADC_URL));
+        break;
+      case 'ADA':
+        agent.add('As runas para está classe são dividas em:');
+        agent.add('Assassinos Burst:');
+        agent.add(new Image(BURST_ASSASSIN_URL));
+        agent.add('Assassino Defensivo:'); 
+        agent.add(new Image(SUSTA_ASSASSIN_URL));
+        break;
+      case 'AP':
+        agent.add('As runas para está classe são dividas em:');
+        agent.add('Magos Burst:'); 
+        agent.add(new Image(BURST_MAGE_URL));
+        agent.add('Magos Poke:'); 
+        agent.add(new Image(POKE_MAGE_URL));
+        break;
+      case 'Tank':
+        agent.add('As runas para está classe são dividas em:');
+        agent.add('Suportes Longo Alcance:');
+        agent.add(new Image(SUPORT_LONGRANGE_URL));
+        agent.add('Tanks/Suportes Controle:');
+        agent.add(new Image(SUPORT_TANK_CC_URL));
+        agent.add('Tanks/Suportes TF Focus:');
+        agent.add(new Image(SUPORT_TANK_TF_URL));
+        break;  
+    }
+  }
+
+  if(filtro.hero) {
+    
+    agent.add('Ainda não sei a runas de todos mas já sei as basicas de cada classe, que no seu caso poderia ser');
+    if(HEROIS_SOLO.includes(filtro.hero)){
+      agent.add('Runas para guerreiros');
+    }
+    if(HEROIS_JUNGLE.includes(filtro.hero)){
+      agent.add('Runas para assassino');
+    }
+    if(HEROIS_MID.includes(filtro.hero)){
+      agent.add('Runas para mago');
+    }
+    if(HEROIS_SUPORTE.includes(filtro.hero)){
+      agent.add('Runas para Suporte');
+    }
+    if(HEROIS_LANE.includes(filtro.hero)){
+      agent.add('Runas para Atirador');
+    }
+    agent.add('Em breve te digo as específicas de cada herói');
+    agent.add('E não esquece de seguir a página para saber da próxima atualização! :)');
+  }
+    //   case 'Airi':  
+    //     agent.add('Ainda não sei a runas de todos mas já sei as basicas de cada classe, que nesse caso poderia ser:');
+    //     break; 
+
+    //   case 'Aleister':
+    //     break;
+
+    //   case 'Alice':
+    //     break;
+
+    //   case 'Amily':
+    //     break;
+
+    //   case 'Annette':
+    //     break;
+
+    //   case 'Arduin':
+    //     break;
+
+    //   case 'Arthur':
+    //     break;
+
+    //   case 'Arum':
+    //     break;
+
+    //   case 'Astrid':
+    //     break;
+
+    //   case 'Azzenka':
+    //     break;
+
+    //   case 'Baldum':
+    //     break;
+
+    //   case 'Batman':
+    //     break;
+
+    //   case 'Brunhilda':
+    //     break;
+      
+    //   case 'Butterfly':
+    //     break;       
+
+    //   case 'Capheny':
+    //     break;
+
+    //   case 'Chaugnar':
+    //     break;
+
+    //   case 'Cresht':
+    //     break;
+
+    //   case 'Darcy':
+    //     break;  
+
+    //   case 'Diaochan':
+    //     break; 
+
+    //   case 'Elsu':
+    //     break;
+
+    //   case 'Enzo':
+    //     break; 
+
+    //   case 'Errol':
+    //     break;
+
+    //   case 'Fennik':
+    //     break;
+
+    //   case 'Florentino':
+    //     break;
+
+    //   case 'Gildur':
+    //     break; 
+
+    //   case 'Grakk':
+    //     break;
+
+    //   case 'Hayate':
+    //     break;
+
+    //   case 'Ignis':
+    //     break;
+
+    //   case 'Ilumia':
+    //     break; 
+
+    //   case 'Ishar':
+
+    //     agent.add('Te conto assim que ela for lançada, ta?');        
+    //     break;
+
+    //   case 'Jinnar':
+    //     break; 
+
+    //   case 'Kahlii':
+    //     break;  
+
+    //   case 'KilGroth':
+    //     break;
+
+    //   case 'Kriknak':
+    //     break;
+
+    //   case 'Krixi':
+    //     break;
+
+    //   case 'Lauriel':
+    //     break;
+
+    //   case 'Liliana':
+    //     break;
+
+    //   case 'Lindis':
+    //     break;
+
+    //   case 'LuBu':
+    //     break;
+
+    //   case 'Lumburr':
+    //     break;
+
+    //   case 'Maloch':
+    //     break;
+
+    //   case 'Marja':
+    //     break;
+
+    //   case 'Max':
+    //     break;
+
+    //   case 'Mganga':
+    //     break;
+
+    //   case 'Mina':
+    //     break;
+
+    //   case 'Moren':
+    //     break;
+
+    //   case 'Murad':
+    //     break; 
+
+    //   case 'Nakroth':
+    //     break;
+
+    //   case 'Natalya':
+    //     break;
+
+    //   case 'Omega':
+    //     break;
+
+    //   case 'Ormarr':
+    //     break;
+
+    //   case 'Omen':
+    //     break;
+
+    //   case 'Peura':
+    //     break;
+
+    //   case 'Preyta':
+    //     break;
+
+    //   case 'Qi':
+    //     break;
+      
+    //   case 'Quillen':
+    //     break;
+
+    //   case 'Raz':
+    //     break;
+
+    //   case 'Riktor':
+    //     break;
+
+    //   case 'Rourke':
+    //     break;
+
+    //   case 'Roxie':
+    //     break;
+
+    //   case 'Ryoma':
+    //     break;
+
+    //   case 'Sephera':
+    //     break;
+
+    //   case 'Skud':
+    //     break;  
+
+    //   case 'Slimz':
+    //     break;
+
+    //   case 'Superman':
+    //     break;
+
+    //   case 'Taara':
+    //     break;
+
+    //   case 'TeeMee':
+    //     break;
+
+    //   case 'TelAnnas':
+    //     break;
+
+
+    //   case 'Thane':
+    //     break;
+
+    //   case 'TheFlash':
+    //     break;
+
+
+    //   case 'TheJoker':
+    //     break;
+
+    //   case 'Toro':
+
+    //     agent.add('Infelizmente ele não está em nosso servidor');
+    //     break;
+
+    //   case 'Tulen':
+    //     break;
+
+    //   case 'Valhein':
+    //     break;
+
+    //   case 'Veera':  
+    //     break;
+
+    //   case 'Veres':
+    //     break;
+
+    //   case 'Violet':
+    //     break;
+
+    //   case 'Wiro':
+    //     break;
+
+    //   case 'Wisp':
+    //     break;
+
+    //   case 'Wonder Woman':
+    //     break;
+
+    //   case 'Wukong':
+    //     break;
+
+    //   case 'Xeniel':
+    //     break;
+
+    //   case 'YBneth':
+    //     break;
+
+    //   case 'Yena':
+    //     break;  
+
+    //   case 'Yorn':
+    //     break;
+
+    //   case 'Zanis':
+    //     break;
+
+    //   case 'Zephys':
+    //     break;
+
+    //   case 'Zill':
+    //     break;
+
+    //   case 'Zuka':
+    //     break;
+    // } 
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                 DICAS                                                                                //
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -4044,9 +4609,12 @@ function checarDicas(agent) {
     }
   }
 
-  if(filtro.hero) {
+  if(!filtro.papel && filtro.hero) {
     switch(filtro.hero){
-
+      case 'Herói':
+        agent.add('Para pedir dicas é preciso informar o nome do herói, por exemplo: dicas violet');
+        break;
+  
       case 'Airi':
 
         if(filtro.dica == "combo"){
@@ -4199,6 +4767,20 @@ function checarDicas(agent) {
         }
         break;
 
+      case 'Brunhilda':
+
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Brunhilda é uma atiradora com um kit bem equilibrado, especializada em cercar e defender, já que com sua ULT, uma equipe adversária de curto alcance sofre pra conseguir se aproximar');
+          agent.add('Maximize sua segunda habilidade primeiro, é o que te da sustain para agressivar durante o early game, apesar dela só causar estragos mesmo da metade para o fim da partida');
+          agent.add('Sua passiva permite causar bastante dano crítico caso tenha as arcanas certas, cada AA aumenta a taxa de acertar um crítico');
+          agent.add('Use sua segunda habilidade explode assim que entra em contato com o inimigo, causando dano, slow e reduzindo armadura.\n\nEssas armadilhas podem ser vistas no matinho, então coloque sempre no caminho do inimigo, ou forçando eles de mudar de rota');
+          agent.add('Sobre sua ULT, é perfeita para cercar inimigos, além de funcionar em torres, pode inclusive usar o Flick enquanto usa ela para aumentar o alcance\n\nCuidado apenas com posicionamento, você fica imóvel enquanto ulta, um alvo fácil para puxões do Grakk por exemplo');
+          agent.add('Apesar de fácil de jogar ela é melhor se utilizada em uma composição que tenham heróis que possam dar dive, portanto evite jogar com ela caso tenha uma Kahlii ou uma Ilumia por exemplo');
+        }
+        break;
+
       case 'Butterfly':
 
         if(filtro.dica == "combo"){
@@ -4227,9 +4809,15 @@ function checarDicas(agent) {
       case 'Chaugnar':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('O combo do Chaugnar é: S1 -> AA -> S2 -> ULT -> S2 -> AA');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('O Chaugnar é um suporte/tank com um kit perfeito para counterar controle de grupos e proteger seu time');
+          agent.add('Inicie upando sua primeira habilidade e depois maximize a segunda.\nAh e sempre use a segunda antes de usar a ULT, pois ela reseta após usar');
+          agent.add('Sua primeira skill é muito boa para roubar pássaros e também te deixa imune a controle de grupo\n\n Use para prever o ataque do Grakk ou do Ryoma e proteger seus amigos');
+          agent.add('Lembre-se que apesar de ter imunidade ao controle de grupo, você ainda sofre dano, portanto tome cuidado ao iniciar tfs');
+          agent.add('Seu combo é: S1 -> AA -> S2 -> ULT -> S2 -> AA');
+          agent.add('Seu foco é proteger seu time usando usa ULT no momento que o time adversário usa habilidades de controle de grupo');
+          agent.add('Com sua ULT você dá redução de dano para o seu time, da imunidade a controle e diminui o cooldownr\n\nE tbm retira o custo de mana da S2 por 6 segundos, com 40% de CDR o cooldown dela fica 0,6 segundos');
         }
         break;
 
@@ -4270,13 +4858,28 @@ function checarDicas(agent) {
         if(filtro.dica == "combo"){
           agent.add('Não sei nenhum combo para esse herói ainda');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Elsu é um atirador/assassino capaz de causar muito dano a uma longa distância, além de possuir um kit com habilidades de visão');
+          agent.add('Maximize seu tiro, sua segunda habilidade é o seu maior poke, capaz de causar muito dano desde o early');
+          agent.add('Um bom Elsu é capaz de acertar seus tiros da segunda habilidade, no momento certo, pois sabe a diferença entre o momento que você deve usar AA e o momento que se usa a habilidade\n\nPor exemplo, durante uma tf é importante que o Elsu use AA, somente nos momentos antes e pós tf que se usa o tiro sniper, pois a chance de acertar no alvo durante uma tf é muito pequena');
+          agent.add('Lembrando que a passiva de sua primeira habilidade é o que faz o AA do Elsu tão poderoso. Se usado junto do stack e uma Murasama, ele vai ter 100% de perfuração de armadura\n\nEm outras palavras, o AA causa dano puro. Portanto, posicionamento correto numa tf é a chave para a vitória com ele');
+          agent.add('Sua ULT apesar de causar bastante dano é usada principalmente como uma forma de reposionamento, ou até mesmo de escape, caso algum assassino pule em cima de você\n\nEla não possui o mesmo delay que a sniper tem ao ser utilizada, podendo ser usada no mesmo momento para te salvar, portanto evite usar de forma agressiva para não ficar sem');
+          agent.add('Minha principal dica é, coloque suas armadilhas em lugares que te permita segurança de possíveis ganks, como a moita próximo do rio por exemplo e durante tfs sempre AA, é sua maior fonte de dano\n\nAh, sua visão também revela inimigos invisíveis! Não esqueça disso!');
         }
         break;  
       
       case 'Enzo':
 
-        agent.add('Infelizmente o Enzo ainda não foi lançado oficialmente no nosso servidor');
+        if(filtro.dica == "combo"){
+          agent.add('Seus combos são:\n\nS2 -> S1 -> S2 -> ULT -> AA -> ULT\n\nS2 -> ULT -> S2 -> ULT');
+        }else{
+          agent.add('Enzo é um assassino jungler, com bastante mobilidade, controle de grupo e potencial de gank');
+          agent.add('Maximize sua segunda habilidade, ela causa controle de grupo ao arremessar um inimigo para trás');
+          agent.add('Sua primeira habilidade é um dash parecido com o do Hayate, capaz de trazer para perto inimigo que estiverem presos pela segunda habilidade\n\nImportante seu uso durante o combo para garantir que o inimigo fique dentro da zona de arremesso do gancho');
+          agent.add('Seu gancho é carregavel, quanto mais tempo carregar (limite de 4 segundos) mais longe vai, pode e deve ser usado enquanto anda, sempre carregado antes de iniciar tfs\n\nMinha dica é, tente capturar inimigos individualmente e puxe eles para seu time, focando principalmente mago e ADC');
+          agent.add('Após prender um inimigo com seu gancho, sua ULT te leva até o inimigo e causa dano a ele e a todos os inimigos no caminho\n\nTente sempre combar com o Enzo, e evite pular no meio de tfs, seu papel é finalizar inimigos sozinhos, e sempre alternar suas habilidades com AA, pois sua passiva faz sua velocidade aumentar');
+          agent.add('Seus combos são:\n\nS2 -> S1 -> S2 -> ULT -> AA -> ULT\n\nS2 -> ULT -> S2 -> ULT');
+          agent.add('Caso erre seu gancho te recomendo evitar tfs, pois sem ter um inimigo preso o Enzo fica vulnerável, pois ele é apenas um assassino\n\nLembrando que o Enzo possui uma das maiores dificuldades de maestria, portanto treine bastante antes de ir rankeds com ele');
+        }
         break;
         
       case 'Errol':
@@ -4343,6 +4946,15 @@ function checarDicas(agent) {
         break;
 
       case 'Ilumia':
+
+        if(filtro.dica == "combo"){
+          agent.add('Não sei nenhum combo para esse herói ainda');
+        }else{
+          agent.add('Não tenho dicas para esse herói ainda');
+        }
+        break; 
+
+      case 'Ishar':
 
         if(filtro.dica == "combo"){
           agent.add('Não sei nenhum combo para esse herói ainda');
@@ -4576,6 +5188,21 @@ function checarDicas(agent) {
         }
         break;
 
+      case 'Qi':
+
+        if(filtro.dica == "combo"){
+          agent.add('O combo básico da Qi é:\n\nS1 -> S3 (focar jogar inimigo numa parede) -> S2 -> S3');
+        }else{
+          agent.add('Qi é uma guerreira/tank, muito parecida com uma Airi, ou Zuka na Solo lane, com um bom kit de controle mas com um pouco mais de mecânica devido sua ULT');
+          agent.add('Comece upando sua primeira skill, e depois maximize a segunda, é sua maior fonte de dano');
+          agent.add('Sempre que acertar uma habilidade no inimigo, Qi ganha armadura, e dá dois ataques normais mais rápidos, dano extra e recupera HP\n\nO que a torna uma guerreira com um ótimo sustain, mas precisa de uma build certa');
+          agent.add('Sua primeira habilidade é um dash que arremessa pra cima o inimigo causando dano e imobilizando por 0,5 segundos, use-a para iniciar seu combo\n\nSua segunda habilidade causa dano por segundo e reduz em 20 a armadura do inimigo até 5 stacks (100, praticamente uma Rompe Fileira no lvl 1)');
+          agent.add('Sua ULT empurra os inimigos para frente, se eles batem numa parede recebem um dano extra, ficam stunnados por 1,5 segundos, e sua ULT pode ser usada novamente e causa dano baseado na % de vida perdida do inimigo');
+          agent.add('Seu combo básico é:\n\nS1 -> S3 (focar jogar inimigo numa parede) -> S2 -> S3');
+          agent.add('A Qi é uma guerreira que consegue acabar rapidamente com magos e atiradores, seu foco deve ser esses heróis, por isso builds full AD nela sejam populares\n\nMas caso esteja aprendendo, builds equilibradas com dano e armadura vão ser melhores');
+        }
+        break;  
+      
       case 'Quillen':
 
         if(filtro.dica == "combo"){
@@ -4603,9 +5230,14 @@ function checarDicas(agent) {
       case 'Riktor':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Seu combo comum é:\n\nS1 -> AA -> S1 -> AA -> S2\nDeve ser iniciado de dentro da moita, para finalizar inimigos basta usar a ULT antes de iniciar o combo');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Riktor é um guerreiro/assassino capaz de se adaptar ao terreno para mudar suas habilidades, com muita mobilidade, controle de grupo além de causar dano puro com sua ULT');
+          agent.add('Maximize sua primeira habilidade, é sua maior fonte de dano além da ULT, inclusive evite lutar sem ter essa habilidade disponível');
+          agent.add('Para jogar de Riktor você deve entender que o matinho é seu melhor amigo, dessa forma é possível usar suas habilidades duas vezes devido ao stack da passiva\n\nSua primeira reseta o cooldown ao acertar um inimigo, sempre use AA após usar essa habilidade, e não use a habilidade assim que for resetada, você pode precisar usar para fugir');
+          agent.add('Salve sua segunda para os momentos que você for dar dive ou estiver sendo atacado, principalmente para evitar controle de grupo dos inimigos\n\nua ULT deve ser usada perto de um inimigo e precisa de stack para ativar o dano puro, portanto calcule bem a distância para não ultar no nada');
+          agent.add('Seu combo comum é:\n\nS1 -> AA -> S1 -> AA -> S2\nDeve ser iniciado de dentro da moita, para finalizar inimigos basta usar a ULT antes de iniciar o combo');
+          agent.add('Apesar de ser um guerreiro, o Riktor é muito papel, portanto o ideal é entender o timing de suas habilidades para poder buildar ele full AD (ideal) e causar o máximo possível de dano nos inimigos papeis');
         }
         break;
 
@@ -4678,7 +5310,7 @@ function checarDicas(agent) {
       case 'Superman':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Os combos para o Superman são vários:\n\n ULT(voando) -> S2(andando) -> faz um meio circulo -> AA e repete, meio-circulo -> AA (pode ser feito até 7 vezes)');
         }else{
           agent.add('Não tenho dicas para esse herói ainda');
         }
@@ -4826,7 +5458,12 @@ function checarDicas(agent) {
         if(filtro.dica == "combo"){
           agent.add('Não sei nenhum combo para esse herói ainda');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('A Wisp é uma atiradora focada em crítico, capaz de causar crítico em todas as suas habilidades');
+          agent.add('Maximize sua segunda habilidade, é com ela que você stuna seus inimigos');
+          agent.add('Sua primeira habilidade foi voltada para posicionamento, use-a como uma forma de escapar, ou para atacar caso tenha certeza da kill em segurança\n\nEla também causa dano em área no momento do ataque, bem parecido com a bazooka da violet, funciona quase que da mesma forma');
+          agent.add('Sua segunda habilidade reduz a recarga sempre que acertar um herói inimigo, portanto mire sempre em um!\n\nAlém disso esteja sempre posicionado perto de uma parede, pois o barril explode se encostar em um, fica mais fácil de explodir alguém que pular em cima de você. Mas normalmente o barril explode um pouco antes do limite do alcance do ataque normal da Wisp');
+          agent.add('Sua ULT é melhor se utilizada de dentro de um matinho, ou quando você quer atrapalhar a rotação do inimigo, tome muito cuidado pois você fica vulnerável ao usar');
+          agent.add('A Wisp é um pouco diferente dos ADCs comuns, sua ULT deve ser utilizada no momento certo pois você não pode se mexer enquanto usa!');
         }
         break;
 
@@ -4842,18 +5479,29 @@ function checarDicas(agent) {
       case 'Wukong':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('Os combos com ele são:\n\nS1-> AA -> S2 -> AA -> ULT -> AA\n\nS2 -> AA -> ULT -> AA -> S1 -> AA -> S3');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('Wukong é um assassino/guerreiro burst, focado em critico com um dano absurdo no late game, capaz de entrar e sair de tfs facilmente devido o seu kit');
+          agent.add('Maximize primeiro sua segunda habilidade, além de garantir escape através de paredes, te dá agilidade para o elemento surpresa dos ganks');
+          agent.add('O Wukong, é um herói totalmente dependente de sorte, pois ele precisa acertar críticos para ser realmente efetivo, portanto o ideal é que além da build suas arcanas sejam focadas em dano crítico\n\nInclusive minha dica é após completar o item da jungle tier 2, compre o item da luva de crítico antes de terminar a bota, ajuda muito o early dele');
+          agent.add('Devido a sua passiva, sempre após usar uma habilidade você deve usar AA, mas isso depende.\n\nSe seu ataque der crítico, continue o combo com AA e sua ULT, do contrário, só fuja, pois sem seu crítico você não é nada, lembrando de focar magos e adc primeiro');
+          agent.add('Os combos com ele são:\n\nS1-> AA -> S2 -> AA -> ULT -> AA\n\nS2 -> AA -> ULT -> AA -> S1 -> AA -> S3');
+          agent.add('Tome cuidado com controle de grupo, Wukong por ser um assassino é extremamente frágil, então, um erro e já era\n\nAlém disso, por ser um herói de late game, seu foco é total em farmar e completar sua build');
+          agent.add('Ah, lembrando que você só perde a invisibilidade se bater em alguém, ou seja, dá pra combar suas skills na hora que precisar fugir rapidamente');
         }
         break;
 
       case 'Xeniel':
 
         if(filtro.dica == "combo"){
-          agent.add('Não sei nenhum combo para esse herói ainda');
+          agent.add('O combo ideal do Xeniel é usar sua primeira habilidade, esperar um tempo, pular na tf com sua segunda, sair e repetir o procedimento');
         }else{
-          agent.add('Não tenho dicas para esse herói ainda');
+          agent.add('O Xeniel, apesar de ter em sua descrição Tank/Suporte, você deve imaginar ele como um guerreiro mago, pois suas habilidades causam dano mágico baseado em seu HP');
+          agent.add('Maximize sua primeira habilidade, além de ser sua proteção, é com o dano dessa habilidade que você consegue limpar waves de minion mais rápido');
+          agent.add('O talento mais indicado para ele é o punir, dessa forma você consegue buildar mais HP e consequentemente causar mais dano\n\nE o ideal é usar sua primeira habilidade, esperar um tempo, pular na tf com sua segunda, sair e repetir o procedimento');
+          agent.add('Depois de usar sua ULT, lembre-se de voltar para defender sua lane, e nunca esqueça de limpar ela antes de ultar\n\nFoque usar sua ULT em heróis tanks ou de sustain (Lauriel, Zephys por exemplo), evite heróis que são muito focados como ADC, dependendo da situação, é capaz dele morrer antes de você chegar');
+          agent.add('Aproveite das moitas para ativar sua primeira habilidade ou ultar sem que seu inimigo te veja, caso contrário sua ULT pode ser cancelada.\n\nTente ao máximo fazer split push e sempre ultar para se unir a uma tf que já iniciou. O Xeniel não é muito bom iniciando tfs');
+          agent.add('Lembrando que sua passiva é: a cada 3 ataques normais, o Xeniel causa dano mágico baseado no seu HP, no late game esse dano é enorme, portanto abuse disso contra heróis mais frágeis');
         }
         break;
 
@@ -4936,21 +5584,21 @@ function checarDicas(agent) {
 
   let intentMap = new Map();
 
-  intentMap.set('checarBuild', testando); 
-
   intentMap.set('checarDicas', checarDicas);
 
   intentMap.set('checarBuild', checarBuild);
   
+  intentMap.set('checarRunas', checarRunas);
+  
   intentMap.set('checarBoots', checarBoots);
   
+  intentMap.set('checarArcanas', checarArcanas);
+
   intentMap.set('glossarioExplicar', glossarioExplicar);
 
   intentMap.set('listarAlgo', listarAlgo);
 
   intentMap.set('detalharItens', detalharItens);
-
-  intentMap.set('checarArcanas', checarArcanas);
 
   intentMap.set('ultimasAtualizacoes', ultimasAtualizacoes);
 
